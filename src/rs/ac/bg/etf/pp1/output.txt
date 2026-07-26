@@ -1,0 +1,1325 @@
+INFO  23:28:17,295 - #2 program
+INFO  23:28:17,295 - #48 FoldingAll
+INFO  23:28:17,295 - #10 const
+INFO  23:28:17,297 - #48 int
+INFO  23:28:17,297 - #48 C
+INFO  23:28:17,297 - #36 =
+INFO  23:28:17,297 - #47 5
+INFO  23:28:17,297 - #38 ,
+INFO  23:28:17,297 - #48 D
+INFO  23:28:17,297 - #36 =
+INFO  23:28:17,298 - #47 10
+INFO  23:28:17,298 - #37 ;
+INFO  23:28:17,299 - #10 const
+INFO  23:28:17,299 - #48 bool
+INFO  23:28:17,299 - #48 T
+INFO  23:28:17,300 - #36 =
+INFO  23:28:17,300 - #46 true
+INFO  23:28:17,300 - #38 ,
+INFO  23:28:17,300 - #48 F
+INFO  23:28:17,300 - #36 =
+INFO  23:28:17,300 - #46 false
+INFO  23:28:17,300 - #37 ;
+INFO  23:28:17,300 - #44 {
+INFO  23:28:17,300 - #5 void
+INFO  23:28:17,301 - #48 main
+INFO  23:28:17,301 - #40 (
+INFO  23:28:17,301 - #41 )
+INFO  23:28:17,303 - #48 int
+INFO  23:28:17,305 - #48 x
+INFO  23:28:17,305 - #37 ;
+INFO  23:28:17,308 - #44 {
+INFO  23:28:17,309 - #3 print
+INFO  23:28:17,310 - #40 (
+INFO  23:28:17,311 - #47 2
+INFO  23:28:17,311 - #22 +
+INFO  23:28:17,314 - #47 3
+INFO  23:28:17,316 - #25 *
+INFO  23:28:17,316 - #47 4
+INFO  23:28:17,318 - #41 )
+INFO  23:28:17,320 - #37 ;
+INFO  23:28:17,320 - #3 print
+INFO  23:28:17,320 - #40 (
+INFO  23:28:17,320 - #40 (
+INFO  23:28:17,320 - #47 2
+INFO  23:28:17,320 - #22 +
+INFO  23:28:17,320 - #47 3
+INFO  23:28:17,320 - #41 )
+INFO  23:28:17,320 - #25 *
+INFO  23:28:17,320 - #47 4
+INFO  23:28:17,320 - #41 )
+INFO  23:28:17,320 - #37 ;
+INFO  23:28:17,320 - #3 print
+INFO  23:28:17,320 - #40 (
+INFO  23:28:17,321 - #24 -
+INFO  23:28:17,321 - #47 2
+INFO  23:28:17,321 - #22 +
+INFO  23:28:17,321 - #47 3
+INFO  23:28:17,321 - #25 *
+INFO  23:28:17,321 - #47 4
+INFO  23:28:17,321 - #41 )
+INFO  23:28:17,321 - #37 ;
+INFO  23:28:17,321 - #3 print
+INFO  23:28:17,321 - #40 (
+INFO  23:28:17,321 - #47 100
+INFO  23:28:17,321 - #26 /
+INFO  23:28:17,321 - #47 4
+INFO  23:28:17,324 - #27 %
+INFO  23:28:17,324 - #47 3
+INFO  23:28:17,325 - #41 )
+INFO  23:28:17,325 - #37 ;
+INFO  23:28:17,327 - #3 print
+INFO  23:28:17,327 - #40 (
+INFO  23:28:17,327 - #48 C
+INFO  23:28:17,327 - #22 +
+INFO  23:28:17,332 - #48 D
+INFO  23:28:17,333 - #41 )
+INFO  23:28:17,333 - #37 ;
+INFO  23:28:17,333 - #3 print
+INFO  23:28:17,333 - #40 (
+INFO  23:28:17,333 - #48 C
+INFO  23:28:17,333 - #25 *
+INFO  23:28:17,333 - #47 2
+INFO  23:28:17,333 - #22 +
+INFO  23:28:17,333 - #47 1
+INFO  23:28:17,333 - #41 )
+INFO  23:28:17,333 - #37 ;
+INFO  23:28:17,334 - #48 x
+INFO  23:28:17,334 - #36 =
+INFO  23:28:17,334 - #47 7
+INFO  23:28:17,335 - #37 ;
+INFO  23:28:17,336 - #3 print
+INFO  23:28:17,336 - #40 (
+INFO  23:28:17,336 - #48 x
+INFO  23:28:17,336 - #22 +
+INFO  23:28:17,336 - #47 2
+INFO  23:28:17,336 - #25 *
+INFO  23:28:17,336 - #47 3
+INFO  23:28:17,336 - #41 )
+INFO  23:28:17,336 - #37 ;
+INFO  23:28:17,336 - #3 print
+INFO  23:28:17,336 - #40 (
+INFO  23:28:17,336 - #48 x
+INFO  23:28:17,336 - #25 *
+INFO  23:28:17,336 - #40 (
+INFO  23:28:17,336 - #47 1
+INFO  23:28:17,336 - #22 +
+INFO  23:28:17,336 - #47 1
+INFO  23:28:17,336 - #41 )
+INFO  23:28:17,337 - #41 )
+INFO  23:28:17,337 - #37 ;
+INFO  23:28:17,337 - #11 if
+INFO  23:28:17,337 - #40 (
+INFO  23:28:17,337 - #47 1
+INFO  23:28:17,337 - #22 +
+INFO  23:28:17,337 - #47 1
+INFO  23:28:17,337 - #28 ==
+INFO  23:28:17,337 - #47 2
+INFO  23:28:17,339 - #41 )
+INFO  23:28:17,342 - #3 print
+INFO  23:28:17,342 - #40 (
+INFO  23:28:17,343 - #47 1
+INFO  23:28:17,343 - #41 )
+INFO  23:28:17,343 - #37 ;
+INFO  23:28:17,343 - #8 else
+INFO  23:28:17,343 - #3 print
+INFO  23:28:17,345 - #40 (
+INFO  23:28:17,345 - #47 0
+INFO  23:28:17,345 - #41 )
+INFO  23:28:17,345 - #37 ;
+INFO  23:28:17,345 - #11 if
+INFO  23:28:17,345 - #40 (
+INFO  23:28:17,345 - #46 false
+INFO  23:28:17,345 - #41 )
+INFO  23:28:17,347 - #3 print
+INFO  23:28:17,347 - #40 (
+INFO  23:28:17,347 - #47 0
+INFO  23:28:17,347 - #41 )
+INFO  23:28:17,347 - #37 ;
+INFO  23:28:17,347 - #8 else
+INFO  23:28:17,347 - #3 print
+INFO  23:28:17,347 - #40 (
+INFO  23:28:17,347 - #47 2
+INFO  23:28:17,347 - #41 )
+INFO  23:28:17,347 - #37 ;
+INFO  23:28:17,347 - #11 if
+INFO  23:28:17,347 - #40 (
+INFO  23:28:17,347 - #48 C
+INFO  23:28:17,347 - #33 <
+INFO  23:28:17,347 - #48 D
+INFO  23:28:17,349 - #34 &&
+INFO  23:28:17,349 - #48 T
+INFO  23:28:17,349 - #41 )
+INFO  23:28:17,349 - #3 print
+INFO  23:28:17,349 - #40 (
+INFO  23:28:17,349 - #47 3
+INFO  23:28:17,349 - #41 )
+INFO  23:28:17,349 - #37 ;
+INFO  23:28:17,349 - #8 else
+INFO  23:28:17,349 - #3 print
+INFO  23:28:17,349 - #40 (
+INFO  23:28:17,349 - #47 0
+INFO  23:28:17,349 - #41 )
+INFO  23:28:17,349 - #37 ;
+INFO  23:28:17,349 - #11 if
+INFO  23:28:17,349 - #40 (
+INFO  23:28:17,349 - #48 F
+INFO  23:28:17,349 - #35 ||
+INFO  23:28:17,349 - #47 2
+INFO  23:28:17,349 - #31 >
+INFO  23:28:17,349 - #47 10
+INFO  23:28:17,350 - #41 )
+INFO  23:28:17,350 - #3 print
+INFO  23:28:17,350 - #40 (
+INFO  23:28:17,351 - #47 0
+INFO  23:28:17,351 - #41 )
+INFO  23:28:17,351 - #37 ;
+INFO  23:28:17,351 - #8 else
+INFO  23:28:17,351 - #3 print
+INFO  23:28:17,351 - #40 (
+INFO  23:28:17,351 - #47 4
+INFO  23:28:17,351 - #41 )
+INFO  23:28:17,351 - #37 ;
+INFO  23:28:17,351 - #11 if
+INFO  23:28:17,351 - #40 (
+INFO  23:28:17,351 - #46 true
+INFO  23:28:17,351 - #35 ||
+INFO  23:28:17,351 - #48 x
+INFO  23:28:17,351 - #28 ==
+INFO  23:28:17,351 - #47 0
+INFO  23:28:17,351 - #41 )
+INFO  23:28:17,351 - #3 print
+INFO  23:28:17,351 - #40 (
+INFO  23:28:17,351 - #47 5
+INFO  23:28:17,351 - #41 )
+INFO  23:28:17,351 - #37 ;
+INFO  23:28:17,351 - #8 else
+INFO  23:28:17,351 - #3 print
+INFO  23:28:17,351 - #40 (
+INFO  23:28:17,351 - #47 0
+INFO  23:28:17,351 - #41 )
+INFO  23:28:17,351 - #37 ;
+INFO  23:28:17,351 - #11 if
+INFO  23:28:17,351 - #40 (
+INFO  23:28:17,351 - #46 false
+INFO  23:28:17,351 - #34 &&
+INFO  23:28:17,351 - #48 x
+INFO  23:28:17,351 - #28 ==
+INFO  23:28:17,351 - #47 0
+INFO  23:28:17,352 - #41 )
+INFO  23:28:17,352 - #3 print
+INFO  23:28:17,352 - #40 (
+INFO  23:28:17,352 - #47 0
+INFO  23:28:17,352 - #41 )
+INFO  23:28:17,352 - #37 ;
+INFO  23:28:17,352 - #8 else
+INFO  23:28:17,352 - #3 print
+INFO  23:28:17,352 - #40 (
+INFO  23:28:17,352 - #47 6
+INFO  23:28:17,352 - #41 )
+INFO  23:28:17,352 - #37 ;
+INFO  23:28:17,352 - #17 do
+INFO  23:28:17,352 - #3 print
+INFO  23:28:17,354 - #40 (
+INFO  23:28:17,354 - #47 7
+INFO  23:28:17,354 - #41 )
+INFO  23:28:17,354 - #37 ;
+INFO  23:28:17,354 - #18 while
+INFO  23:28:17,354 - #40 (
+INFO  23:28:17,355 - #46 false
+INFO  23:28:17,355 - #41 )
+INFO  23:28:17,357 - #37 ;
+INFO  23:28:17,357 - #45 }
+INFO  23:28:17,357 - #45 }
+INFO  23:28:17,361 - Program(
+  ProgName(
+   FoldingAll
+  ) [ProgName]
+  DeclarationList(
+    DeclarationList(
+      NoDeclarations(
+      ) [NoDeclarations]
+      ConstDeclarations(
+        ConstDeclaration(
+          TypeOf(
+           int
+          ) [TypeOf]
+         C
+          NumberLiteral(
+           5
+          ) [NumberLiteral]
+          ConstDeclarationList(
+           D
+            NumberLiteral(
+             10
+            ) [NumberLiteral]
+            NoConstDeclarations(
+            ) [NoConstDeclarations]
+          ) [ConstDeclarationList]
+        ) [ConstDeclaration]
+      ) [ConstDeclarations]
+    ) [DeclarationList]
+    ConstDeclarations(
+      ConstDeclaration(
+        TypeOf(
+         bool
+        ) [TypeOf]
+       T
+        BoolLiteral(
+         true
+        ) [BoolLiteral]
+        ConstDeclarationList(
+         F
+          BoolLiteral(
+           false
+          ) [BoolLiteral]
+          NoConstDeclarations(
+          ) [NoConstDeclarations]
+        ) [ConstDeclarationList]
+      ) [ConstDeclaration]
+    ) [ConstDeclarations]
+  ) [DeclarationList]
+  MethodDeclarationList(
+    NoMethodDeclarations(
+    ) [NoMethodDeclarations]
+    MethodDeclaration(
+      MethodSignature(
+        VoidMethod(
+         main
+        ) [VoidMethod]
+        NoFormalParams(
+        ) [NoFormalParams]
+      ) [MethodSignature]
+      LocalVariable(
+        NoLocalVariablesList(
+        ) [NoLocalVariablesList]
+        VarDecl(
+          TypeOf(
+           int
+          ) [TypeOf]
+         x
+          NoArray(
+          ) [NoArray]
+          NoVarDeclarations(
+          ) [NoVarDeclarations]
+        ) [VarDecl]
+      ) [LocalVariable]
+      StatementsList(
+        StatementsList(
+          StatementsList(
+            StatementsList(
+              StatementsList(
+                StatementsList(
+                  StatementsList(
+                    StatementsList(
+                      StatementsList(
+                        StatementsList(
+                          StatementsList(
+                            StatementsList(
+                              StatementsList(
+                                StatementsList(
+                                  StatementsList(
+                                    StatementsList(
+                                      NoStatements(
+                                      ) [NoStatements]
+                                      Print(
+                                        TermOperation(
+                                          Term(
+                                            Num(
+                                             2
+                                            ) [Num]
+                                            NoMultiplicativeSequenceList(
+                                            ) [NoMultiplicativeSequenceList]
+                                          ) [Term]
+                                          AddOperations(
+                                            NoOperations(
+                                            ) [NoOperations]
+                                            Plus(
+                                            ) [Plus]
+                                            Term(
+                                              Num(
+                                               3
+                                              ) [Num]
+                                              MultiplicativeOperations(
+                                                NoMultiplicativeSequenceList(
+                                                ) [NoMultiplicativeSequenceList]
+                                                Mul(
+                                                ) [Mul]
+                                                Num(
+                                                 4
+                                                ) [Num]
+                                              ) [MultiplicativeOperations]
+                                            ) [Term]
+                                          ) [AddOperations]
+                                        ) [TermOperation]
+                                        NoOptionalWidth(
+                                        ) [NoOptionalWidth]
+                                      ) [Print]
+                                    ) [StatementsList]
+                                    Print(
+                                      TermOperation(
+                                        Term(
+                                          ParenthesisExpression(
+                                            TermOperation(
+                                              Term(
+                                                Num(
+                                                 2
+                                                ) [Num]
+                                                NoMultiplicativeSequenceList(
+                                                ) [NoMultiplicativeSequenceList]
+                                              ) [Term]
+                                              AddOperations(
+                                                NoOperations(
+                                                ) [NoOperations]
+                                                Plus(
+                                                ) [Plus]
+                                                Term(
+                                                  Num(
+                                                   3
+                                                  ) [Num]
+                                                  NoMultiplicativeSequenceList(
+                                                  ) [NoMultiplicativeSequenceList]
+                                                ) [Term]
+                                              ) [AddOperations]
+                                            ) [TermOperation]
+                                          ) [ParenthesisExpression]
+                                          MultiplicativeOperations(
+                                            NoMultiplicativeSequenceList(
+                                            ) [NoMultiplicativeSequenceList]
+                                            Mul(
+                                            ) [Mul]
+                                            Num(
+                                             4
+                                            ) [Num]
+                                          ) [MultiplicativeOperations]
+                                        ) [Term]
+                                        NoOperations(
+                                        ) [NoOperations]
+                                      ) [TermOperation]
+                                      NoOptionalWidth(
+                                      ) [NoOptionalWidth]
+                                    ) [Print]
+                                  ) [StatementsList]
+                                  Print(
+                                    NegativeTermOperation(
+                                      Term(
+                                        Num(
+                                         2
+                                        ) [Num]
+                                        NoMultiplicativeSequenceList(
+                                        ) [NoMultiplicativeSequenceList]
+                                      ) [Term]
+                                      AddOperations(
+                                        NoOperations(
+                                        ) [NoOperations]
+                                        Plus(
+                                        ) [Plus]
+                                        Term(
+                                          Num(
+                                           3
+                                          ) [Num]
+                                          MultiplicativeOperations(
+                                            NoMultiplicativeSequenceList(
+                                            ) [NoMultiplicativeSequenceList]
+                                            Mul(
+                                            ) [Mul]
+                                            Num(
+                                             4
+                                            ) [Num]
+                                          ) [MultiplicativeOperations]
+                                        ) [Term]
+                                      ) [AddOperations]
+                                    ) [NegativeTermOperation]
+                                    NoOptionalWidth(
+                                    ) [NoOptionalWidth]
+                                  ) [Print]
+                                ) [StatementsList]
+                                Print(
+                                  TermOperation(
+                                    Term(
+                                      Num(
+                                       100
+                                      ) [Num]
+                                      MultiplicativeOperations(
+                                        MultiplicativeOperations(
+                                          NoMultiplicativeSequenceList(
+                                          ) [NoMultiplicativeSequenceList]
+                                          Div(
+                                          ) [Div]
+                                          Num(
+                                           4
+                                          ) [Num]
+                                        ) [MultiplicativeOperations]
+                                        Mod(
+                                        ) [Mod]
+                                        Num(
+                                         3
+                                        ) [Num]
+                                      ) [MultiplicativeOperations]
+                                    ) [Term]
+                                    NoOperations(
+                                    ) [NoOperations]
+                                  ) [TermOperation]
+                                  NoOptionalWidth(
+                                  ) [NoOptionalWidth]
+                                ) [Print]
+                              ) [StatementsList]
+                              Print(
+                                TermOperation(
+                                  Term(
+                                    FuncCall(
+                                      Designator(
+                                        DesignatorName(
+                                         C
+                                        ) [DesignatorName]
+                                        NoAccessorList(
+                                        ) [NoAccessorList]
+                                      ) [Designator]
+                                      NoDesignatorParamsList(
+                                      ) [NoDesignatorParamsList]
+                                    ) [FuncCall]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  AddOperations(
+                                    NoOperations(
+                                    ) [NoOperations]
+                                    Plus(
+                                    ) [Plus]
+                                    Term(
+                                      FuncCall(
+                                        Designator(
+                                          DesignatorName(
+                                           D
+                                          ) [DesignatorName]
+                                          NoAccessorList(
+                                          ) [NoAccessorList]
+                                        ) [Designator]
+                                        NoDesignatorParamsList(
+                                        ) [NoDesignatorParamsList]
+                                      ) [FuncCall]
+                                      NoMultiplicativeSequenceList(
+                                      ) [NoMultiplicativeSequenceList]
+                                    ) [Term]
+                                  ) [AddOperations]
+                                ) [TermOperation]
+                                NoOptionalWidth(
+                                ) [NoOptionalWidth]
+                              ) [Print]
+                            ) [StatementsList]
+                            Print(
+                              TermOperation(
+                                Term(
+                                  FuncCall(
+                                    Designator(
+                                      DesignatorName(
+                                       C
+                                      ) [DesignatorName]
+                                      NoAccessorList(
+                                      ) [NoAccessorList]
+                                    ) [Designator]
+                                    NoDesignatorParamsList(
+                                    ) [NoDesignatorParamsList]
+                                  ) [FuncCall]
+                                  MultiplicativeOperations(
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                    Mul(
+                                    ) [Mul]
+                                    Num(
+                                     2
+                                    ) [Num]
+                                  ) [MultiplicativeOperations]
+                                ) [Term]
+                                AddOperations(
+                                  NoOperations(
+                                  ) [NoOperations]
+                                  Plus(
+                                  ) [Plus]
+                                  Term(
+                                    Num(
+                                     1
+                                    ) [Num]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                ) [AddOperations]
+                              ) [TermOperation]
+                              NoOptionalWidth(
+                              ) [NoOptionalWidth]
+                            ) [Print]
+                          ) [StatementsList]
+                          DesignatorStmt(
+                            AssignOperation(
+                              Designator(
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                NoAccessorList(
+                                ) [NoAccessorList]
+                              ) [Designator]
+                              AssignOperator(
+                              ) [AssignOperator]
+                              TermOperation(
+                                Term(
+                                  Num(
+                                   7
+                                  ) [Num]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                            ) [AssignOperation]
+                          ) [DesignatorStmt]
+                        ) [StatementsList]
+                        Print(
+                          TermOperation(
+                            Term(
+                              FuncCall(
+                                Designator(
+                                  DesignatorName(
+                                   x
+                                  ) [DesignatorName]
+                                  NoAccessorList(
+                                  ) [NoAccessorList]
+                                ) [Designator]
+                                NoDesignatorParamsList(
+                                ) [NoDesignatorParamsList]
+                              ) [FuncCall]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            AddOperations(
+                              NoOperations(
+                              ) [NoOperations]
+                              Plus(
+                              ) [Plus]
+                              Term(
+                                Num(
+                                 2
+                                ) [Num]
+                                MultiplicativeOperations(
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                  Mul(
+                                  ) [Mul]
+                                  Num(
+                                   3
+                                  ) [Num]
+                                ) [MultiplicativeOperations]
+                              ) [Term]
+                            ) [AddOperations]
+                          ) [TermOperation]
+                          NoOptionalWidth(
+                          ) [NoOptionalWidth]
+                        ) [Print]
+                      ) [StatementsList]
+                      Print(
+                        TermOperation(
+                          Term(
+                            FuncCall(
+                              Designator(
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                NoAccessorList(
+                                ) [NoAccessorList]
+                              ) [Designator]
+                              NoDesignatorParamsList(
+                              ) [NoDesignatorParamsList]
+                            ) [FuncCall]
+                            MultiplicativeOperations(
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                              Mul(
+                              ) [Mul]
+                              ParenthesisExpression(
+                                TermOperation(
+                                  Term(
+                                    Num(
+                                     1
+                                    ) [Num]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  AddOperations(
+                                    NoOperations(
+                                    ) [NoOperations]
+                                    Plus(
+                                    ) [Plus]
+                                    Term(
+                                      Num(
+                                       1
+                                      ) [Num]
+                                      NoMultiplicativeSequenceList(
+                                      ) [NoMultiplicativeSequenceList]
+                                    ) [Term]
+                                  ) [AddOperations]
+                                ) [TermOperation]
+                              ) [ParenthesisExpression]
+                            ) [MultiplicativeOperations]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        NoOptionalWidth(
+                        ) [NoOptionalWidth]
+                      ) [Print]
+                    ) [StatementsList]
+                    IfStatement(
+                      Condition(
+                        ConditionTerm(
+                          CondFactor(
+                            TermOperation(
+                              Term(
+                                Num(
+                                 1
+                                ) [Num]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              AddOperations(
+                                NoOperations(
+                                ) [NoOperations]
+                                Plus(
+                                ) [Plus]
+                                Term(
+                                  Num(
+                                   1
+                                  ) [Num]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                              ) [AddOperations]
+                            ) [TermOperation]
+                            OptionalRelOperator(
+                              Equal(
+                              ) [Equal]
+                              TermOperation(
+                                Term(
+                                  Num(
+                                   2
+                                  ) [Num]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                            ) [OptionalRelOperator]
+                          ) [CondFactor]
+                          NoCondFactors(
+                          ) [NoCondFactors]
+                        ) [ConditionTerm]
+                        NoCondTermList(
+                        ) [NoCondTermList]
+                      ) [Condition]
+                      Print(
+                        TermOperation(
+                          Term(
+                            Num(
+                             1
+                            ) [Num]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        NoOptionalWidth(
+                        ) [NoOptionalWidth]
+                      ) [Print]
+                      HasElse(
+                        Else(
+                        ) [Else]
+                        Print(
+                          TermOperation(
+                            Term(
+                              Num(
+                               0
+                              ) [Num]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                          NoOptionalWidth(
+                          ) [NoOptionalWidth]
+                        ) [Print]
+                      ) [HasElse]
+                    ) [IfStatement]
+                  ) [StatementsList]
+                  IfStatement(
+                    Condition(
+                      ConditionTerm(
+                        CondFactor(
+                          TermOperation(
+                            Term(
+                              Bool(
+                               false
+                              ) [Bool]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                          NoOptionalRelop(
+                          ) [NoOptionalRelop]
+                        ) [CondFactor]
+                        NoCondFactors(
+                        ) [NoCondFactors]
+                      ) [ConditionTerm]
+                      NoCondTermList(
+                      ) [NoCondTermList]
+                    ) [Condition]
+                    Print(
+                      TermOperation(
+                        Term(
+                          Num(
+                           0
+                          ) [Num]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                      NoOptionalWidth(
+                      ) [NoOptionalWidth]
+                    ) [Print]
+                    HasElse(
+                      Else(
+                      ) [Else]
+                      Print(
+                        TermOperation(
+                          Term(
+                            Num(
+                             2
+                            ) [Num]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        NoOptionalWidth(
+                        ) [NoOptionalWidth]
+                      ) [Print]
+                    ) [HasElse]
+                  ) [IfStatement]
+                ) [StatementsList]
+                IfStatement(
+                  Condition(
+                    ConditionTerm(
+                      CondFactor(
+                        TermOperation(
+                          Term(
+                            FuncCall(
+                              Designator(
+                                DesignatorName(
+                                 C
+                                ) [DesignatorName]
+                                NoAccessorList(
+                                ) [NoAccessorList]
+                              ) [Designator]
+                              NoDesignatorParamsList(
+                              ) [NoDesignatorParamsList]
+                            ) [FuncCall]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        OptionalRelOperator(
+                          Less(
+                          ) [Less]
+                          TermOperation(
+                            Term(
+                              FuncCall(
+                                Designator(
+                                  DesignatorName(
+                                   D
+                                  ) [DesignatorName]
+                                  NoAccessorList(
+                                  ) [NoAccessorList]
+                                ) [Designator]
+                                NoDesignatorParamsList(
+                                ) [NoDesignatorParamsList]
+                              ) [FuncCall]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                        ) [OptionalRelOperator]
+                      ) [CondFactor]
+                      ConditionFactorsList(
+                        CondFactor(
+                          TermOperation(
+                            Term(
+                              FuncCall(
+                                Designator(
+                                  DesignatorName(
+                                   T
+                                  ) [DesignatorName]
+                                  NoAccessorList(
+                                  ) [NoAccessorList]
+                                ) [Designator]
+                                NoDesignatorParamsList(
+                                ) [NoDesignatorParamsList]
+                              ) [FuncCall]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                          NoOptionalRelop(
+                          ) [NoOptionalRelop]
+                        ) [CondFactor]
+                        NoCondFactors(
+                        ) [NoCondFactors]
+                      ) [ConditionFactorsList]
+                    ) [ConditionTerm]
+                    NoCondTermList(
+                    ) [NoCondTermList]
+                  ) [Condition]
+                  Print(
+                    TermOperation(
+                      Term(
+                        Num(
+                         3
+                        ) [Num]
+                        NoMultiplicativeSequenceList(
+                        ) [NoMultiplicativeSequenceList]
+                      ) [Term]
+                      NoOperations(
+                      ) [NoOperations]
+                    ) [TermOperation]
+                    NoOptionalWidth(
+                    ) [NoOptionalWidth]
+                  ) [Print]
+                  HasElse(
+                    Else(
+                    ) [Else]
+                    Print(
+                      TermOperation(
+                        Term(
+                          Num(
+                           0
+                          ) [Num]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                      NoOptionalWidth(
+                      ) [NoOptionalWidth]
+                    ) [Print]
+                  ) [HasElse]
+                ) [IfStatement]
+              ) [StatementsList]
+              IfStatement(
+                Condition(
+                  ConditionTerm(
+                    CondFactor(
+                      TermOperation(
+                        Term(
+                          FuncCall(
+                            Designator(
+                              DesignatorName(
+                               F
+                              ) [DesignatorName]
+                              NoAccessorList(
+                              ) [NoAccessorList]
+                            ) [Designator]
+                            NoDesignatorParamsList(
+                            ) [NoDesignatorParamsList]
+                          ) [FuncCall]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                      NoOptionalRelop(
+                      ) [NoOptionalRelop]
+                    ) [CondFactor]
+                    NoCondFactors(
+                    ) [NoCondFactors]
+                  ) [ConditionTerm]
+                  ConditionTermList(
+                    ConditionTerm(
+                      CondFactor(
+                        TermOperation(
+                          Term(
+                            Num(
+                             2
+                            ) [Num]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        OptionalRelOperator(
+                          Greater(
+                          ) [Greater]
+                          TermOperation(
+                            Term(
+                              Num(
+                               10
+                              ) [Num]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                        ) [OptionalRelOperator]
+                      ) [CondFactor]
+                      NoCondFactors(
+                      ) [NoCondFactors]
+                    ) [ConditionTerm]
+                    NoCondTermList(
+                    ) [NoCondTermList]
+                  ) [ConditionTermList]
+                ) [Condition]
+                Print(
+                  TermOperation(
+                    Term(
+                      Num(
+                       0
+                      ) [Num]
+                      NoMultiplicativeSequenceList(
+                      ) [NoMultiplicativeSequenceList]
+                    ) [Term]
+                    NoOperations(
+                    ) [NoOperations]
+                  ) [TermOperation]
+                  NoOptionalWidth(
+                  ) [NoOptionalWidth]
+                ) [Print]
+                HasElse(
+                  Else(
+                  ) [Else]
+                  Print(
+                    TermOperation(
+                      Term(
+                        Num(
+                         4
+                        ) [Num]
+                        NoMultiplicativeSequenceList(
+                        ) [NoMultiplicativeSequenceList]
+                      ) [Term]
+                      NoOperations(
+                      ) [NoOperations]
+                    ) [TermOperation]
+                    NoOptionalWidth(
+                    ) [NoOptionalWidth]
+                  ) [Print]
+                ) [HasElse]
+              ) [IfStatement]
+            ) [StatementsList]
+            IfStatement(
+              Condition(
+                ConditionTerm(
+                  CondFactor(
+                    TermOperation(
+                      Term(
+                        Bool(
+                         true
+                        ) [Bool]
+                        NoMultiplicativeSequenceList(
+                        ) [NoMultiplicativeSequenceList]
+                      ) [Term]
+                      NoOperations(
+                      ) [NoOperations]
+                    ) [TermOperation]
+                    NoOptionalRelop(
+                    ) [NoOptionalRelop]
+                  ) [CondFactor]
+                  NoCondFactors(
+                  ) [NoCondFactors]
+                ) [ConditionTerm]
+                ConditionTermList(
+                  ConditionTerm(
+                    CondFactor(
+                      TermOperation(
+                        Term(
+                          FuncCall(
+                            Designator(
+                              DesignatorName(
+                               x
+                              ) [DesignatorName]
+                              NoAccessorList(
+                              ) [NoAccessorList]
+                            ) [Designator]
+                            NoDesignatorParamsList(
+                            ) [NoDesignatorParamsList]
+                          ) [FuncCall]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                      OptionalRelOperator(
+                        Equal(
+                        ) [Equal]
+                        TermOperation(
+                          Term(
+                            Num(
+                             0
+                            ) [Num]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                      ) [OptionalRelOperator]
+                    ) [CondFactor]
+                    NoCondFactors(
+                    ) [NoCondFactors]
+                  ) [ConditionTerm]
+                  NoCondTermList(
+                  ) [NoCondTermList]
+                ) [ConditionTermList]
+              ) [Condition]
+              Print(
+                TermOperation(
+                  Term(
+                    Num(
+                     5
+                    ) [Num]
+                    NoMultiplicativeSequenceList(
+                    ) [NoMultiplicativeSequenceList]
+                  ) [Term]
+                  NoOperations(
+                  ) [NoOperations]
+                ) [TermOperation]
+                NoOptionalWidth(
+                ) [NoOptionalWidth]
+              ) [Print]
+              HasElse(
+                Else(
+                ) [Else]
+                Print(
+                  TermOperation(
+                    Term(
+                      Num(
+                       0
+                      ) [Num]
+                      NoMultiplicativeSequenceList(
+                      ) [NoMultiplicativeSequenceList]
+                    ) [Term]
+                    NoOperations(
+                    ) [NoOperations]
+                  ) [TermOperation]
+                  NoOptionalWidth(
+                  ) [NoOptionalWidth]
+                ) [Print]
+              ) [HasElse]
+            ) [IfStatement]
+          ) [StatementsList]
+          IfStatement(
+            Condition(
+              ConditionTerm(
+                CondFactor(
+                  TermOperation(
+                    Term(
+                      Bool(
+                       false
+                      ) [Bool]
+                      NoMultiplicativeSequenceList(
+                      ) [NoMultiplicativeSequenceList]
+                    ) [Term]
+                    NoOperations(
+                    ) [NoOperations]
+                  ) [TermOperation]
+                  NoOptionalRelop(
+                  ) [NoOptionalRelop]
+                ) [CondFactor]
+                ConditionFactorsList(
+                  CondFactor(
+                    TermOperation(
+                      Term(
+                        FuncCall(
+                          Designator(
+                            DesignatorName(
+                             x
+                            ) [DesignatorName]
+                            NoAccessorList(
+                            ) [NoAccessorList]
+                          ) [Designator]
+                          NoDesignatorParamsList(
+                          ) [NoDesignatorParamsList]
+                        ) [FuncCall]
+                        NoMultiplicativeSequenceList(
+                        ) [NoMultiplicativeSequenceList]
+                      ) [Term]
+                      NoOperations(
+                      ) [NoOperations]
+                    ) [TermOperation]
+                    OptionalRelOperator(
+                      Equal(
+                      ) [Equal]
+                      TermOperation(
+                        Term(
+                          Num(
+                           0
+                          ) [Num]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                    ) [OptionalRelOperator]
+                  ) [CondFactor]
+                  NoCondFactors(
+                  ) [NoCondFactors]
+                ) [ConditionFactorsList]
+              ) [ConditionTerm]
+              NoCondTermList(
+              ) [NoCondTermList]
+            ) [Condition]
+            Print(
+              TermOperation(
+                Term(
+                  Num(
+                   0
+                  ) [Num]
+                  NoMultiplicativeSequenceList(
+                  ) [NoMultiplicativeSequenceList]
+                ) [Term]
+                NoOperations(
+                ) [NoOperations]
+              ) [TermOperation]
+              NoOptionalWidth(
+              ) [NoOptionalWidth]
+            ) [Print]
+            HasElse(
+              Else(
+              ) [Else]
+              Print(
+                TermOperation(
+                  Term(
+                    Num(
+                     6
+                    ) [Num]
+                    NoMultiplicativeSequenceList(
+                    ) [NoMultiplicativeSequenceList]
+                  ) [Term]
+                  NoOperations(
+                  ) [NoOperations]
+                ) [TermOperation]
+                NoOptionalWidth(
+                ) [NoOptionalWidth]
+              ) [Print]
+            ) [HasElse]
+          ) [IfStatement]
+        ) [StatementsList]
+        DoWhile(
+          DoStart(
+          ) [DoStart]
+          Print(
+            TermOperation(
+              Term(
+                Num(
+                 7
+                ) [Num]
+                NoMultiplicativeSequenceList(
+                ) [NoMultiplicativeSequenceList]
+              ) [Term]
+              NoOperations(
+              ) [NoOperations]
+            ) [TermOperation]
+            NoOptionalWidth(
+            ) [NoOptionalWidth]
+          ) [Print]
+          While(
+          ) [While]
+          OptionalCondition(
+            Condition(
+              ConditionTerm(
+                CondFactor(
+                  TermOperation(
+                    Term(
+                      Bool(
+                       false
+                      ) [Bool]
+                      NoMultiplicativeSequenceList(
+                      ) [NoMultiplicativeSequenceList]
+                    ) [Term]
+                    NoOperations(
+                    ) [NoOperations]
+                  ) [TermOperation]
+                  NoOptionalRelop(
+                  ) [NoOptionalRelop]
+                ) [CondFactor]
+                NoCondFactors(
+                ) [NoCondFactors]
+              ) [ConditionTerm]
+              NoCondTermList(
+              ) [NoCondTermList]
+            ) [Condition]
+            NoAdditionalStatement(
+            ) [NoAdditionalStatement]
+          ) [OptionalCondition]
+        ) [DoWhile]
+      ) [StatementsList]
+    ) [MethodDeclaration]
+  ) [MethodDeclarationList]
+) [Program]
+===================================
+INFO  23:28:17,374 - Deklarisana konstanta C na liniji 3
+INFO  23:28:17,374 - Deklarisana konstanta D na liniji 3
+INFO  23:28:17,375 - Deklarisana konstanta T na liniji 4
+INFO  23:28:17,375 - Deklarisana konstanta F na liniji 4
+INFO  23:28:17,375 - Definicija funkcije main, povratnog tipa void na liniji 7
+INFO  23:28:17,376 - Deklarisana lokalna promenljiva x na liniji 8
+INFO  23:28:17,377 - Dodela vrednosti promenljivoj x na liniji 21
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: bool, -1, -1 
+Type set: set, -1, -1 
+Meth add: notype, 0, 2 
+   Var a: set, 0, 1 
+   Var b: int, 1, 1 
+
+Meth addAll: notype, 0, 2 
+   Var a: set, 0, 1 
+   Var b: Arr of int, 1, 1 
+
+Prog FoldingAll: notype, 0, 0 
+   Con C: int, 5, 0 
+   Con D: int, 10, 0 
+   Con T: bool, 1, 0 
+   Con F: bool, 0, 0 
+   Meth main: notype, 0, 0 
+      Var x: int, 0, 1 
+
+
+
+INFO  23:28:17,389 - Generisanje koda uspesno zavrseno!

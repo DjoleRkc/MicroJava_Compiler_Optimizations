@@ -1,0 +1,66 @@
+program FoldingAll
+
+const int C = 5, D = 10;
+const bool T = true, F = false;
+
+{
+	void main()
+	int x;
+	{
+		// ===== 1) Aritmetika (literali, prioritet, unarni minus, zagrade) =====
+		print(2 + 3 * 4);           // 14  — mul pa add, jedan const
+		print((2 + 3) * 4);         // 20  — zagrade
+		print(-2 + 3 * 4);          // 10  — unarni minus
+		print(100 / 4 % 3);         // 1   — div i mod
+
+		// ===== 2) Simboličke konstante =====
+		print(C + D);               // 15
+		print(C * 2 + 1);           // 11
+
+		// ===== 3) Mešavina const + promenljiva (delimični fold) =====
+		x = 7;
+		print(x + 2 * 3);           // 13  — samo 2*3 → const 6, pa + x
+		print(x * (1 + 1));         // 14  — (1+1) → 2
+
+		// ===== 4) Const if / else =====
+		if (1 + 1 == 2)
+			print(1);
+		else
+			print(0);               // treba 1; bez == u disasm
+
+		if (false)
+			print(0);
+		else
+			print(2);               // treba 2
+
+		if (C < D && T)
+			print(3);
+		else
+			print(0);               // treba 3
+
+		if (F || 2 > 10)
+			print(0);
+		else
+			print(4);               // treba 4
+
+		// short-circuit: desna strana se ne računa u fold/codegen
+		if (true || x == 0)
+			print(5);
+		else
+			print(0);               // treba 5
+
+		if (false && x == 0)
+			print(0);
+		else
+			print(6);               // treba 6
+
+		// ===== 5) do-while sa const uslovom =====
+		do
+			print(7);
+		while (false);              // jednom 7
+
+		// Očekivani ispis:
+		// 14 20 10 1 15 11 13 14 1 2 3 4 5 6 7
+		// => 1420101151113141234567
+	}
+}

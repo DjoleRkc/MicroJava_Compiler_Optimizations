@@ -1,0 +1,9 @@
+program Test8
+
+interface I {
+        void foo();
+    }
+
+{
+    void main(){}
+}

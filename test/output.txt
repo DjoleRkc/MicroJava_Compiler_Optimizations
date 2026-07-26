@@ -1,0 +1,126 @@
+
+  pos: instruction operands
+     | expressionstack
+-----------------------------
+  208: enter       0 1 
+     | 
+  211: const       14 
+     | 14 
+  216: const_0     
+     | 14 0 
+  217: print       14
+     | 
+  218: const       20 
+     | 20 
+  223: const_0     
+     | 20 0 
+  224: print       20
+     | 
+  225: const       10 
+     | 10 
+  230: const_0     
+     | 10 0 
+  231: print       10
+     | 
+  232: const_1     
+     | 1 
+  233: const_0     
+     | 1 0 
+  234: print       1
+     | 
+  235: const       15 
+     | 15 
+  240: const_0     
+     | 15 0 
+  241: print       15
+     | 
+  242: const       11 
+     | 11 
+  247: const_0     
+     | 11 0 
+  248: print       11
+     | 
+  249: const       7 
+     | 7 
+  254: store_0     
+     | 
+  255: load_0      
+     | 7 
+  256: const       6 
+     | 7 6 
+  261: add         
+     | 13 
+  262: const_0     
+     | 13 0 
+  263: print       13
+     | 
+  264: load_0      
+     | 7 
+  265: const_2     
+     | 7 2 
+  266: mul         
+     | 14 
+  267: const_0     
+     | 14 0 
+  268: print       14
+     | 
+  269: const_1     
+     | 1 
+  270: const_0     
+     | 1 0 
+  271: print       1
+     | 
+  272: jmp         6 
+     | 
+  278: jmp         9 
+     | 
+  287: const_2     
+     | 2 
+  288: const_0     
+     | 2 0 
+  289: print       2
+     | 
+  290: const_3     
+     | 3 
+  291: const_0     
+     | 3 0 
+  292: print       3
+     | 
+  293: jmp         6 
+     | 
+  299: jmp         9 
+     | 
+  308: const_4     
+     | 4 
+  309: const_0     
+     | 4 0 
+  310: print       4
+     | 
+  311: const_5     
+     | 5 
+  312: const_0     
+     | 5 0 
+  313: print       5
+     | 
+  314: jmp         6 
+     | 
+  320: jmp         9 
+     | 
+  329: const       6 
+     | 6 
+  334: const_0     
+     | 6 0 
+  335: print       6
+     | 
+  336: const       7 
+     | 7 
+  341: const_0     
+     | 7 0 
+  342: print       7
+     | 
+  343: jmp         6 
+     | 
+  349: exit        
+     | 
+  350: return      
+Completion took 8 ms

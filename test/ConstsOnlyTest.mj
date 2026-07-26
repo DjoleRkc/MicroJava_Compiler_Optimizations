@@ -1,0 +1,7 @@
+program Test1
+ 
+const int a = 5, b = 10;
+
+{
+    void main(){}
+}

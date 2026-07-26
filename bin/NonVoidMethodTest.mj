@@ -1,0 +1,9 @@
+program Test4
+
+{
+
+	int square(int x){ return x*x; }
+	void main(){}
+	
+	
+}

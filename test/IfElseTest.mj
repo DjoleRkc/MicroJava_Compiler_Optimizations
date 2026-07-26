@@ -1,0 +1,9 @@
+program Test5 
+{
+    void main() {
+        if (5 > 3) 
+            print(1);
+        else
+            print(0);
+    }
+}

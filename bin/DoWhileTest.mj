@@ -1,0 +1,10 @@
+program Test6
+{
+    void main() int i; {
+    	i = 0;
+        do {
+            print(1);
+            i++;
+        } while (i < 1);
+    }
+}
