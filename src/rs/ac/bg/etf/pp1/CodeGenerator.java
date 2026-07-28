@@ -35,6 +35,7 @@ import rs.ac.bg.etf.pp1.ast.FuncCall;
 import rs.ac.bg.etf.pp1.ast.Greater;
 import rs.ac.bg.etf.pp1.ast.GreaterOrEqual;
 import rs.ac.bg.etf.pp1.ast.HasElse;
+import rs.ac.bg.etf.pp1.ast.IfStatement;
 import rs.ac.bg.etf.pp1.ast.Increment;
 import rs.ac.bg.etf.pp1.ast.Less;
 import rs.ac.bg.etf.pp1.ast.LessOrEqual;
@@ -62,6 +63,7 @@ import rs.ac.bg.etf.pp1.ast.Read;
 import rs.ac.bg.etf.pp1.ast.Relop;
 import rs.ac.bg.etf.pp1.ast.Return;
 import rs.ac.bg.etf.pp1.ast.SetOperation;
+import rs.ac.bg.etf.pp1.ast.Statement;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.Term;
 import rs.ac.bg.etf.pp1.ast.TermOperation;
@@ -486,13 +488,26 @@ public class CodeGenerator extends VisitorAdaptor {
 		return false;
 	}
 
+	/** Naredba (ili predak-naredba) označena kao unreachable u eliminaciji mrtvog koda. */
+	private boolean shouldSkipDeadCode(SyntaxNode node) {
+		if (optimizer == null)
+			return false;
+		SyntaxNode current = node;
+		while (current != null) {
+			if (current instanceof Statement && optimizer.isUnreachable((Statement) current))
+				return true;
+			current = current.getParent();
+		}
+		return false;
+	}
+
 	private boolean shouldSkipCodegen(SyntaxNode node) {
-		return hasConstValueAncestor(node);
+		return shouldSkipDeadCode(node) || hasConstValueAncestor(node);
 	}
 
 	// Ako je ovaj čvor const i nema const pretka, emituj jedan loadConst
 	private boolean tryEmitFoldedConst(SyntaxNode node) {
-		if (optimizer == null || !optimizer.isConst(node) || hasConstValueAncestor(node))
+		if (shouldSkipDeadCode(node) || optimizer == null || !optimizer.isConst(node) || hasConstValueAncestor(node))
 			return false;
 		Code.loadConst(optimizer.getConstValue(node));
 		return true;
@@ -573,6 +588,9 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(99);
 		}
 		else {
+			// Ako telo već završava returnom, ne emituj drugi exit/return
+			if (optimizer != null && optimizer.endsWithLiveReturn(methodDeclaration.getStatementList()))
+				return;
 			Code.put(Code.exit);
 			Code.put(Code.return_);
 		}
@@ -597,6 +615,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Print print) {
+		if (shouldSkipDeadCode(print))
+			return;
 		if (print.getExpr().struct.getKind() == Struct.Char)
 			Code.put(Code.bprint);
 		else if(print.getExpr().struct.getKind() == Struct.Int)
@@ -613,12 +633,16 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(NoOptionalWidth noOptionalWidth) {
+		if (shouldSkipDeadCode(noOptionalWidth))
+			return;
 		Code.loadConst(0);
 	}
 
 
 	@Override
 	public void visit(Width w) {
+		if (shouldSkipDeadCode(w))
+			return;
 		Code.loadConst(w.getN1());
 	}
 
@@ -709,6 +733,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(DesignatorWithParams dwp) {
+		if (shouldSkipDeadCode(dwp))
+			return;
 		Obj func = dwp.getDesignator().obj;
 
 		if (func.getLocalSymbols().isEmpty() ||
@@ -734,6 +760,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(SetOperation so) {
+		if (shouldSkipDeadCode(so))
+			return;
 		// s1
 		Code.load(so.getDesignator().obj);
 		Code.load(so.getDesignator1().obj);
@@ -753,6 +781,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(DesignatorName ba) {
+		if (shouldSkipDeadCode(ba))
+			return;
 		if(ba.obj.getKind() == Obj.Fld && !ba.obj.getName().equals("this"))
 			Code.put(Code.load_n);
 
@@ -774,6 +804,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(BracketAccessor ba) {
+		if (shouldSkipDeadCode(ba))
+			return;
 		Designator des = (Designator)ba.getParent();
 		Code.load(des.getDesignatorName().obj);
 		Code.put(Code.dup_x1);
@@ -794,7 +826,7 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(DotAccessor da) {
-		if(da.getParent() instanceof BracketAccessor) return;
+		if(shouldSkipDeadCode(da) || (da.getParent() instanceof BracketAccessor)) return;
 
 		Obj des =  ((Designator)da.getParent()).getDesignatorName().obj;
 		if(des.getType().getKind() != Struct.Class && des.getType().getKind() != Struct.Interface) return;
@@ -813,6 +845,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(AssignOperation assignOp) {
+		if (shouldSkipDeadCode(assignOp))
+			return;
 		Code.store(assignOp.getDesignator().obj);
 
 	}
@@ -829,6 +863,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(NewWithBrackets nwb) {
+		if (shouldSkipDeadCode(nwb))
+			return;
 
 		if(nwb.getType().struct.equals(SemanticAnalyzer.setType)) {
 			Code.loadConst(1);
@@ -844,6 +880,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(NewWithParams nwp) {
+		if (shouldSkipDeadCode(nwp))
+			return;
 		Code.put(Code.new_);
 		Code.put2((nwp.getType().struct.getNumberOfFields() + 1) * 4); // +1 zbog tvf pokazivaca
 		Code.put(Code.dup);
@@ -856,6 +894,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Increment inc) {
+		if (shouldSkipDeadCode(inc))
+			return;
 		if (inc.getDesignator().obj.getKind() == Obj.Elem)
 			Code.put(Code.dup2);
 		else if (inc.getDesignator().obj.getKind() == Obj.Fld)
@@ -868,6 +908,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Decrement dec) {
+		if (shouldSkipDeadCode(dec))
+			return;
 		if (dec.getDesignator().obj.getKind() == Obj.Elem)
 			Code.put(Code.dup2);
 		else if (dec.getDesignator().obj.getKind() == Obj.Fld)
@@ -880,18 +922,38 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Return ret) {
+		if (shouldSkipDeadCode(ret))
+			return;
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
 
 	@Override
 	public void visit(Read r) {
+		if (shouldSkipDeadCode(r))
+			return;
 		if (r.getDesignator().obj.getType().equals(Tab.charType))
 			Code.put(Code.bread);
 		else
 			Code.put(Code.read);
 		Code.store(r.getDesignator().obj);
 
+	}
+
+	/**
+	 * Da li je ovaj čvor unutar if sa foldovanim (const) uslovom
+	 * Tad ne treba jump skelet - mrtva grana se ionako ne emituje
+	 */
+	private boolean inConstConditionIf(SyntaxNode node) {
+		if (optimizer == null)
+			return false;
+		SyntaxNode p = node;
+		while (p != null && !(p instanceof IfStatement))
+			p = p.getParent();
+		if (!(p instanceof IfStatement))
+			return false;
+		Condition c = ((IfStatement) p).getCondition();
+		return optimizer.isConst(c);
 	}
 
 	@Override
@@ -952,13 +1014,20 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Condition cond) {
+		if (shouldSkipDeadCode(cond))
+			return;
+
 		if (optimizer != null && optimizer.isConst(cond)) {
+			// Const if: bez skokova (mrtva grana se ne emituje)
+			if (inConstConditionIf(cond)) {
+				skipInsideLoopStack.push(NO_FALSE_JUMP);
+				return;
+			}
+			// Const do-while: i dalje treba izlazni skok kad je false
 			if (optimizer.getConstValue(cond) == 0) {
-				// uvek false -> bezuslovni skok na else / izlaz iz petlje
 				Code.putJump(0);
 				skipInsideLoopStack.push(Code.pc - 2);
 			} else
-				// uvek true -> nema false-skoka
 				skipInsideLoopStack.push(NO_FALSE_JUMP);
 			return;
 		}
@@ -972,6 +1041,8 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(NoElse noElse) {
+		if (shouldSkipDeadCode(noElse))
+			return;
 		int adr = skipInsideLoopStack.pop();
 		if (adr != NO_FALSE_JUMP)
 			Code.fixup(adr);
@@ -979,6 +1050,16 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Else e) {
+		if (shouldSkipDeadCode(e))
+			return;
+
+		// Const if: ne emituj jmp preko else - mrtva grana se ionako skipuje
+		if (inConstConditionIf(e)) {
+			skipInsideLoopStack.pop(); // NO_FALSE_JUMP
+			skipElseBranchStack.push(NO_FALSE_JUMP);
+			return;
+		}
+
 		Code.putJump(0); // tacni uslovi ne ulaze u else
 		skipElseBranchStack.push(Code.pc - 2);
 		int adr = skipInsideLoopStack.pop();
@@ -988,8 +1069,11 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(HasElse hasElse) {
-		Code.fixup(skipElseBranchStack.pop());
-
+		if (shouldSkipDeadCode(hasElse))
+			return;
+		int adr = skipElseBranchStack.pop();
+		if (adr != NO_FALSE_JUMP)
+			Code.fixup(adr);
 	}
 
 	@Override
@@ -1001,7 +1085,11 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(DoWhile doWhile) {
-		Code.putJump(doStartStack.pop()); // jump na doStart
+		int loopStart = doStartStack.pop();
+		// Korak 4: nemoj jmp nazad ako petlja nikad ne nastavlja
+		if (optimizer == null || !optimizer.shouldSkipLoopBackEdge(doWhile))
+			Code.putJump(loopStart);
+
 		if (!skipInsideLoopStack.isEmpty()) {
 			int adr = skipInsideLoopStack.pop();
 			if (adr != NO_FALSE_JUMP)
@@ -1023,14 +1111,16 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Break b) {
-
+		if (shouldSkipDeadCode(b))
+			return;
 		Code.putJump(0); // jump na kraj petlje
 		jumpBreakAdrs.peek().add(Code.pc - 2); // -2 zbog putJump - dodaje u listu najugnjezdenije petlje
 	}
 
 	@Override
 	public void visit(Continue c) {
-
+		if (shouldSkipDeadCode(c))
+			return;
 		Code.putJump(0); // jump na pocetak petlje
 		jumpContinueAdrs.peek().add(Code.pc - 2); // -2 zbog putJump - dodaje u listu najugnjezdenije petlje
 	}

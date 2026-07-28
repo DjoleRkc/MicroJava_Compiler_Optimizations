@@ -1,239 +1,301 @@
-INFO  23:28:17,295 - #2 program
-INFO  23:28:17,295 - #48 FoldingAll
-INFO  23:28:17,295 - #10 const
-INFO  23:28:17,297 - #48 int
-INFO  23:28:17,297 - #48 C
-INFO  23:28:17,297 - #36 =
-INFO  23:28:17,297 - #47 5
-INFO  23:28:17,297 - #38 ,
-INFO  23:28:17,297 - #48 D
-INFO  23:28:17,297 - #36 =
-INFO  23:28:17,298 - #47 10
-INFO  23:28:17,298 - #37 ;
-INFO  23:28:17,299 - #10 const
-INFO  23:28:17,299 - #48 bool
-INFO  23:28:17,299 - #48 T
-INFO  23:28:17,300 - #36 =
-INFO  23:28:17,300 - #46 true
-INFO  23:28:17,300 - #38 ,
-INFO  23:28:17,300 - #48 F
-INFO  23:28:17,300 - #36 =
-INFO  23:28:17,300 - #46 false
-INFO  23:28:17,300 - #37 ;
-INFO  23:28:17,300 - #44 {
-INFO  23:28:17,300 - #5 void
-INFO  23:28:17,301 - #48 main
-INFO  23:28:17,301 - #40 (
-INFO  23:28:17,301 - #41 )
-INFO  23:28:17,303 - #48 int
-INFO  23:28:17,305 - #48 x
-INFO  23:28:17,305 - #37 ;
-INFO  23:28:17,308 - #44 {
-INFO  23:28:17,309 - #3 print
-INFO  23:28:17,310 - #40 (
-INFO  23:28:17,311 - #47 2
-INFO  23:28:17,311 - #22 +
-INFO  23:28:17,314 - #47 3
-INFO  23:28:17,316 - #25 *
-INFO  23:28:17,316 - #47 4
-INFO  23:28:17,318 - #41 )
-INFO  23:28:17,320 - #37 ;
-INFO  23:28:17,320 - #3 print
-INFO  23:28:17,320 - #40 (
-INFO  23:28:17,320 - #40 (
-INFO  23:28:17,320 - #47 2
-INFO  23:28:17,320 - #22 +
-INFO  23:28:17,320 - #47 3
-INFO  23:28:17,320 - #41 )
-INFO  23:28:17,320 - #25 *
-INFO  23:28:17,320 - #47 4
-INFO  23:28:17,320 - #41 )
-INFO  23:28:17,320 - #37 ;
-INFO  23:28:17,320 - #3 print
-INFO  23:28:17,320 - #40 (
-INFO  23:28:17,321 - #24 -
-INFO  23:28:17,321 - #47 2
-INFO  23:28:17,321 - #22 +
-INFO  23:28:17,321 - #47 3
-INFO  23:28:17,321 - #25 *
-INFO  23:28:17,321 - #47 4
-INFO  23:28:17,321 - #41 )
-INFO  23:28:17,321 - #37 ;
-INFO  23:28:17,321 - #3 print
-INFO  23:28:17,321 - #40 (
-INFO  23:28:17,321 - #47 100
-INFO  23:28:17,321 - #26 /
-INFO  23:28:17,321 - #47 4
-INFO  23:28:17,324 - #27 %
-INFO  23:28:17,324 - #47 3
-INFO  23:28:17,325 - #41 )
-INFO  23:28:17,325 - #37 ;
-INFO  23:28:17,327 - #3 print
-INFO  23:28:17,327 - #40 (
-INFO  23:28:17,327 - #48 C
-INFO  23:28:17,327 - #22 +
-INFO  23:28:17,332 - #48 D
-INFO  23:28:17,333 - #41 )
-INFO  23:28:17,333 - #37 ;
-INFO  23:28:17,333 - #3 print
-INFO  23:28:17,333 - #40 (
-INFO  23:28:17,333 - #48 C
-INFO  23:28:17,333 - #25 *
-INFO  23:28:17,333 - #47 2
-INFO  23:28:17,333 - #22 +
-INFO  23:28:17,333 - #47 1
-INFO  23:28:17,333 - #41 )
-INFO  23:28:17,333 - #37 ;
-INFO  23:28:17,334 - #48 x
-INFO  23:28:17,334 - #36 =
-INFO  23:28:17,334 - #47 7
-INFO  23:28:17,335 - #37 ;
-INFO  23:28:17,336 - #3 print
-INFO  23:28:17,336 - #40 (
-INFO  23:28:17,336 - #48 x
-INFO  23:28:17,336 - #22 +
-INFO  23:28:17,336 - #47 2
-INFO  23:28:17,336 - #25 *
-INFO  23:28:17,336 - #47 3
-INFO  23:28:17,336 - #41 )
-INFO  23:28:17,336 - #37 ;
-INFO  23:28:17,336 - #3 print
-INFO  23:28:17,336 - #40 (
-INFO  23:28:17,336 - #48 x
-INFO  23:28:17,336 - #25 *
-INFO  23:28:17,336 - #40 (
-INFO  23:28:17,336 - #47 1
-INFO  23:28:17,336 - #22 +
-INFO  23:28:17,336 - #47 1
-INFO  23:28:17,336 - #41 )
-INFO  23:28:17,337 - #41 )
-INFO  23:28:17,337 - #37 ;
-INFO  23:28:17,337 - #11 if
-INFO  23:28:17,337 - #40 (
-INFO  23:28:17,337 - #47 1
-INFO  23:28:17,337 - #22 +
-INFO  23:28:17,337 - #47 1
-INFO  23:28:17,337 - #28 ==
-INFO  23:28:17,337 - #47 2
-INFO  23:28:17,339 - #41 )
-INFO  23:28:17,342 - #3 print
-INFO  23:28:17,342 - #40 (
-INFO  23:28:17,343 - #47 1
-INFO  23:28:17,343 - #41 )
-INFO  23:28:17,343 - #37 ;
-INFO  23:28:17,343 - #8 else
-INFO  23:28:17,343 - #3 print
-INFO  23:28:17,345 - #40 (
-INFO  23:28:17,345 - #47 0
-INFO  23:28:17,345 - #41 )
-INFO  23:28:17,345 - #37 ;
-INFO  23:28:17,345 - #11 if
-INFO  23:28:17,345 - #40 (
-INFO  23:28:17,345 - #46 false
-INFO  23:28:17,345 - #41 )
-INFO  23:28:17,347 - #3 print
-INFO  23:28:17,347 - #40 (
-INFO  23:28:17,347 - #47 0
-INFO  23:28:17,347 - #41 )
-INFO  23:28:17,347 - #37 ;
-INFO  23:28:17,347 - #8 else
-INFO  23:28:17,347 - #3 print
-INFO  23:28:17,347 - #40 (
-INFO  23:28:17,347 - #47 2
-INFO  23:28:17,347 - #41 )
-INFO  23:28:17,347 - #37 ;
-INFO  23:28:17,347 - #11 if
-INFO  23:28:17,347 - #40 (
-INFO  23:28:17,347 - #48 C
-INFO  23:28:17,347 - #33 <
-INFO  23:28:17,347 - #48 D
-INFO  23:28:17,349 - #34 &&
-INFO  23:28:17,349 - #48 T
-INFO  23:28:17,349 - #41 )
-INFO  23:28:17,349 - #3 print
-INFO  23:28:17,349 - #40 (
-INFO  23:28:17,349 - #47 3
-INFO  23:28:17,349 - #41 )
-INFO  23:28:17,349 - #37 ;
-INFO  23:28:17,349 - #8 else
-INFO  23:28:17,349 - #3 print
-INFO  23:28:17,349 - #40 (
-INFO  23:28:17,349 - #47 0
-INFO  23:28:17,349 - #41 )
-INFO  23:28:17,349 - #37 ;
-INFO  23:28:17,349 - #11 if
-INFO  23:28:17,349 - #40 (
-INFO  23:28:17,349 - #48 F
-INFO  23:28:17,349 - #35 ||
-INFO  23:28:17,349 - #47 2
-INFO  23:28:17,349 - #31 >
-INFO  23:28:17,349 - #47 10
-INFO  23:28:17,350 - #41 )
-INFO  23:28:17,350 - #3 print
-INFO  23:28:17,350 - #40 (
-INFO  23:28:17,351 - #47 0
-INFO  23:28:17,351 - #41 )
-INFO  23:28:17,351 - #37 ;
-INFO  23:28:17,351 - #8 else
-INFO  23:28:17,351 - #3 print
-INFO  23:28:17,351 - #40 (
-INFO  23:28:17,351 - #47 4
-INFO  23:28:17,351 - #41 )
-INFO  23:28:17,351 - #37 ;
-INFO  23:28:17,351 - #11 if
-INFO  23:28:17,351 - #40 (
-INFO  23:28:17,351 - #46 true
-INFO  23:28:17,351 - #35 ||
-INFO  23:28:17,351 - #48 x
-INFO  23:28:17,351 - #28 ==
-INFO  23:28:17,351 - #47 0
-INFO  23:28:17,351 - #41 )
-INFO  23:28:17,351 - #3 print
-INFO  23:28:17,351 - #40 (
-INFO  23:28:17,351 - #47 5
-INFO  23:28:17,351 - #41 )
-INFO  23:28:17,351 - #37 ;
-INFO  23:28:17,351 - #8 else
-INFO  23:28:17,351 - #3 print
-INFO  23:28:17,351 - #40 (
-INFO  23:28:17,351 - #47 0
-INFO  23:28:17,351 - #41 )
-INFO  23:28:17,351 - #37 ;
-INFO  23:28:17,351 - #11 if
-INFO  23:28:17,351 - #40 (
-INFO  23:28:17,351 - #46 false
-INFO  23:28:17,351 - #34 &&
-INFO  23:28:17,351 - #48 x
-INFO  23:28:17,351 - #28 ==
-INFO  23:28:17,351 - #47 0
-INFO  23:28:17,352 - #41 )
-INFO  23:28:17,352 - #3 print
-INFO  23:28:17,352 - #40 (
-INFO  23:28:17,352 - #47 0
-INFO  23:28:17,352 - #41 )
-INFO  23:28:17,352 - #37 ;
-INFO  23:28:17,352 - #8 else
-INFO  23:28:17,352 - #3 print
-INFO  23:28:17,352 - #40 (
-INFO  23:28:17,352 - #47 6
-INFO  23:28:17,352 - #41 )
-INFO  23:28:17,352 - #37 ;
-INFO  23:28:17,352 - #17 do
-INFO  23:28:17,352 - #3 print
-INFO  23:28:17,354 - #40 (
-INFO  23:28:17,354 - #47 7
-INFO  23:28:17,354 - #41 )
-INFO  23:28:17,354 - #37 ;
-INFO  23:28:17,354 - #18 while
-INFO  23:28:17,354 - #40 (
-INFO  23:28:17,355 - #46 false
-INFO  23:28:17,355 - #41 )
-INFO  23:28:17,357 - #37 ;
-INFO  23:28:17,357 - #45 }
-INFO  23:28:17,357 - #45 }
-INFO  23:28:17,361 - Program(
+INFO  22:18:59,628 - #2 program
+INFO  22:18:59,629 - #48 DceAll
+INFO  22:18:59,629 - #10 const
+INFO  22:18:59,630 - #48 int
+INFO  22:18:59,630 - #48 C
+INFO  22:18:59,631 - #36 =
+INFO  22:18:59,631 - #47 5
+INFO  22:18:59,631 - #38 ,
+INFO  22:18:59,631 - #48 D
+INFO  22:18:59,631 - #36 =
+INFO  22:18:59,631 - #47 10
+INFO  22:18:59,631 - #37 ;
+INFO  22:18:59,634 - #10 const
+INFO  22:18:59,634 - #48 bool
+INFO  22:18:59,634 - #48 T
+INFO  22:18:59,634 - #36 =
+INFO  22:18:59,635 - #46 true
+INFO  22:18:59,635 - #38 ,
+INFO  22:18:59,635 - #48 F
+INFO  22:18:59,635 - #36 =
+INFO  22:18:59,635 - #46 false
+INFO  22:18:59,635 - #37 ;
+INFO  22:18:59,635 - #44 {
+INFO  22:18:59,635 - #5 void
+INFO  22:18:59,636 - #48 deadAfterReturn
+INFO  22:18:59,637 - #40 (
+INFO  22:18:59,637 - #41 )
+INFO  22:18:59,639 - #44 {
+INFO  22:18:59,640 - #3 print
+INFO  22:18:59,641 - #40 (
+INFO  22:18:59,641 - #47 10
+INFO  22:18:59,641 - #41 )
+INFO  22:18:59,644 - #37 ;
+INFO  22:18:59,644 - #4 return
+INFO  22:18:59,644 - #37 ;
+INFO  22:18:59,645 - #3 print
+INFO  22:18:59,645 - #40 (
+INFO  22:18:59,645 - #47 99
+INFO  22:18:59,645 - #41 )
+INFO  22:18:59,645 - #37 ;
+INFO  22:18:59,645 - #45 }
+INFO  22:18:59,645 - #5 void
+INFO  22:18:59,645 - #48 main
+INFO  22:18:59,645 - #40 (
+INFO  22:18:59,647 - #41 )
+INFO  22:18:59,647 - #48 int
+INFO  22:18:59,647 - #48 x
+INFO  22:18:59,647 - #37 ;
+INFO  22:18:59,648 - #44 {
+INFO  22:18:59,649 - #3 print
+INFO  22:18:59,649 - #40 (
+INFO  22:18:59,649 - #47 2
+INFO  22:18:59,649 - #22 +
+INFO  22:18:59,649 - #47 3
+INFO  22:18:59,650 - #25 *
+INFO  22:18:59,650 - #47 4
+INFO  22:18:59,651 - #41 )
+INFO  22:18:59,653 - #37 ;
+INFO  22:18:59,653 - #3 print
+INFO  22:18:59,653 - #40 (
+INFO  22:18:59,653 - #40 (
+INFO  22:18:59,653 - #47 2
+INFO  22:18:59,653 - #22 +
+INFO  22:18:59,653 - #47 3
+INFO  22:18:59,653 - #41 )
+INFO  22:18:59,654 - #25 *
+INFO  22:18:59,654 - #47 4
+INFO  22:18:59,654 - #41 )
+INFO  22:18:59,654 - #37 ;
+INFO  22:18:59,654 - #3 print
+INFO  22:18:59,657 - #40 (
+INFO  22:18:59,657 - #24 -
+INFO  22:18:59,657 - #47 2
+INFO  22:18:59,657 - #22 +
+INFO  22:18:59,657 - #47 3
+INFO  22:18:59,657 - #25 *
+INFO  22:18:59,657 - #47 4
+INFO  22:18:59,657 - #41 )
+INFO  22:18:59,657 - #37 ;
+INFO  22:18:59,657 - #3 print
+INFO  22:18:59,657 - #40 (
+INFO  22:18:59,657 - #47 100
+INFO  22:18:59,657 - #26 /
+INFO  22:18:59,658 - #47 4
+INFO  22:18:59,658 - #27 %
+INFO  22:18:59,659 - #47 3
+INFO  22:18:59,659 - #41 )
+INFO  22:18:59,659 - #37 ;
+INFO  22:18:59,659 - #3 print
+INFO  22:18:59,659 - #40 (
+INFO  22:18:59,660 - #48 C
+INFO  22:18:59,660 - #22 +
+INFO  22:18:59,662 - #48 D
+INFO  22:18:59,662 - #41 )
+INFO  22:18:59,662 - #37 ;
+INFO  22:18:59,662 - #3 print
+INFO  22:18:59,662 - #40 (
+INFO  22:18:59,662 - #48 C
+INFO  22:18:59,662 - #25 *
+INFO  22:18:59,662 - #47 2
+INFO  22:18:59,662 - #22 +
+INFO  22:18:59,662 - #47 1
+INFO  22:18:59,663 - #41 )
+INFO  22:18:59,663 - #37 ;
+INFO  22:18:59,663 - #48 x
+INFO  22:18:59,663 - #36 =
+INFO  22:18:59,663 - #47 7
+INFO  22:18:59,664 - #37 ;
+INFO  22:18:59,665 - #3 print
+INFO  22:18:59,665 - #40 (
+INFO  22:18:59,665 - #48 x
+INFO  22:18:59,665 - #22 +
+INFO  22:18:59,665 - #47 2
+INFO  22:18:59,665 - #25 *
+INFO  22:18:59,665 - #47 3
+INFO  22:18:59,665 - #41 )
+INFO  22:18:59,665 - #37 ;
+INFO  22:18:59,665 - #3 print
+INFO  22:18:59,665 - #40 (
+INFO  22:18:59,665 - #48 x
+INFO  22:18:59,665 - #25 *
+INFO  22:18:59,665 - #40 (
+INFO  22:18:59,666 - #47 1
+INFO  22:18:59,666 - #22 +
+INFO  22:18:59,666 - #47 1
+INFO  22:18:59,666 - #41 )
+INFO  22:18:59,666 - #41 )
+INFO  22:18:59,666 - #37 ;
+INFO  22:18:59,667 - #11 if
+INFO  22:18:59,667 - #40 (
+INFO  22:18:59,667 - #47 1
+INFO  22:18:59,667 - #22 +
+INFO  22:18:59,667 - #47 1
+INFO  22:18:59,667 - #28 ==
+INFO  22:18:59,667 - #47 2
+INFO  22:18:59,669 - #41 )
+INFO  22:18:59,673 - #3 print
+INFO  22:18:59,673 - #40 (
+INFO  22:18:59,673 - #47 1
+INFO  22:18:59,673 - #41 )
+INFO  22:18:59,673 - #37 ;
+INFO  22:18:59,673 - #8 else
+INFO  22:18:59,673 - #3 print
+INFO  22:18:59,674 - #40 (
+INFO  22:18:59,674 - #47 0
+INFO  22:18:59,674 - #41 )
+INFO  22:18:59,674 - #37 ;
+INFO  22:18:59,674 - #11 if
+INFO  22:18:59,675 - #40 (
+INFO  22:18:59,675 - #46 false
+INFO  22:18:59,675 - #41 )
+INFO  22:18:59,677 - #3 print
+INFO  22:18:59,677 - #40 (
+INFO  22:18:59,677 - #47 0
+INFO  22:18:59,677 - #41 )
+INFO  22:18:59,677 - #37 ;
+INFO  22:18:59,677 - #8 else
+INFO  22:18:59,677 - #3 print
+INFO  22:18:59,677 - #40 (
+INFO  22:18:59,677 - #47 2
+INFO  22:18:59,677 - #41 )
+INFO  22:18:59,677 - #37 ;
+INFO  22:18:59,677 - #11 if
+INFO  22:18:59,677 - #40 (
+INFO  22:18:59,677 - #48 C
+INFO  22:18:59,677 - #33 <
+INFO  22:18:59,677 - #48 D
+INFO  22:18:59,679 - #34 &&
+INFO  22:18:59,679 - #48 T
+INFO  22:18:59,679 - #41 )
+INFO  22:18:59,679 - #3 print
+INFO  22:18:59,679 - #40 (
+INFO  22:18:59,679 - #47 3
+INFO  22:18:59,679 - #41 )
+INFO  22:18:59,680 - #37 ;
+INFO  22:18:59,680 - #8 else
+INFO  22:18:59,680 - #3 print
+INFO  22:18:59,680 - #40 (
+INFO  22:18:59,680 - #47 0
+INFO  22:18:59,680 - #41 )
+INFO  22:18:59,680 - #37 ;
+INFO  22:18:59,680 - #11 if
+INFO  22:18:59,680 - #40 (
+INFO  22:18:59,680 - #48 F
+INFO  22:18:59,680 - #35 ||
+INFO  22:18:59,680 - #47 2
+INFO  22:18:59,680 - #31 >
+INFO  22:18:59,680 - #47 10
+INFO  22:18:59,681 - #41 )
+INFO  22:18:59,681 - #3 print
+INFO  22:18:59,681 - #40 (
+INFO  22:18:59,681 - #47 0
+INFO  22:18:59,681 - #41 )
+INFO  22:18:59,682 - #37 ;
+INFO  22:18:59,682 - #8 else
+INFO  22:18:59,682 - #3 print
+INFO  22:18:59,682 - #40 (
+INFO  22:18:59,682 - #47 4
+INFO  22:18:59,682 - #41 )
+INFO  22:18:59,682 - #37 ;
+INFO  22:18:59,682 - #11 if
+INFO  22:18:59,682 - #40 (
+INFO  22:18:59,682 - #46 true
+INFO  22:18:59,682 - #35 ||
+INFO  22:18:59,682 - #48 x
+INFO  22:18:59,682 - #28 ==
+INFO  22:18:59,682 - #47 0
+INFO  22:18:59,682 - #41 )
+INFO  22:18:59,682 - #3 print
+INFO  22:18:59,682 - #40 (
+INFO  22:18:59,682 - #47 5
+INFO  22:18:59,682 - #41 )
+INFO  22:18:59,682 - #37 ;
+INFO  22:18:59,682 - #8 else
+INFO  22:18:59,682 - #3 print
+INFO  22:18:59,682 - #40 (
+INFO  22:18:59,682 - #47 0
+INFO  22:18:59,683 - #41 )
+INFO  22:18:59,683 - #37 ;
+INFO  22:18:59,683 - #11 if
+INFO  22:18:59,683 - #40 (
+INFO  22:18:59,683 - #46 false
+INFO  22:18:59,683 - #34 &&
+INFO  22:18:59,683 - #48 x
+INFO  22:18:59,683 - #28 ==
+INFO  22:18:59,683 - #47 0
+INFO  22:18:59,683 - #41 )
+INFO  22:18:59,683 - #3 print
+INFO  22:18:59,683 - #40 (
+INFO  22:18:59,683 - #47 0
+INFO  22:18:59,683 - #41 )
+INFO  22:18:59,683 - #37 ;
+INFO  22:18:59,683 - #8 else
+INFO  22:18:59,683 - #3 print
+INFO  22:18:59,683 - #40 (
+INFO  22:18:59,683 - #47 6
+INFO  22:18:59,683 - #41 )
+INFO  22:18:59,683 - #37 ;
+INFO  22:18:59,683 - #17 do
+INFO  22:18:59,683 - #3 print
+INFO  22:18:59,684 - #40 (
+INFO  22:18:59,685 - #47 7
+INFO  22:18:59,685 - #41 )
+INFO  22:18:59,685 - #37 ;
+INFO  22:18:59,685 - #18 while
+INFO  22:18:59,685 - #40 (
+INFO  22:18:59,686 - #46 false
+INFO  22:18:59,686 - #41 )
+INFO  22:18:59,687 - #37 ;
+INFO  22:18:59,688 - #17 do
+INFO  22:18:59,688 - #44 {
+INFO  22:18:59,688 - #3 print
+INFO  22:18:59,688 - #40 (
+INFO  22:18:59,688 - #47 8
+INFO  22:18:59,688 - #41 )
+INFO  22:18:59,688 - #37 ;
+INFO  22:18:59,688 - #6 break
+INFO  22:18:59,688 - #37 ;
+INFO  22:18:59,688 - #3 print
+INFO  22:18:59,689 - #40 (
+INFO  22:18:59,690 - #47 99
+INFO  22:18:59,690 - #41 )
+INFO  22:18:59,690 - #37 ;
+INFO  22:18:59,690 - #45 }
+INFO  22:18:59,690 - #18 while
+INFO  22:18:59,690 - #40 (
+INFO  22:18:59,690 - #46 true
+INFO  22:18:59,690 - #41 )
+INFO  22:18:59,690 - #37 ;
+INFO  22:18:59,690 - #17 do
+INFO  22:18:59,690 - #44 {
+INFO  22:18:59,690 - #3 print
+INFO  22:18:59,690 - #40 (
+INFO  22:18:59,690 - #47 9
+INFO  22:18:59,690 - #41 )
+INFO  22:18:59,690 - #37 ;
+INFO  22:18:59,690 - #9 continue
+INFO  22:18:59,690 - #37 ;
+INFO  22:18:59,690 - #3 print
+INFO  22:18:59,692 - #40 (
+INFO  22:18:59,692 - #47 99
+INFO  22:18:59,692 - #41 )
+INFO  22:18:59,692 - #37 ;
+INFO  22:18:59,692 - #45 }
+INFO  22:18:59,692 - #18 while
+INFO  22:18:59,692 - #40 (
+INFO  22:18:59,692 - #46 false
+INFO  22:18:59,692 - #41 )
+INFO  22:18:59,692 - #37 ;
+INFO  22:18:59,692 - #48 deadAfterReturn
+INFO  22:18:59,692 - #40 (
+INFO  22:18:59,692 - #41 )
+INFO  22:18:59,693 - #37 ;
+INFO  22:18:59,694 - #45 }
+INFO  22:18:59,694 - #45 }
+INFO  22:18:59,701 - Program(
   ProgName(
-   FoldingAll
+   DceAll
   ) [ProgName]
   DeclarationList(
     DeclarationList(
@@ -280,8 +342,63 @@ INFO  23:28:17,361 - Program(
     ) [ConstDeclarations]
   ) [DeclarationList]
   MethodDeclarationList(
-    NoMethodDeclarations(
-    ) [NoMethodDeclarations]
+    MethodDeclarationList(
+      NoMethodDeclarations(
+      ) [NoMethodDeclarations]
+      MethodDeclaration(
+        MethodSignature(
+          VoidMethod(
+           deadAfterReturn
+          ) [VoidMethod]
+          NoFormalParams(
+          ) [NoFormalParams]
+        ) [MethodSignature]
+        NoLocalVariablesList(
+        ) [NoLocalVariablesList]
+        StatementsList(
+          StatementsList(
+            StatementsList(
+              NoStatements(
+              ) [NoStatements]
+              Print(
+                TermOperation(
+                  Term(
+                    Num(
+                     10
+                    ) [Num]
+                    NoMultiplicativeSequenceList(
+                    ) [NoMultiplicativeSequenceList]
+                  ) [Term]
+                  NoOperations(
+                  ) [NoOperations]
+                ) [TermOperation]
+                NoOptionalWidth(
+                ) [NoOptionalWidth]
+              ) [Print]
+            ) [StatementsList]
+            Return(
+              NoReturnValue(
+              ) [NoReturnValue]
+            ) [Return]
+          ) [StatementsList]
+          Print(
+            TermOperation(
+              Term(
+                Num(
+                 99
+                ) [Num]
+                NoMultiplicativeSequenceList(
+                ) [NoMultiplicativeSequenceList]
+              ) [Term]
+              NoOperations(
+              ) [NoOperations]
+            ) [TermOperation]
+            NoOptionalWidth(
+            ) [NoOptionalWidth]
+          ) [Print]
+        ) [StatementsList]
+      ) [MethodDeclaration]
+    ) [MethodDeclarationList]
     MethodDeclaration(
       MethodSignature(
         VoidMethod(
@@ -320,37 +437,148 @@ INFO  23:28:17,361 - Program(
                                 StatementsList(
                                   StatementsList(
                                     StatementsList(
-                                      NoStatements(
-                                      ) [NoStatements]
+                                      StatementsList(
+                                        StatementsList(
+                                          StatementsList(
+                                            NoStatements(
+                                            ) [NoStatements]
+                                            Print(
+                                              TermOperation(
+                                                Term(
+                                                  Num(
+                                                   2
+                                                  ) [Num]
+                                                  NoMultiplicativeSequenceList(
+                                                  ) [NoMultiplicativeSequenceList]
+                                                ) [Term]
+                                                AddOperations(
+                                                  NoOperations(
+                                                  ) [NoOperations]
+                                                  Plus(
+                                                  ) [Plus]
+                                                  Term(
+                                                    Num(
+                                                     3
+                                                    ) [Num]
+                                                    MultiplicativeOperations(
+                                                      NoMultiplicativeSequenceList(
+                                                      ) [NoMultiplicativeSequenceList]
+                                                      Mul(
+                                                      ) [Mul]
+                                                      Num(
+                                                       4
+                                                      ) [Num]
+                                                    ) [MultiplicativeOperations]
+                                                  ) [Term]
+                                                ) [AddOperations]
+                                              ) [TermOperation]
+                                              NoOptionalWidth(
+                                              ) [NoOptionalWidth]
+                                            ) [Print]
+                                          ) [StatementsList]
+                                          Print(
+                                            TermOperation(
+                                              Term(
+                                                ParenthesisExpression(
+                                                  TermOperation(
+                                                    Term(
+                                                      Num(
+                                                       2
+                                                      ) [Num]
+                                                      NoMultiplicativeSequenceList(
+                                                      ) [NoMultiplicativeSequenceList]
+                                                    ) [Term]
+                                                    AddOperations(
+                                                      NoOperations(
+                                                      ) [NoOperations]
+                                                      Plus(
+                                                      ) [Plus]
+                                                      Term(
+                                                        Num(
+                                                         3
+                                                        ) [Num]
+                                                        NoMultiplicativeSequenceList(
+                                                        ) [NoMultiplicativeSequenceList]
+                                                      ) [Term]
+                                                    ) [AddOperations]
+                                                  ) [TermOperation]
+                                                ) [ParenthesisExpression]
+                                                MultiplicativeOperations(
+                                                  NoMultiplicativeSequenceList(
+                                                  ) [NoMultiplicativeSequenceList]
+                                                  Mul(
+                                                  ) [Mul]
+                                                  Num(
+                                                   4
+                                                  ) [Num]
+                                                ) [MultiplicativeOperations]
+                                              ) [Term]
+                                              NoOperations(
+                                              ) [NoOperations]
+                                            ) [TermOperation]
+                                            NoOptionalWidth(
+                                            ) [NoOptionalWidth]
+                                          ) [Print]
+                                        ) [StatementsList]
+                                        Print(
+                                          NegativeTermOperation(
+                                            Term(
+                                              Num(
+                                               2
+                                              ) [Num]
+                                              NoMultiplicativeSequenceList(
+                                              ) [NoMultiplicativeSequenceList]
+                                            ) [Term]
+                                            AddOperations(
+                                              NoOperations(
+                                              ) [NoOperations]
+                                              Plus(
+                                              ) [Plus]
+                                              Term(
+                                                Num(
+                                                 3
+                                                ) [Num]
+                                                MultiplicativeOperations(
+                                                  NoMultiplicativeSequenceList(
+                                                  ) [NoMultiplicativeSequenceList]
+                                                  Mul(
+                                                  ) [Mul]
+                                                  Num(
+                                                   4
+                                                  ) [Num]
+                                                ) [MultiplicativeOperations]
+                                              ) [Term]
+                                            ) [AddOperations]
+                                          ) [NegativeTermOperation]
+                                          NoOptionalWidth(
+                                          ) [NoOptionalWidth]
+                                        ) [Print]
+                                      ) [StatementsList]
                                       Print(
                                         TermOperation(
                                           Term(
                                             Num(
-                                             2
+                                             100
                                             ) [Num]
-                                            NoMultiplicativeSequenceList(
-                                            ) [NoMultiplicativeSequenceList]
-                                          ) [Term]
-                                          AddOperations(
-                                            NoOperations(
-                                            ) [NoOperations]
-                                            Plus(
-                                            ) [Plus]
-                                            Term(
-                                              Num(
-                                               3
-                                              ) [Num]
+                                            MultiplicativeOperations(
                                               MultiplicativeOperations(
                                                 NoMultiplicativeSequenceList(
                                                 ) [NoMultiplicativeSequenceList]
-                                                Mul(
-                                                ) [Mul]
+                                                Div(
+                                                ) [Div]
                                                 Num(
                                                  4
                                                 ) [Num]
                                               ) [MultiplicativeOperations]
-                                            ) [Term]
-                                          ) [AddOperations]
+                                              Mod(
+                                              ) [Mod]
+                                              Num(
+                                               3
+                                              ) [Num]
+                                            ) [MultiplicativeOperations]
+                                          ) [Term]
+                                          NoOperations(
+                                          ) [NoOperations]
                                         ) [TermOperation]
                                         NoOptionalWidth(
                                         ) [NoOptionalWidth]
@@ -359,55 +587,69 @@ INFO  23:28:17,361 - Program(
                                     Print(
                                       TermOperation(
                                         Term(
-                                          ParenthesisExpression(
-                                            TermOperation(
-                                              Term(
-                                                Num(
-                                                 2
-                                                ) [Num]
-                                                NoMultiplicativeSequenceList(
-                                                ) [NoMultiplicativeSequenceList]
-                                              ) [Term]
-                                              AddOperations(
-                                                NoOperations(
-                                                ) [NoOperations]
-                                                Plus(
-                                                ) [Plus]
-                                                Term(
-                                                  Num(
-                                                   3
-                                                  ) [Num]
-                                                  NoMultiplicativeSequenceList(
-                                                  ) [NoMultiplicativeSequenceList]
-                                                ) [Term]
-                                              ) [AddOperations]
-                                            ) [TermOperation]
-                                          ) [ParenthesisExpression]
-                                          MultiplicativeOperations(
+                                          FuncCall(
+                                            Designator(
+                                              DesignatorName(
+                                               C
+                                              ) [DesignatorName]
+                                              NoAccessorList(
+                                              ) [NoAccessorList]
+                                            ) [Designator]
+                                            NoDesignatorParamsList(
+                                            ) [NoDesignatorParamsList]
+                                          ) [FuncCall]
+                                          NoMultiplicativeSequenceList(
+                                          ) [NoMultiplicativeSequenceList]
+                                        ) [Term]
+                                        AddOperations(
+                                          NoOperations(
+                                          ) [NoOperations]
+                                          Plus(
+                                          ) [Plus]
+                                          Term(
+                                            FuncCall(
+                                              Designator(
+                                                DesignatorName(
+                                                 D
+                                                ) [DesignatorName]
+                                                NoAccessorList(
+                                                ) [NoAccessorList]
+                                              ) [Designator]
+                                              NoDesignatorParamsList(
+                                              ) [NoDesignatorParamsList]
+                                            ) [FuncCall]
                                             NoMultiplicativeSequenceList(
                                             ) [NoMultiplicativeSequenceList]
-                                            Mul(
-                                            ) [Mul]
-                                            Num(
-                                             4
-                                            ) [Num]
-                                          ) [MultiplicativeOperations]
-                                        ) [Term]
-                                        NoOperations(
-                                        ) [NoOperations]
+                                          ) [Term]
+                                        ) [AddOperations]
                                       ) [TermOperation]
                                       NoOptionalWidth(
                                       ) [NoOptionalWidth]
                                     ) [Print]
                                   ) [StatementsList]
                                   Print(
-                                    NegativeTermOperation(
+                                    TermOperation(
                                       Term(
-                                        Num(
-                                         2
-                                        ) [Num]
-                                        NoMultiplicativeSequenceList(
-                                        ) [NoMultiplicativeSequenceList]
+                                        FuncCall(
+                                          Designator(
+                                            DesignatorName(
+                                             C
+                                            ) [DesignatorName]
+                                            NoAccessorList(
+                                            ) [NoAccessorList]
+                                          ) [Designator]
+                                          NoDesignatorParamsList(
+                                          ) [NoDesignatorParamsList]
+                                        ) [FuncCall]
+                                        MultiplicativeOperations(
+                                          NoMultiplicativeSequenceList(
+                                          ) [NoMultiplicativeSequenceList]
+                                          Mul(
+                                          ) [Mul]
+                                          Num(
+                                           2
+                                          ) [Num]
+                                        ) [MultiplicativeOperations]
                                       ) [Term]
                                       AddOperations(
                                         NoOperations(
@@ -416,53 +658,41 @@ INFO  23:28:17,361 - Program(
                                         ) [Plus]
                                         Term(
                                           Num(
-                                           3
+                                           1
                                           ) [Num]
-                                          MultiplicativeOperations(
-                                            NoMultiplicativeSequenceList(
-                                            ) [NoMultiplicativeSequenceList]
-                                            Mul(
-                                            ) [Mul]
-                                            Num(
-                                             4
-                                            ) [Num]
-                                          ) [MultiplicativeOperations]
+                                          NoMultiplicativeSequenceList(
+                                          ) [NoMultiplicativeSequenceList]
                                         ) [Term]
                                       ) [AddOperations]
-                                    ) [NegativeTermOperation]
+                                    ) [TermOperation]
                                     NoOptionalWidth(
                                     ) [NoOptionalWidth]
                                   ) [Print]
                                 ) [StatementsList]
-                                Print(
-                                  TermOperation(
-                                    Term(
-                                      Num(
-                                       100
-                                      ) [Num]
-                                      MultiplicativeOperations(
-                                        MultiplicativeOperations(
-                                          NoMultiplicativeSequenceList(
-                                          ) [NoMultiplicativeSequenceList]
-                                          Div(
-                                          ) [Div]
-                                          Num(
-                                           4
-                                          ) [Num]
-                                        ) [MultiplicativeOperations]
-                                        Mod(
-                                        ) [Mod]
+                                DesignatorStmt(
+                                  AssignOperation(
+                                    Designator(
+                                      DesignatorName(
+                                       x
+                                      ) [DesignatorName]
+                                      NoAccessorList(
+                                      ) [NoAccessorList]
+                                    ) [Designator]
+                                    AssignOperator(
+                                    ) [AssignOperator]
+                                    TermOperation(
+                                      Term(
                                         Num(
-                                         3
+                                         7
                                         ) [Num]
-                                      ) [MultiplicativeOperations]
-                                    ) [Term]
-                                    NoOperations(
-                                    ) [NoOperations]
-                                  ) [TermOperation]
-                                  NoOptionalWidth(
-                                  ) [NoOptionalWidth]
-                                ) [Print]
+                                        NoMultiplicativeSequenceList(
+                                        ) [NoMultiplicativeSequenceList]
+                                      ) [Term]
+                                      NoOperations(
+                                      ) [NoOperations]
+                                    ) [TermOperation]
+                                  ) [AssignOperation]
+                                ) [DesignatorStmt]
                               ) [StatementsList]
                               Print(
                                 TermOperation(
@@ -470,7 +700,7 @@ INFO  23:28:17,361 - Program(
                                     FuncCall(
                                       Designator(
                                         DesignatorName(
-                                         C
+                                         x
                                         ) [DesignatorName]
                                         NoAccessorList(
                                         ) [NoAccessorList]
@@ -487,19 +717,18 @@ INFO  23:28:17,361 - Program(
                                     Plus(
                                     ) [Plus]
                                     Term(
-                                      FuncCall(
-                                        Designator(
-                                          DesignatorName(
-                                           D
-                                          ) [DesignatorName]
-                                          NoAccessorList(
-                                          ) [NoAccessorList]
-                                        ) [Designator]
-                                        NoDesignatorParamsList(
-                                        ) [NoDesignatorParamsList]
-                                      ) [FuncCall]
-                                      NoMultiplicativeSequenceList(
-                                      ) [NoMultiplicativeSequenceList]
+                                      Num(
+                                       2
+                                      ) [Num]
+                                      MultiplicativeOperations(
+                                        NoMultiplicativeSequenceList(
+                                        ) [NoMultiplicativeSequenceList]
+                                        Mul(
+                                        ) [Mul]
+                                        Num(
+                                         3
+                                        ) [Num]
+                                      ) [MultiplicativeOperations]
                                     ) [Term]
                                   ) [AddOperations]
                                 ) [TermOperation]
@@ -513,7 +742,7 @@ INFO  23:28:17,361 - Program(
                                   FuncCall(
                                     Designator(
                                       DesignatorName(
-                                       C
+                                       x
                                       ) [DesignatorName]
                                       NoAccessorList(
                                       ) [NoAccessorList]
@@ -526,129 +755,44 @@ INFO  23:28:17,361 - Program(
                                     ) [NoMultiplicativeSequenceList]
                                     Mul(
                                     ) [Mul]
-                                    Num(
-                                     2
-                                    ) [Num]
+                                    ParenthesisExpression(
+                                      TermOperation(
+                                        Term(
+                                          Num(
+                                           1
+                                          ) [Num]
+                                          NoMultiplicativeSequenceList(
+                                          ) [NoMultiplicativeSequenceList]
+                                        ) [Term]
+                                        AddOperations(
+                                          NoOperations(
+                                          ) [NoOperations]
+                                          Plus(
+                                          ) [Plus]
+                                          Term(
+                                            Num(
+                                             1
+                                            ) [Num]
+                                            NoMultiplicativeSequenceList(
+                                            ) [NoMultiplicativeSequenceList]
+                                          ) [Term]
+                                        ) [AddOperations]
+                                      ) [TermOperation]
+                                    ) [ParenthesisExpression]
                                   ) [MultiplicativeOperations]
                                 ) [Term]
-                                AddOperations(
-                                  NoOperations(
-                                  ) [NoOperations]
-                                  Plus(
-                                  ) [Plus]
-                                  Term(
-                                    Num(
-                                     1
-                                    ) [Num]
-                                    NoMultiplicativeSequenceList(
-                                    ) [NoMultiplicativeSequenceList]
-                                  ) [Term]
-                                ) [AddOperations]
+                                NoOperations(
+                                ) [NoOperations]
                               ) [TermOperation]
                               NoOptionalWidth(
                               ) [NoOptionalWidth]
                             ) [Print]
                           ) [StatementsList]
-                          DesignatorStmt(
-                            AssignOperation(
-                              Designator(
-                                DesignatorName(
-                                 x
-                                ) [DesignatorName]
-                                NoAccessorList(
-                                ) [NoAccessorList]
-                              ) [Designator]
-                              AssignOperator(
-                              ) [AssignOperator]
-                              TermOperation(
-                                Term(
-                                  Num(
-                                   7
-                                  ) [Num]
-                                  NoMultiplicativeSequenceList(
-                                  ) [NoMultiplicativeSequenceList]
-                                ) [Term]
-                                NoOperations(
-                                ) [NoOperations]
-                              ) [TermOperation]
-                            ) [AssignOperation]
-                          ) [DesignatorStmt]
-                        ) [StatementsList]
-                        Print(
-                          TermOperation(
-                            Term(
-                              FuncCall(
-                                Designator(
-                                  DesignatorName(
-                                   x
-                                  ) [DesignatorName]
-                                  NoAccessorList(
-                                  ) [NoAccessorList]
-                                ) [Designator]
-                                NoDesignatorParamsList(
-                                ) [NoDesignatorParamsList]
-                              ) [FuncCall]
-                              NoMultiplicativeSequenceList(
-                              ) [NoMultiplicativeSequenceList]
-                            ) [Term]
-                            AddOperations(
-                              NoOperations(
-                              ) [NoOperations]
-                              Plus(
-                              ) [Plus]
-                              Term(
-                                Num(
-                                 2
-                                ) [Num]
-                                MultiplicativeOperations(
-                                  NoMultiplicativeSequenceList(
-                                  ) [NoMultiplicativeSequenceList]
-                                  Mul(
-                                  ) [Mul]
-                                  Num(
-                                   3
-                                  ) [Num]
-                                ) [MultiplicativeOperations]
-                              ) [Term]
-                            ) [AddOperations]
-                          ) [TermOperation]
-                          NoOptionalWidth(
-                          ) [NoOptionalWidth]
-                        ) [Print]
-                      ) [StatementsList]
-                      Print(
-                        TermOperation(
-                          Term(
-                            FuncCall(
-                              Designator(
-                                DesignatorName(
-                                 x
-                                ) [DesignatorName]
-                                NoAccessorList(
-                                ) [NoAccessorList]
-                              ) [Designator]
-                              NoDesignatorParamsList(
-                              ) [NoDesignatorParamsList]
-                            ) [FuncCall]
-                            MultiplicativeOperations(
-                              NoMultiplicativeSequenceList(
-                              ) [NoMultiplicativeSequenceList]
-                              Mul(
-                              ) [Mul]
-                              ParenthesisExpression(
-                                TermOperation(
-                                  Term(
-                                    Num(
-                                     1
-                                    ) [Num]
-                                    NoMultiplicativeSequenceList(
-                                    ) [NoMultiplicativeSequenceList]
-                                  ) [Term]
-                                  AddOperations(
-                                    NoOperations(
-                                    ) [NoOperations]
-                                    Plus(
-                                    ) [Plus]
+                          IfStatement(
+                            Condition(
+                              ConditionTerm(
+                                CondFactor(
+                                  TermOperation(
                                     Term(
                                       Num(
                                        1
@@ -656,35 +800,44 @@ INFO  23:28:17,361 - Program(
                                       NoMultiplicativeSequenceList(
                                       ) [NoMultiplicativeSequenceList]
                                     ) [Term]
-                                  ) [AddOperations]
-                                ) [TermOperation]
-                              ) [ParenthesisExpression]
-                            ) [MultiplicativeOperations]
-                          ) [Term]
-                          NoOperations(
-                          ) [NoOperations]
-                        ) [TermOperation]
-                        NoOptionalWidth(
-                        ) [NoOptionalWidth]
-                      ) [Print]
-                    ) [StatementsList]
-                    IfStatement(
-                      Condition(
-                        ConditionTerm(
-                          CondFactor(
-                            TermOperation(
-                              Term(
-                                Num(
-                                 1
-                                ) [Num]
-                                NoMultiplicativeSequenceList(
-                                ) [NoMultiplicativeSequenceList]
-                              ) [Term]
-                              AddOperations(
-                                NoOperations(
-                                ) [NoOperations]
-                                Plus(
-                                ) [Plus]
+                                    AddOperations(
+                                      NoOperations(
+                                      ) [NoOperations]
+                                      Plus(
+                                      ) [Plus]
+                                      Term(
+                                        Num(
+                                         1
+                                        ) [Num]
+                                        NoMultiplicativeSequenceList(
+                                        ) [NoMultiplicativeSequenceList]
+                                      ) [Term]
+                                    ) [AddOperations]
+                                  ) [TermOperation]
+                                  OptionalRelOperator(
+                                    Equal(
+                                    ) [Equal]
+                                    TermOperation(
+                                      Term(
+                                        Num(
+                                         2
+                                        ) [Num]
+                                        NoMultiplicativeSequenceList(
+                                        ) [NoMultiplicativeSequenceList]
+                                      ) [Term]
+                                      NoOperations(
+                                      ) [NoOperations]
+                                    ) [TermOperation]
+                                  ) [OptionalRelOperator]
+                                ) [CondFactor]
+                                NoCondFactors(
+                                ) [NoCondFactors]
+                              ) [ConditionTerm]
+                              NoCondTermList(
+                              ) [NoCondTermList]
+                            ) [Condition]
+                            Print(
+                              TermOperation(
                                 Term(
                                   Num(
                                    1
@@ -692,11 +845,76 @@ INFO  23:28:17,361 - Program(
                                   NoMultiplicativeSequenceList(
                                   ) [NoMultiplicativeSequenceList]
                                 ) [Term]
-                              ) [AddOperations]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                              NoOptionalWidth(
+                              ) [NoOptionalWidth]
+                            ) [Print]
+                            HasElse(
+                              Else(
+                              ) [Else]
+                              Print(
+                                TermOperation(
+                                  Term(
+                                    Num(
+                                     0
+                                    ) [Num]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  NoOperations(
+                                  ) [NoOperations]
+                                ) [TermOperation]
+                                NoOptionalWidth(
+                                ) [NoOptionalWidth]
+                              ) [Print]
+                            ) [HasElse]
+                          ) [IfStatement]
+                        ) [StatementsList]
+                        IfStatement(
+                          Condition(
+                            ConditionTerm(
+                              CondFactor(
+                                TermOperation(
+                                  Term(
+                                    Bool(
+                                     false
+                                    ) [Bool]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  NoOperations(
+                                  ) [NoOperations]
+                                ) [TermOperation]
+                                NoOptionalRelop(
+                                ) [NoOptionalRelop]
+                              ) [CondFactor]
+                              NoCondFactors(
+                              ) [NoCondFactors]
+                            ) [ConditionTerm]
+                            NoCondTermList(
+                            ) [NoCondTermList]
+                          ) [Condition]
+                          Print(
+                            TermOperation(
+                              Term(
+                                Num(
+                                 0
+                                ) [Num]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              NoOperations(
+                              ) [NoOperations]
                             ) [TermOperation]
-                            OptionalRelOperator(
-                              Equal(
-                              ) [Equal]
+                            NoOptionalWidth(
+                            ) [NoOptionalWidth]
+                          ) [Print]
+                          HasElse(
+                            Else(
+                            ) [Else]
+                            Print(
                               TermOperation(
                                 Term(
                                   Num(
@@ -708,19 +926,197 @@ INFO  23:28:17,361 - Program(
                                 NoOperations(
                                 ) [NoOperations]
                               ) [TermOperation]
-                            ) [OptionalRelOperator]
+                              NoOptionalWidth(
+                              ) [NoOptionalWidth]
+                            ) [Print]
+                          ) [HasElse]
+                        ) [IfStatement]
+                      ) [StatementsList]
+                      IfStatement(
+                        Condition(
+                          ConditionTerm(
+                            CondFactor(
+                              TermOperation(
+                                Term(
+                                  FuncCall(
+                                    Designator(
+                                      DesignatorName(
+                                       C
+                                      ) [DesignatorName]
+                                      NoAccessorList(
+                                      ) [NoAccessorList]
+                                    ) [Designator]
+                                    NoDesignatorParamsList(
+                                    ) [NoDesignatorParamsList]
+                                  ) [FuncCall]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                              OptionalRelOperator(
+                                Less(
+                                ) [Less]
+                                TermOperation(
+                                  Term(
+                                    FuncCall(
+                                      Designator(
+                                        DesignatorName(
+                                         D
+                                        ) [DesignatorName]
+                                        NoAccessorList(
+                                        ) [NoAccessorList]
+                                      ) [Designator]
+                                      NoDesignatorParamsList(
+                                      ) [NoDesignatorParamsList]
+                                    ) [FuncCall]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  NoOperations(
+                                  ) [NoOperations]
+                                ) [TermOperation]
+                              ) [OptionalRelOperator]
+                            ) [CondFactor]
+                            ConditionFactorsList(
+                              CondFactor(
+                                TermOperation(
+                                  Term(
+                                    FuncCall(
+                                      Designator(
+                                        DesignatorName(
+                                         T
+                                        ) [DesignatorName]
+                                        NoAccessorList(
+                                        ) [NoAccessorList]
+                                      ) [Designator]
+                                      NoDesignatorParamsList(
+                                      ) [NoDesignatorParamsList]
+                                    ) [FuncCall]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  NoOperations(
+                                  ) [NoOperations]
+                                ) [TermOperation]
+                                NoOptionalRelop(
+                                ) [NoOptionalRelop]
+                              ) [CondFactor]
+                              NoCondFactors(
+                              ) [NoCondFactors]
+                            ) [ConditionFactorsList]
+                          ) [ConditionTerm]
+                          NoCondTermList(
+                          ) [NoCondTermList]
+                        ) [Condition]
+                        Print(
+                          TermOperation(
+                            Term(
+                              Num(
+                               3
+                              ) [Num]
+                              NoMultiplicativeSequenceList(
+                              ) [NoMultiplicativeSequenceList]
+                            ) [Term]
+                            NoOperations(
+                            ) [NoOperations]
+                          ) [TermOperation]
+                          NoOptionalWidth(
+                          ) [NoOptionalWidth]
+                        ) [Print]
+                        HasElse(
+                          Else(
+                          ) [Else]
+                          Print(
+                            TermOperation(
+                              Term(
+                                Num(
+                                 0
+                                ) [Num]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              NoOperations(
+                              ) [NoOperations]
+                            ) [TermOperation]
+                            NoOptionalWidth(
+                            ) [NoOptionalWidth]
+                          ) [Print]
+                        ) [HasElse]
+                      ) [IfStatement]
+                    ) [StatementsList]
+                    IfStatement(
+                      Condition(
+                        ConditionTerm(
+                          CondFactor(
+                            TermOperation(
+                              Term(
+                                FuncCall(
+                                  Designator(
+                                    DesignatorName(
+                                     F
+                                    ) [DesignatorName]
+                                    NoAccessorList(
+                                    ) [NoAccessorList]
+                                  ) [Designator]
+                                  NoDesignatorParamsList(
+                                  ) [NoDesignatorParamsList]
+                                ) [FuncCall]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              NoOperations(
+                              ) [NoOperations]
+                            ) [TermOperation]
+                            NoOptionalRelop(
+                            ) [NoOptionalRelop]
                           ) [CondFactor]
                           NoCondFactors(
                           ) [NoCondFactors]
                         ) [ConditionTerm]
-                        NoCondTermList(
-                        ) [NoCondTermList]
+                        ConditionTermList(
+                          ConditionTerm(
+                            CondFactor(
+                              TermOperation(
+                                Term(
+                                  Num(
+                                   2
+                                  ) [Num]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                              OptionalRelOperator(
+                                Greater(
+                                ) [Greater]
+                                TermOperation(
+                                  Term(
+                                    Num(
+                                     10
+                                    ) [Num]
+                                    NoMultiplicativeSequenceList(
+                                    ) [NoMultiplicativeSequenceList]
+                                  ) [Term]
+                                  NoOperations(
+                                  ) [NoOperations]
+                                ) [TermOperation]
+                              ) [OptionalRelOperator]
+                            ) [CondFactor]
+                            NoCondFactors(
+                            ) [NoCondFactors]
+                          ) [ConditionTerm]
+                          NoCondTermList(
+                          ) [NoCondTermList]
+                        ) [ConditionTermList]
                       ) [Condition]
                       Print(
                         TermOperation(
                           Term(
                             Num(
-                             1
+                             0
                             ) [Num]
                             NoMultiplicativeSequenceList(
                             ) [NoMultiplicativeSequenceList]
@@ -738,7 +1134,7 @@ INFO  23:28:17,361 - Program(
                           TermOperation(
                             Term(
                               Num(
-                               0
+                               4
                               ) [Num]
                               NoMultiplicativeSequenceList(
                               ) [NoMultiplicativeSequenceList]
@@ -759,7 +1155,7 @@ INFO  23:28:17,361 - Program(
                           TermOperation(
                             Term(
                               Bool(
-                               false
+                               true
                               ) [Bool]
                               NoMultiplicativeSequenceList(
                               ) [NoMultiplicativeSequenceList]
@@ -773,14 +1169,56 @@ INFO  23:28:17,361 - Program(
                         NoCondFactors(
                         ) [NoCondFactors]
                       ) [ConditionTerm]
-                      NoCondTermList(
-                      ) [NoCondTermList]
+                      ConditionTermList(
+                        ConditionTerm(
+                          CondFactor(
+                            TermOperation(
+                              Term(
+                                FuncCall(
+                                  Designator(
+                                    DesignatorName(
+                                     x
+                                    ) [DesignatorName]
+                                    NoAccessorList(
+                                    ) [NoAccessorList]
+                                  ) [Designator]
+                                  NoDesignatorParamsList(
+                                  ) [NoDesignatorParamsList]
+                                ) [FuncCall]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              NoOperations(
+                              ) [NoOperations]
+                            ) [TermOperation]
+                            OptionalRelOperator(
+                              Equal(
+                              ) [Equal]
+                              TermOperation(
+                                Term(
+                                  Num(
+                                   0
+                                  ) [Num]
+                                  NoMultiplicativeSequenceList(
+                                  ) [NoMultiplicativeSequenceList]
+                                ) [Term]
+                                NoOperations(
+                                ) [NoOperations]
+                              ) [TermOperation]
+                            ) [OptionalRelOperator]
+                          ) [CondFactor]
+                          NoCondFactors(
+                          ) [NoCondFactors]
+                        ) [ConditionTerm]
+                        NoCondTermList(
+                        ) [NoCondTermList]
+                      ) [ConditionTermList]
                     ) [Condition]
                     Print(
                       TermOperation(
                         Term(
                           Num(
-                           0
+                           5
                           ) [Num]
                           NoMultiplicativeSequenceList(
                           ) [NoMultiplicativeSequenceList]
@@ -798,7 +1236,7 @@ INFO  23:28:17,361 - Program(
                         TermOperation(
                           Term(
                             Num(
-                             2
+                             0
                             ) [Num]
                             NoMultiplicativeSequenceList(
                             ) [NoMultiplicativeSequenceList]
@@ -818,46 +1256,17 @@ INFO  23:28:17,361 - Program(
                       CondFactor(
                         TermOperation(
                           Term(
-                            FuncCall(
-                              Designator(
-                                DesignatorName(
-                                 C
-                                ) [DesignatorName]
-                                NoAccessorList(
-                                ) [NoAccessorList]
-                              ) [Designator]
-                              NoDesignatorParamsList(
-                              ) [NoDesignatorParamsList]
-                            ) [FuncCall]
+                            Bool(
+                             false
+                            ) [Bool]
                             NoMultiplicativeSequenceList(
                             ) [NoMultiplicativeSequenceList]
                           ) [Term]
                           NoOperations(
                           ) [NoOperations]
                         ) [TermOperation]
-                        OptionalRelOperator(
-                          Less(
-                          ) [Less]
-                          TermOperation(
-                            Term(
-                              FuncCall(
-                                Designator(
-                                  DesignatorName(
-                                   D
-                                  ) [DesignatorName]
-                                  NoAccessorList(
-                                  ) [NoAccessorList]
-                                ) [Designator]
-                                NoDesignatorParamsList(
-                                ) [NoDesignatorParamsList]
-                              ) [FuncCall]
-                              NoMultiplicativeSequenceList(
-                              ) [NoMultiplicativeSequenceList]
-                            ) [Term]
-                            NoOperations(
-                            ) [NoOperations]
-                          ) [TermOperation]
-                        ) [OptionalRelOperator]
+                        NoOptionalRelop(
+                        ) [NoOptionalRelop]
                       ) [CondFactor]
                       ConditionFactorsList(
                         CondFactor(
@@ -866,7 +1275,7 @@ INFO  23:28:17,361 - Program(
                               FuncCall(
                                 Designator(
                                   DesignatorName(
-                                   T
+                                   x
                                   ) [DesignatorName]
                                   NoAccessorList(
                                   ) [NoAccessorList]
@@ -880,8 +1289,21 @@ INFO  23:28:17,361 - Program(
                             NoOperations(
                             ) [NoOperations]
                           ) [TermOperation]
-                          NoOptionalRelop(
-                          ) [NoOptionalRelop]
+                          OptionalRelOperator(
+                            Equal(
+                            ) [Equal]
+                            TermOperation(
+                              Term(
+                                Num(
+                                 0
+                                ) [Num]
+                                NoMultiplicativeSequenceList(
+                                ) [NoMultiplicativeSequenceList]
+                              ) [Term]
+                              NoOperations(
+                              ) [NoOperations]
+                            ) [TermOperation]
+                          ) [OptionalRelOperator]
                         ) [CondFactor]
                         NoCondFactors(
                         ) [NoCondFactors]
@@ -894,7 +1316,7 @@ INFO  23:28:17,361 - Program(
                     TermOperation(
                       Term(
                         Num(
-                         3
+                         0
                         ) [Num]
                         NoMultiplicativeSequenceList(
                         ) [NoMultiplicativeSequenceList]
@@ -912,7 +1334,7 @@ INFO  23:28:17,361 - Program(
                       TermOperation(
                         Term(
                           Num(
-                           0
+                           6
                           ) [Num]
                           NoMultiplicativeSequenceList(
                           ) [NoMultiplicativeSequenceList]
@@ -926,23 +1348,111 @@ INFO  23:28:17,361 - Program(
                   ) [HasElse]
                 ) [IfStatement]
               ) [StatementsList]
-              IfStatement(
+              DoWhile(
+                DoStart(
+                ) [DoStart]
+                Print(
+                  TermOperation(
+                    Term(
+                      Num(
+                       7
+                      ) [Num]
+                      NoMultiplicativeSequenceList(
+                      ) [NoMultiplicativeSequenceList]
+                    ) [Term]
+                    NoOperations(
+                    ) [NoOperations]
+                  ) [TermOperation]
+                  NoOptionalWidth(
+                  ) [NoOptionalWidth]
+                ) [Print]
+                While(
+                ) [While]
+                OptionalCondition(
+                  Condition(
+                    ConditionTerm(
+                      CondFactor(
+                        TermOperation(
+                          Term(
+                            Bool(
+                             false
+                            ) [Bool]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        NoOptionalRelop(
+                        ) [NoOptionalRelop]
+                      ) [CondFactor]
+                      NoCondFactors(
+                      ) [NoCondFactors]
+                    ) [ConditionTerm]
+                    NoCondTermList(
+                    ) [NoCondTermList]
+                  ) [Condition]
+                  NoAdditionalStatement(
+                  ) [NoAdditionalStatement]
+                ) [OptionalCondition]
+              ) [DoWhile]
+            ) [StatementsList]
+            DoWhile(
+              DoStart(
+              ) [DoStart]
+              NestedStatements(
+                StatementsList(
+                  StatementsList(
+                    StatementsList(
+                      NoStatements(
+                      ) [NoStatements]
+                      Print(
+                        TermOperation(
+                          Term(
+                            Num(
+                             8
+                            ) [Num]
+                            NoMultiplicativeSequenceList(
+                            ) [NoMultiplicativeSequenceList]
+                          ) [Term]
+                          NoOperations(
+                          ) [NoOperations]
+                        ) [TermOperation]
+                        NoOptionalWidth(
+                        ) [NoOptionalWidth]
+                      ) [Print]
+                    ) [StatementsList]
+                    Break(
+                    ) [Break]
+                  ) [StatementsList]
+                  Print(
+                    TermOperation(
+                      Term(
+                        Num(
+                         99
+                        ) [Num]
+                        NoMultiplicativeSequenceList(
+                        ) [NoMultiplicativeSequenceList]
+                      ) [Term]
+                      NoOperations(
+                      ) [NoOperations]
+                    ) [TermOperation]
+                    NoOptionalWidth(
+                    ) [NoOptionalWidth]
+                  ) [Print]
+                ) [StatementsList]
+              ) [NestedStatements]
+              While(
+              ) [While]
+              OptionalCondition(
                 Condition(
                   ConditionTerm(
                     CondFactor(
                       TermOperation(
                         Term(
-                          FuncCall(
-                            Designator(
-                              DesignatorName(
-                               F
-                              ) [DesignatorName]
-                              NoAccessorList(
-                              ) [NoAccessorList]
-                            ) [Designator]
-                            NoDesignatorParamsList(
-                            ) [NoDesignatorParamsList]
-                          ) [FuncCall]
+                          Bool(
+                           true
+                          ) [Bool]
                           NoMultiplicativeSequenceList(
                           ) [NoMultiplicativeSequenceList]
                         ) [Term]
@@ -955,48 +1465,47 @@ INFO  23:28:17,361 - Program(
                     NoCondFactors(
                     ) [NoCondFactors]
                   ) [ConditionTerm]
-                  ConditionTermList(
-                    ConditionTerm(
-                      CondFactor(
-                        TermOperation(
-                          Term(
-                            Num(
-                             2
-                            ) [Num]
-                            NoMultiplicativeSequenceList(
-                            ) [NoMultiplicativeSequenceList]
-                          ) [Term]
-                          NoOperations(
-                          ) [NoOperations]
-                        ) [TermOperation]
-                        OptionalRelOperator(
-                          Greater(
-                          ) [Greater]
-                          TermOperation(
-                            Term(
-                              Num(
-                               10
-                              ) [Num]
-                              NoMultiplicativeSequenceList(
-                              ) [NoMultiplicativeSequenceList]
-                            ) [Term]
-                            NoOperations(
-                            ) [NoOperations]
-                          ) [TermOperation]
-                        ) [OptionalRelOperator]
-                      ) [CondFactor]
-                      NoCondFactors(
-                      ) [NoCondFactors]
-                    ) [ConditionTerm]
-                    NoCondTermList(
-                    ) [NoCondTermList]
-                  ) [ConditionTermList]
+                  NoCondTermList(
+                  ) [NoCondTermList]
                 ) [Condition]
+                NoAdditionalStatement(
+                ) [NoAdditionalStatement]
+              ) [OptionalCondition]
+            ) [DoWhile]
+          ) [StatementsList]
+          DoWhile(
+            DoStart(
+            ) [DoStart]
+            NestedStatements(
+              StatementsList(
+                StatementsList(
+                  StatementsList(
+                    NoStatements(
+                    ) [NoStatements]
+                    Print(
+                      TermOperation(
+                        Term(
+                          Num(
+                           9
+                          ) [Num]
+                          NoMultiplicativeSequenceList(
+                          ) [NoMultiplicativeSequenceList]
+                        ) [Term]
+                        NoOperations(
+                        ) [NoOperations]
+                      ) [TermOperation]
+                      NoOptionalWidth(
+                      ) [NoOptionalWidth]
+                    ) [Print]
+                  ) [StatementsList]
+                  Continue(
+                  ) [Continue]
+                ) [StatementsList]
                 Print(
                   TermOperation(
                     Term(
                       Num(
-                       0
+                       99
                       ) [Num]
                       NoMultiplicativeSequenceList(
                       ) [NoMultiplicativeSequenceList]
@@ -1007,35 +1516,18 @@ INFO  23:28:17,361 - Program(
                   NoOptionalWidth(
                   ) [NoOptionalWidth]
                 ) [Print]
-                HasElse(
-                  Else(
-                  ) [Else]
-                  Print(
-                    TermOperation(
-                      Term(
-                        Num(
-                         4
-                        ) [Num]
-                        NoMultiplicativeSequenceList(
-                        ) [NoMultiplicativeSequenceList]
-                      ) [Term]
-                      NoOperations(
-                      ) [NoOperations]
-                    ) [TermOperation]
-                    NoOptionalWidth(
-                    ) [NoOptionalWidth]
-                  ) [Print]
-                ) [HasElse]
-              ) [IfStatement]
-            ) [StatementsList]
-            IfStatement(
+              ) [StatementsList]
+            ) [NestedStatements]
+            While(
+            ) [While]
+            OptionalCondition(
               Condition(
                 ConditionTerm(
                   CondFactor(
                     TermOperation(
                       Term(
                         Bool(
-                         true
+                         false
                         ) [Bool]
                         NoMultiplicativeSequenceList(
                         ) [NoMultiplicativeSequenceList]
@@ -1049,245 +1541,41 @@ INFO  23:28:17,361 - Program(
                   NoCondFactors(
                   ) [NoCondFactors]
                 ) [ConditionTerm]
-                ConditionTermList(
-                  ConditionTerm(
-                    CondFactor(
-                      TermOperation(
-                        Term(
-                          FuncCall(
-                            Designator(
-                              DesignatorName(
-                               x
-                              ) [DesignatorName]
-                              NoAccessorList(
-                              ) [NoAccessorList]
-                            ) [Designator]
-                            NoDesignatorParamsList(
-                            ) [NoDesignatorParamsList]
-                          ) [FuncCall]
-                          NoMultiplicativeSequenceList(
-                          ) [NoMultiplicativeSequenceList]
-                        ) [Term]
-                        NoOperations(
-                        ) [NoOperations]
-                      ) [TermOperation]
-                      OptionalRelOperator(
-                        Equal(
-                        ) [Equal]
-                        TermOperation(
-                          Term(
-                            Num(
-                             0
-                            ) [Num]
-                            NoMultiplicativeSequenceList(
-                            ) [NoMultiplicativeSequenceList]
-                          ) [Term]
-                          NoOperations(
-                          ) [NoOperations]
-                        ) [TermOperation]
-                      ) [OptionalRelOperator]
-                    ) [CondFactor]
-                    NoCondFactors(
-                    ) [NoCondFactors]
-                  ) [ConditionTerm]
-                  NoCondTermList(
-                  ) [NoCondTermList]
-                ) [ConditionTermList]
+                NoCondTermList(
+                ) [NoCondTermList]
               ) [Condition]
-              Print(
-                TermOperation(
-                  Term(
-                    Num(
-                     5
-                    ) [Num]
-                    NoMultiplicativeSequenceList(
-                    ) [NoMultiplicativeSequenceList]
-                  ) [Term]
-                  NoOperations(
-                  ) [NoOperations]
-                ) [TermOperation]
-                NoOptionalWidth(
-                ) [NoOptionalWidth]
-              ) [Print]
-              HasElse(
-                Else(
-                ) [Else]
-                Print(
-                  TermOperation(
-                    Term(
-                      Num(
-                       0
-                      ) [Num]
-                      NoMultiplicativeSequenceList(
-                      ) [NoMultiplicativeSequenceList]
-                    ) [Term]
-                    NoOperations(
-                    ) [NoOperations]
-                  ) [TermOperation]
-                  NoOptionalWidth(
-                  ) [NoOptionalWidth]
-                ) [Print]
-              ) [HasElse]
-            ) [IfStatement]
-          ) [StatementsList]
-          IfStatement(
-            Condition(
-              ConditionTerm(
-                CondFactor(
-                  TermOperation(
-                    Term(
-                      Bool(
-                       false
-                      ) [Bool]
-                      NoMultiplicativeSequenceList(
-                      ) [NoMultiplicativeSequenceList]
-                    ) [Term]
-                    NoOperations(
-                    ) [NoOperations]
-                  ) [TermOperation]
-                  NoOptionalRelop(
-                  ) [NoOptionalRelop]
-                ) [CondFactor]
-                ConditionFactorsList(
-                  CondFactor(
-                    TermOperation(
-                      Term(
-                        FuncCall(
-                          Designator(
-                            DesignatorName(
-                             x
-                            ) [DesignatorName]
-                            NoAccessorList(
-                            ) [NoAccessorList]
-                          ) [Designator]
-                          NoDesignatorParamsList(
-                          ) [NoDesignatorParamsList]
-                        ) [FuncCall]
-                        NoMultiplicativeSequenceList(
-                        ) [NoMultiplicativeSequenceList]
-                      ) [Term]
-                      NoOperations(
-                      ) [NoOperations]
-                    ) [TermOperation]
-                    OptionalRelOperator(
-                      Equal(
-                      ) [Equal]
-                      TermOperation(
-                        Term(
-                          Num(
-                           0
-                          ) [Num]
-                          NoMultiplicativeSequenceList(
-                          ) [NoMultiplicativeSequenceList]
-                        ) [Term]
-                        NoOperations(
-                        ) [NoOperations]
-                      ) [TermOperation]
-                    ) [OptionalRelOperator]
-                  ) [CondFactor]
-                  NoCondFactors(
-                  ) [NoCondFactors]
-                ) [ConditionFactorsList]
-              ) [ConditionTerm]
-              NoCondTermList(
-              ) [NoCondTermList]
-            ) [Condition]
-            Print(
-              TermOperation(
-                Term(
-                  Num(
-                   0
-                  ) [Num]
-                  NoMultiplicativeSequenceList(
-                  ) [NoMultiplicativeSequenceList]
-                ) [Term]
-                NoOperations(
-                ) [NoOperations]
-              ) [TermOperation]
-              NoOptionalWidth(
-              ) [NoOptionalWidth]
-            ) [Print]
-            HasElse(
-              Else(
-              ) [Else]
-              Print(
-                TermOperation(
-                  Term(
-                    Num(
-                     6
-                    ) [Num]
-                    NoMultiplicativeSequenceList(
-                    ) [NoMultiplicativeSequenceList]
-                  ) [Term]
-                  NoOperations(
-                  ) [NoOperations]
-                ) [TermOperation]
-                NoOptionalWidth(
-                ) [NoOptionalWidth]
-              ) [Print]
-            ) [HasElse]
-          ) [IfStatement]
+              NoAdditionalStatement(
+              ) [NoAdditionalStatement]
+            ) [OptionalCondition]
+          ) [DoWhile]
         ) [StatementsList]
-        DoWhile(
-          DoStart(
-          ) [DoStart]
-          Print(
-            TermOperation(
-              Term(
-                Num(
-                 7
-                ) [Num]
-                NoMultiplicativeSequenceList(
-                ) [NoMultiplicativeSequenceList]
-              ) [Term]
-              NoOperations(
-              ) [NoOperations]
-            ) [TermOperation]
-            NoOptionalWidth(
-            ) [NoOptionalWidth]
-          ) [Print]
-          While(
-          ) [While]
-          OptionalCondition(
-            Condition(
-              ConditionTerm(
-                CondFactor(
-                  TermOperation(
-                    Term(
-                      Bool(
-                       false
-                      ) [Bool]
-                      NoMultiplicativeSequenceList(
-                      ) [NoMultiplicativeSequenceList]
-                    ) [Term]
-                    NoOperations(
-                    ) [NoOperations]
-                  ) [TermOperation]
-                  NoOptionalRelop(
-                  ) [NoOptionalRelop]
-                ) [CondFactor]
-                NoCondFactors(
-                ) [NoCondFactors]
-              ) [ConditionTerm]
-              NoCondTermList(
-              ) [NoCondTermList]
-            ) [Condition]
-            NoAdditionalStatement(
-            ) [NoAdditionalStatement]
-          ) [OptionalCondition]
-        ) [DoWhile]
+        DesignatorStmt(
+          DesignatorWithParams(
+            Designator(
+              DesignatorName(
+               deadAfterReturn
+              ) [DesignatorName]
+              NoAccessorList(
+              ) [NoAccessorList]
+            ) [Designator]
+            NoActualParams(
+            ) [NoActualParams]
+          ) [DesignatorWithParams]
+        ) [DesignatorStmt]
       ) [StatementsList]
     ) [MethodDeclaration]
   ) [MethodDeclarationList]
 ) [Program]
 ===================================
-INFO  23:28:17,374 - Deklarisana konstanta C na liniji 3
-INFO  23:28:17,374 - Deklarisana konstanta D na liniji 3
-INFO  23:28:17,375 - Deklarisana konstanta T na liniji 4
-INFO  23:28:17,375 - Deklarisana konstanta F na liniji 4
-INFO  23:28:17,375 - Definicija funkcije main, povratnog tipa void na liniji 7
-INFO  23:28:17,376 - Deklarisana lokalna promenljiva x na liniji 8
-INFO  23:28:17,377 - Dodela vrednosti promenljivoj x na liniji 21
+INFO  22:18:59,721 - Deklarisana konstanta C na liniji 3
+INFO  22:18:59,721 - Deklarisana konstanta D na liniji 3
+INFO  22:18:59,721 - Deklarisana konstanta T na liniji 4
+INFO  22:18:59,721 - Deklarisana konstanta F na liniji 4
+INFO  22:18:59,721 - Definicija funkcije deadAfterReturn, povratnog tipa void na liniji 7
+INFO  22:18:59,721 - Definicija funkcije main, povratnog tipa void na liniji 13
+INFO  22:18:59,722 - Deklarisana lokalna promenljiva x na liniji 14
+INFO  22:18:59,722 - Dodela vrednosti promenljivoj x na liniji 31
+INFO  22:18:59,723 - Pronadjen poziv funkcije deadAfterReturn na liniji 91
 =====================SYMBOL TABLE DUMP=========================
 Type int: int, -1, -1 
 Type char: char, -1, -1 
@@ -1312,14 +1600,16 @@ Meth addAll: notype, 0, 2
    Var a: set, 0, 1 
    Var b: Arr of int, 1, 1 
 
-Prog FoldingAll: notype, 0, 0 
+Prog DceAll: notype, 0, 0 
    Con C: int, 5, 0 
    Con D: int, 10, 0 
    Con T: bool, 1, 0 
    Con F: bool, 0, 0 
+   Meth deadAfterReturn: notype, 0, 0 
+
    Meth main: notype, 0, 0 
       Var x: int, 0, 1 
 
 
 
-INFO  23:28:17,389 - Generisanje koda uspesno zavrseno!
+INFO  22:18:59,739 - Generisanje koda uspesno zavrseno!

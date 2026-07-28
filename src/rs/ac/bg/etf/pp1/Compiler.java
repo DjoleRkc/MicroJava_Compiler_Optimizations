@@ -47,6 +47,7 @@ class Compiler {
 			// Constant folding (i kasnije ostale optimizacije) - posle semantike, pre codegen-a
 			Optimizer optimizer = new Optimizer();
 			prog.traverseBottomUp(optimizer);
+			optimizer.markDeadCode(prog);
 
 			File outputFile = new File(args[0].replace(".mj", ".obj"));
 			Code.dataSize = v.nVars;

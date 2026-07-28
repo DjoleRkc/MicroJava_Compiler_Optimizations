@@ -1,0 +1,365 @@
+disasm:
+     [java] codeSize=341
+     [java] dataSize=0
+     [java] mainPC=220
+     [java] 0: enter 1 1
+     [java] 3: load_0
+     [java] 4: exit
+     [java] 5: return
+     [java] 6: enter 1 1
+     [java] 9: load_0
+     [java] 10: exit
+     [java] 11: return
+     [java] 12: enter 1 1
+     [java] 15: load_0
+     [java] 16: arraylength
+     [java] 17: exit
+     [java] 18: return
+     [java] 19: enter 2 3
+     [java] 22: load_0
+     [java] 23: load_0
+     [java] 24: arraylength
+     [java] 25: const_1
+     [java] 26: sub
+     [java] 27: aload
+     [java] 28: load_0
+     [java] 29: arraylength
+     [java] 30: const_1
+     [java] 31: sub
+     [java] 32: jge 64 (=96)
+     [java] 35: const_0
+     [java] 36: store_2
+     [java] 37: load_2
+     [java] 38: load_0
+     [java] 39: load_0
+     [java] 40: arraylength
+     [java] 41: const_1
+     [java] 42: sub
+     [java] 43: aload
+     [java] 44: jgt 18 (=62)
+     [java] 47: load_0
+     [java] 48: load_2
+     [java] 49: aload
+     [java] 50: load_1
+     [java] 51: jne 5 (=56)
+     [java] 54: exit
+     [java] 55: return
+     [java] 56: inc 2,1
+     [java] 59: jmp -22 (=37)
+     [java] 62: load_1
+     [java] 63: const_0
+     [java] 64: jeq 14 (=78)
+     [java] 67: load_0
+     [java] 68: load_0
+     [java] 69: arraylength
+     [java] 70: const_1
+     [java] 71: sub
+     [java] 72: load_0
+     [java] 73: dup_x1
+     [java] 74: pop
+     [java] 75: aload
+     [java] 76: load_1
+     [java] 77: astore
+     [java] 78: load_0
+     [java] 79: load_0
+     [java] 80: arraylength
+     [java] 81: const_1
+     [java] 82: sub
+     [java] 83: aload
+     [java] 84: const_1
+     [java] 85: add
+     [java] 86: load_0
+     [java] 87: dup_x1
+     [java] 88: pop
+     [java] 89: load_0
+     [java] 90: arraylength
+     [java] 91: const_1
+     [java] 92: sub
+     [java] 93: dup_x1
+     [java] 94: pop
+     [java] 95: astore
+     [java] 96: exit
+     [java] 97: return
+     [java] 98: enter 2 3
+     [java] 101: const_0
+     [java] 102: store_2
+     [java] 103: load_2
+     [java] 104: load_1
+     [java] 105: arraylength
+     [java] 106: jge 29 (=135)
+     [java] 109: load_0
+     [java] 110: load_0
+     [java] 111: arraylength
+     [java] 112: const_1
+     [java] 113: sub
+     [java] 114: aload
+     [java] 115: load_0
+     [java] 116: arraylength
+     [java] 117: const_1
+     [java] 118: sub
+     [java] 119: jge 16 (=135)
+     [java] 122: load_0
+     [java] 123: load_1
+     [java] 124: load_2
+     [java] 125: aload
+     [java] 126: call -107 (=19)
+     [java] 129: inc 2,1
+     [java] 132: jmp -29 (=103)
+     [java] 135: exit
+     [java] 136: return
+     [java] 137: enter 1 2
+     [java] 140: store_0
+     [java] 141: const_0
+     [java] 142: store_1
+     [java] 143: load_0
+     [java] 144: load_0
+     [java] 145: arraylength
+     [java] 146: const_1
+     [java] 147: sub
+     [java] 148: aload
+     [java] 149: load_1
+     [java] 150: dup_x1
+     [java] 151: pop
+     [java] 152: jge 22 (=174)
+     [java] 155: load_0
+     [java] 156: load_1
+     [java] 157: aload
+     [java] 158: const_0
+     [java] 159: print
+     [java] 160: const 32
+     [java] 165: const_0
+     [java] 166: bprint
+     [java] 167: load_1
+     [java] 168: const_1
+     [java] 169: add
+     [java] 170: store_1
+     [java] 171: jmp -28 (=143)
+     [java] 174: exit
+     [java] 175: return
+     [java] 176: enter 1 3
+     [java] 179: const_0
+     [java] 180: store_1
+     [java] 181: const_0
+     [java] 182: store_2
+     [java] 183: load_2
+     [java] 184: load_0
+     [java] 185: arraylength
+     [java] 186: jge 19 (=205)
+     [java] 189: load_1
+     [java] 190: load_0
+     [java] 191: load_2
+     [java] 192: aload
+     [java] 193: call 0 (=193)
+     [java] 196: add
+     [java] 197: store_1
+     [java] 198: load_2
+     [java] 199: const_1
+     [java] 200: add
+     [java] 201: store_2
+     [java] 202: jmp -19 (=183)
+     [java] 205: load_1
+     [java] 206: exit
+     [java] 207: return
+     [java] 208: enter 0 0
+     [java] 211: const 10
+     [java] 216: const_0
+     [java] 217: print
+     [java] 218: exit
+     [java] 219: return
+     [java] 220: enter 0 1
+     [java] 223: const 14
+     [java] 228: const_0
+     [java] 229: print
+     [java] 230: const 20
+     [java] 235: const_0
+     [java] 236: print
+     [java] 237: const 10
+     [java] 242: const_0
+     [java] 243: print
+     [java] 244: const_1
+     [java] 245: const_0
+     [java] 246: print
+     [java] 247: const 15
+     [java] 252: const_0
+     [java] 253: print
+     [java] 254: const 11
+     [java] 259: const_0
+     [java] 260: print
+     [java] 261: const 7
+     [java] 266: store_0
+     [java] 267: load_0
+     [java] 268: const 6
+     [java] 273: add
+     [java] 274: const_0
+     [java] 275: print
+     [java] 276: load_0
+     [java] 277: const_2
+     [java] 278: mul
+     [java] 279: const_0
+     [java] 280: print
+     [java] 281: const_1
+     [java] 282: const_0
+     [java] 283: print
+     [java] 284: const_2
+     [java] 285: const_0
+     [java] 286: print
+     [java] 287: const_3
+     [java] 288: const_0
+     [java] 289: print
+     [java] 290: const_4
+     [java] 291: const_0
+     [java] 292: print
+     [java] 293: const_5
+     [java] 294: const_0
+     [java] 295: print
+     [java] 296: const 6
+     [java] 301: const_0
+     [java] 302: print
+     [java] 303: const 7
+     [java] 308: const_0
+     [java] 309: print
+     [java] 310: jmp 3 (=313)
+     [java] 313: const 8
+     [java] 318: const_0
+     [java] 319: print
+     [java] 320: jmp 3 (=323)
+     [java] 323: const 9
+     [java] 328: const_0
+     [java] 329: print
+     [java] 330: jmp 3 (=333)
+     [java] 333: jmp 3 (=336)
+     [java] 336: call -128 (=208)
+     [java] 339: exit
+     [java] 340: return
+debug:
+run:
+     [java] 14201011511131412345678910
+     [java] Completion took 0 ms
+BUILD SUCCESSFUL
+Total time: 574 milliseconds
+
+
+
+; ========== deadAfterReturn (PC=208) ==========
+; void deadAfterReturn() { print(10); return; print(99); }
+208: enter 0 0
+211: const 10              ; [DCE korak 1] živi print
+216: const_0
+217: print
+218: exit                  ; [DCE] jedan exit/return posle live return
+219: return
+                           ; nema print(99) - mrtvo posle return
+
+
+; ========== main (mainPC=220) ==========
+220: enter 0 1
+
+; --- print(2+3*4) -> 14 ---
+223: const 14              ; [FOLD] nema const 2/3/4, mul, add
+228: const_0
+229: print
+
+; --- print((2+3)*4) -> 20 ---
+230: const 20              ; [FOLD]
+235: const_0
+236: print
+
+; --- print(-2+3*4) -> 10 ---
+237: const 10              ; [FOLD]
+242: const_0
+243: print
+
+; --- print(100/4%3) -> 1 ---
+244: const_1               ; [FOLD]
+245: const_0
+246: print
+
+; --- print(C+D) -> 15 ---
+247: const 15              ; [FOLD]
+252: const_0
+253: print
+
+; --- print(C*2+1) -> 11 ---
+254: const 11              ; [FOLD]
+259: const_0
+260: print
+
+; --- x=7; print(x+2*3); print(x*(1+1)) ---
+261: const 7
+266: store_0
+267: load_0
+268: const 6               ; [FOLD] samo 2*3
+273: add
+274: const_0
+275: print                 ; 13
+276: load_0
+277: const_2               ; [FOLD] (1+1)
+278: mul
+279: const_0
+280: print                 ; 14
+
+; --- if (1+1==2) print(1); else print(0); ---
+; folding_all: const_1 print + jmp preko else + mrtav print(0)
+; dce_all:     samo živa grana
+281: const_1               ; [FOLD+DCE korak 2] nema ==, nema else, nema jmp
+282: const_0
+283: print
+
+; --- if (false) print(0); else print(2); ---
+; folding_all: jmp na else + mrtav then + jmp skelet
+; dce_all:     samo else
+284: const_2               ; [DCE korak 2] then nestao; nema jmp skeleta
+285: const_0
+286: print
+
+; --- if (C<D && T) print(3); else print(0); ---
+287: const_3               ; [FOLD+DCE] uslov true -> samo then
+288: const_0
+289: print
+
+; --- if (F || 2>10) print(0); else print(4); ---
+290: const_4               ; [FOLD+DCE] uslov false -> samo else
+291: const_0
+292: print
+
+; --- if (true || x==0) print(5); else print(0); ---
+293: const_5               ; [FOLD+DCE] short-circuit; x se NE računa
+294: const_0
+295: print
+
+; --- if (false && x==0) print(0); else print(6); ---
+296: const 6               ; [FOLD+DCE] false && …; x se NE računa
+301: const_0
+302: print
+
+; --- do print(7); while (false); ---
+; folding_all: print 7 + jmp izlaz + jmp -10 nazad (mrtav back-edge)
+; dce_all:     print 7; nema jmp nazad (korak 4)
+303: const 7
+308: const_0
+309: print
+310: jmp 3 (=313)          ; [FOLD] const false -> forward izlaz
+                           ; [DCE korak 4] nema jmp -10 (=DoStart) kao u folding_all na liniji koda 346
+
+; --- do { print(8); break; print(99); } while (true); ---
+313: const 8               ; [DCE korak 3] živi print
+318: const_0
+319: print
+320: jmp 3 (=323)          ; [DCE] break -> izlaz; nema back-edge (korak 4)
+                           ; nema print(99)
+
+; --- do { print(9); continue; print(99); } while (false); ---
+323: const 9               ; [DCE korak 3] živi print
+328: const_0
+329: print
+330: jmp 3 (=333)          ; continue -> mesto provere uslova
+333: jmp 3 (=336)          ; [FOLD] while(false) -> izlaz
+                           ; [DCE korak 4] nema jmp nazad; nema print(99)
+
+; --- deadAfterReturn(); ---
+336: call -128 (=208)      ; [DCE korak 1] bez print(99)
+
+339: exit
+340: return
+
+; Očekivani ispis: 14201011511131412345678910

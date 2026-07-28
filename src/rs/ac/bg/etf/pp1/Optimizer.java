@@ -1,11 +1,16 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import rs.ac.bg.etf.pp1.ast.AddOperations;
 import rs.ac.bg.etf.pp1.ast.Addop;
 import rs.ac.bg.etf.pp1.ast.Bool;
+import rs.ac.bg.etf.pp1.ast.Break;
 import rs.ac.bg.etf.pp1.ast.Char;
 import rs.ac.bg.etf.pp1.ast.CondFact;
 import rs.ac.bg.etf.pp1.ast.CondFactList;
@@ -16,16 +21,21 @@ import rs.ac.bg.etf.pp1.ast.Condition;
 import rs.ac.bg.etf.pp1.ast.ConditionFactorsList;
 import rs.ac.bg.etf.pp1.ast.ConditionTerm;
 import rs.ac.bg.etf.pp1.ast.ConditionTermList;
+import rs.ac.bg.etf.pp1.ast.Continue;
 import rs.ac.bg.etf.pp1.ast.Designator;
 import rs.ac.bg.etf.pp1.ast.Div;
+import rs.ac.bg.etf.pp1.ast.DoWhile;
 import rs.ac.bg.etf.pp1.ast.Equal;
 import rs.ac.bg.etf.pp1.ast.Expr;
 import rs.ac.bg.etf.pp1.ast.Factor;
 import rs.ac.bg.etf.pp1.ast.FuncCall;
 import rs.ac.bg.etf.pp1.ast.Greater;
 import rs.ac.bg.etf.pp1.ast.GreaterOrEqual;
+import rs.ac.bg.etf.pp1.ast.HasElse;
+import rs.ac.bg.etf.pp1.ast.IfStatement;
 import rs.ac.bg.etf.pp1.ast.Less;
 import rs.ac.bg.etf.pp1.ast.LessOrEqual;
+import rs.ac.bg.etf.pp1.ast.MethodDeclaration;
 import rs.ac.bg.etf.pp1.ast.Minus;
 import rs.ac.bg.etf.pp1.ast.Mod;
 import rs.ac.bg.etf.pp1.ast.Mul;
@@ -33,6 +43,7 @@ import rs.ac.bg.etf.pp1.ast.Mulop;
 import rs.ac.bg.etf.pp1.ast.MultiplicativeOperations;
 import rs.ac.bg.etf.pp1.ast.MultiplicativeSequenceList;
 import rs.ac.bg.etf.pp1.ast.NegativeTermOperation;
+import rs.ac.bg.etf.pp1.ast.NestedStatements;
 import rs.ac.bg.etf.pp1.ast.NoDesignatorParamsList;
 import rs.ac.bg.etf.pp1.ast.NoMultiplicativeSequenceList;
 import rs.ac.bg.etf.pp1.ast.NoOperations;
@@ -40,10 +51,17 @@ import rs.ac.bg.etf.pp1.ast.NoOptionalRelop;
 import rs.ac.bg.etf.pp1.ast.NotEqual;
 import rs.ac.bg.etf.pp1.ast.Num;
 import rs.ac.bg.etf.pp1.ast.OperationList;
+import rs.ac.bg.etf.pp1.ast.OptionalCondition;
+import rs.ac.bg.etf.pp1.ast.OptionalConditionList;
 import rs.ac.bg.etf.pp1.ast.OptionalRelOperator;
 import rs.ac.bg.etf.pp1.ast.ParenthesisExpression;
 import rs.ac.bg.etf.pp1.ast.Plus;
+import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.Relop;
+import rs.ac.bg.etf.pp1.ast.Return;
+import rs.ac.bg.etf.pp1.ast.Statement;
+import rs.ac.bg.etf.pp1.ast.StatementList;
+import rs.ac.bg.etf.pp1.ast.StatementsList;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.Term;
 import rs.ac.bg.etf.pp1.ast.TermOperation;
@@ -51,13 +69,13 @@ import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.symboltable.concepts.Obj;
 
 /**
- * Optimizacioni prolaz posle semantičke analize — constant folding.
- * Korak 1: literali.
- * Korak 2: folding *, /, % u Term.
- * Korak 3: folding +, - i unarni minus u Expr.
- * Korak 4: zagrade — ParenthesisExpression.
- * Korak 5: simboličke konstante (Obj.Con) kao Factor.
- * Korak 6: uslovi — Relop, &&, ||.
+ * Optimizacioni prolaz posle semantičke analize.
+ * - Constant folding (koraci 1–6)
+ * - Dead code:
+ *   korak 1 = naredbe posle return u istom bloku
+ *   korak 2 = mrtve then/else grane kod const Condition
+ *   korak 3 = naredbe posle break/continue u istom bloku
+ *   korak 4 = mrtav back-edge do-while petlje
  */
 public class Optimizer extends VisitorAdaptor {
 
@@ -71,6 +89,9 @@ public class Optimizer extends VisitorAdaptor {
 	}
 
 	private final Map<SyntaxNode, ConstValue> constants = new HashMap<>();
+	private final Set<Statement> unreachable = new HashSet<>();
+	/** do-while petlje kojima ne treba jmp nazad na DoStart */
+	private final Set<DoWhile> skipLoopBackEdge = new HashSet<>();
 
 	public boolean isConst(SyntaxNode node) {
 		return constants.containsKey(node);
@@ -80,8 +101,20 @@ public class Optimizer extends VisitorAdaptor {
 		return constants.get(node).value;
 	}
 
+	public boolean isUnreachable(Statement stmt) {
+		return unreachable.contains(stmt);
+	}
+
+	public boolean shouldSkipLoopBackEdge(DoWhile dw) {
+		return skipLoopBackEdge.contains(dw);
+	}
+
 	private void setConst(SyntaxNode node, int value) {
 		constants.put(node, new ConstValue(value));
+	}
+
+	private void markUnreachable(Statement stmt) {
+		unreachable.add(stmt);
 	}
 
 	// --- Korak 1: literali su uvek konstante (Num, Char, Bool) ---
@@ -269,13 +302,13 @@ public class Optimizer extends VisitorAdaptor {
 			return left != right ? 1 : 0;
 		if (op instanceof Greater)
 			return left > right ? 1 : 0;
-		if (op instanceof GreaterOrEqual)
-			return left >= right ? 1 : 0;
-		if (op instanceof Less)
-			return left < right ? 1 : 0;
-		if (op instanceof LessOrEqual)
-			return left <= right ? 1 : 0;
-		return null;
+			if (op instanceof GreaterOrEqual)
+				return left >= right ? 1 : 0;
+				if (op instanceof Less)
+					return left < right ? 1 : 0;
+				if (op instanceof LessOrEqual)
+					return left <= right ? 1 : 0;
+				return null;
 	}
 
 	@Override
@@ -299,7 +332,7 @@ public class Optimizer extends VisitorAdaptor {
 
 	/**
 	 * CondTerm ::= CondFact { && CondFact }
-	 * Short-circuit: false && x → false čak i ako x nije const.
+	 * Short-circuit: false && x -> false čak i ako x nije const.
 	 */
 	@Override
 	public void visit(ConditionTerm ct) {
@@ -330,7 +363,7 @@ public class Optimizer extends VisitorAdaptor {
 
 	/**
 	 * Condition ::= CondTerm { || CondTerm }
-	 * Short-circuit: true || x → true čak i ako x nije const.
+	 * Short-circuit: true || x -> true čak i ako x nije const.
 	 */
 	@Override
 	public void visit(Condition cond) {
@@ -357,5 +390,143 @@ public class Optimizer extends VisitorAdaptor {
 		}
 
 		setConst(cond, value);
+	}
+
+	// =====================================================================
+	// Dead code - koraci 1–4
+	// =====================================================================
+
+	/**
+	 * Poziva se POSLE constant folding prolaza.
+	 * Korak 1+3: posle return / break / continue u bloku.
+	 * Korak 2: then/else kad je Condition konstanta.
+	 * Korak 4: mrtav jmp nazad u do-while.
+	 */
+	public void markDeadCode(Program prog) {
+		prog.traverseTopDown(new VisitorAdaptor() {
+			@Override
+			public void visit(MethodDeclaration md) {
+				markDeadAfterTerminators(md.getStatementList());
+			}
+
+			@Override
+			public void visit(NestedStatements ns) {
+				markDeadAfterTerminators(ns.getStatementList());
+			}
+
+			@Override
+			public void visit(IfStatement ifs) {
+				markDeadIfBranches(ifs);
+			}
+
+			@Override
+			public void visit(DoWhile dw) {
+				if (loopNeverContinues(dw))
+					skipLoopBackEdge.add(dw);
+			}
+		});
+	}
+
+	/** Skuplja naredbe sleva nadesno iz levo-rekurzivne liste. */
+	private void collectStatements(StatementList list, List<Statement> out) {
+		if (list instanceof StatementsList) {
+			StatementsList sl = (StatementsList) list;
+			collectStatements(sl.getStatementList(), out);
+			out.add(sl.getStatement());
+		}
+		// NoStatements - prazan blok
+	}
+
+	/** return / break / continue prekidaju tok u tekućem bloku. */
+	private boolean isBlockTerminator(Statement s) {
+		return s instanceof Return || s instanceof Break || s instanceof Continue;
+	}
+
+	private void markDeadAfterTerminators(StatementList list) {
+		List<Statement> stmts = new ArrayList<>();
+		collectStatements(list, stmts);
+
+		boolean dead = false;
+		for (Statement s : stmts) {
+			if (dead)
+				markUnreachable(s);
+			// terminator ostaje živ; mrtvo je sve POSLE njega u istom bloku
+			if (isBlockTerminator(s))
+				dead = true;
+		}
+	}
+
+	/**
+	 * Const true  -> else grana mrtva (ako postoji).
+	 * Const false -> then grana mrtva.
+	 * Zahteva da je folding već označio Condition kao const.
+	 */
+	private void markDeadIfBranches(IfStatement ifs) {
+		Condition cond = ifs.getCondition();
+		if (!isConst(cond))
+			return;
+
+		if (getConstValue(cond) != 0) {
+			if (ifs.getOptionalElse() instanceof HasElse)
+				markUnreachable(((HasElse) ifs.getOptionalElse()).getStatement());
+		} else
+			markUnreachable(ifs.getStatement());
+	}
+
+	// --- Korak 4: mrtav back-edge ---
+
+	private Condition getDoWhileCondition(DoWhile dw) {
+		OptionalConditionList ocl = dw.getOptionalConditionList();
+		if (ocl instanceof OptionalCondition)
+			return ((OptionalCondition) ocl).getCondition();
+		return null; // while() bez uslova = uvek true
+	}
+
+	/**
+	 * Poslednja "živa" naredba u telu (simulacija terminator prolaza).
+	 */
+	private Statement lastLiveInBody(Statement body) {
+		if (body instanceof NestedStatements) {
+			List<Statement> stmts = new ArrayList<>();
+			collectStatements(((NestedStatements) body).getStatementList(), stmts);
+			Statement lastLive = null;
+			boolean dead = false;
+			for (Statement s : stmts) {
+				if (!dead)
+					lastLive = s;
+				if (isBlockTerminator(s))
+					dead = true;
+			}
+			return lastLive;
+		}
+		return body;
+	}
+
+	/**
+	 * Petlja se nikad ne vraća na DoStart:
+	 * - while (false) / const false uslov, ili
+	 * - telo uvek završi break/return (continue i dalje treba back-edge).
+	 */
+	private boolean loopNeverContinues(DoWhile dw) {
+		Condition cond = getDoWhileCondition(dw);
+		if (cond != null && isConst(cond) && getConstValue(cond) == 0)
+			return true;
+
+		Statement lastLive = lastLiveInBody(dw.getStatement());
+		return lastLive instanceof Break || lastLive instanceof Return;
+	}
+
+	/**
+	 * Da li je poslednja dostižna naredba u bloku return
+	 * Ako jeste, codegen ne treba ponovo da emituje exit/return na kraju metode.
+	 */
+	public boolean endsWithLiveReturn(StatementList list) {
+		List<Statement> stmts = new ArrayList<>();
+		collectStatements(list, stmts);
+		Statement lastLive = null;
+		for (Statement s : stmts)
+			if (!isUnreachable(s))
+				lastLive = s;
+		return lastLive instanceof Return;
 	}
 }
