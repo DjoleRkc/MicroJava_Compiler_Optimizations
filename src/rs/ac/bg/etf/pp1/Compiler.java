@@ -48,6 +48,8 @@ class Compiler {
 			Optimizer optimizer = new Optimizer();
 			prog.traverseBottomUp(optimizer);
 			optimizer.markDeadCode(prog);
+			optimizer.markReadVariables(prog);
+			optimizer.markUnusedVariables(prog);
 
 			File outputFile = new File(args[0].replace(".mj", ".obj"));
 			Code.dataSize = v.nVars;

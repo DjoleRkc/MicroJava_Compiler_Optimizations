@@ -9,6 +9,7 @@ import java.util.Set;
 
 import rs.ac.bg.etf.pp1.ast.AddOperations;
 import rs.ac.bg.etf.pp1.ast.Addop;
+import rs.ac.bg.etf.pp1.ast.AssignOperation;
 import rs.ac.bg.etf.pp1.ast.Bool;
 import rs.ac.bg.etf.pp1.ast.Break;
 import rs.ac.bg.etf.pp1.ast.Char;
@@ -57,8 +58,10 @@ import rs.ac.bg.etf.pp1.ast.OptionalRelOperator;
 import rs.ac.bg.etf.pp1.ast.ParenthesisExpression;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.Program;
+import rs.ac.bg.etf.pp1.ast.Read;
 import rs.ac.bg.etf.pp1.ast.Relop;
 import rs.ac.bg.etf.pp1.ast.Return;
+import rs.ac.bg.etf.pp1.ast.SetOperation;
 import rs.ac.bg.etf.pp1.ast.Statement;
 import rs.ac.bg.etf.pp1.ast.StatementList;
 import rs.ac.bg.etf.pp1.ast.StatementsList;
@@ -69,17 +72,21 @@ import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.symboltable.concepts.Obj;
 
 /**
- * Optimizacioni prolaz posle semantičke analize.
+ * Optimizacioni prolaz posle semanticke analize.
  * - Constant folding (koraci 1–6)
  * - Dead code:
  *   korak 1 = naredbe posle return u istom bloku
  *   korak 2 = mrtve then/else grane kod const Condition
  *   korak 3 = naredbe posle break/continue u istom bloku
  *   korak 4 = mrtav back-edge do-while petlje
+ * - Nekoriscene varijable:
+ *   korak 1 = koje se Obj.Var citaju
+ *   korak 2 = lokalne Var koje se nikad ne citaju = unused
+ *   korak 3 = codegen: nema store u unused (const RHS nestaje; inace pop)
  */
 public class Optimizer extends VisitorAdaptor {
 
-	/** Informacija o konstantnoj vrednosti nekog AST čvora. */
+	/** Informacija o konstantnoj vrednosti nekog AST cvora. */
 	public static class ConstValue {
 		public final int value;
 
@@ -92,6 +99,10 @@ public class Optimizer extends VisitorAdaptor {
 	private final Set<Statement> unreachable = new HashSet<>();
 	/** do-while petlje kojima ne treba jmp nazad na DoStart */
 	private final Set<DoWhile> skipLoopBackEdge = new HashSet<>();
+	/** Obj.Var ciji se sadrzaj cita bar jednom u zivom kodu */
+	private final Set<Obj> readVars = new HashSet<>();
+	/** Lokalne promenljive koje se nigde ne citaju */
+	private final Set<Obj> unusedVars = new HashSet<>();
 
 	public boolean isConst(SyntaxNode node) {
 		return constants.containsKey(node);
@@ -109,12 +120,27 @@ public class Optimizer extends VisitorAdaptor {
 		return skipLoopBackEdge.contains(dw);
 	}
 
+	/** Da li se vrednost ove promenljive negde cita (load). */
+	public boolean isRead(Obj obj) {
+		return readVars.contains(obj);
+	}
+
+	/** Da li je lokalna promenljiva oznacena kao nekoriscena (korak 2) */
+	public boolean isUnused(Obj obj) {
+		return unusedVars.contains(obj);
+	}
+
 	private void setConst(SyntaxNode node, int value) {
 		constants.put(node, new ConstValue(value));
 	}
 
 	private void markUnreachable(Statement stmt) {
 		unreachable.add(stmt);
+	}
+
+	private void markRead(Obj obj) {
+		if (obj != null && obj.getKind() == Obj.Var)
+			readVars.add(obj);
 	}
 
 	// --- Korak 1: literali su uvek konstante (Num, Char, Bool) ---
@@ -138,7 +164,7 @@ public class Optimizer extends VisitorAdaptor {
 
 	/**
 	 * Leva strana mulop:
-	 * - ako postoji ugnježdeni MultiplicativeOperations, to je delimični proizvod (već foldovan);
+	 * - ako postoji ugnjezdeni MultiplicativeOperations, to je delimicni proizvod (vec foldovan);
 	 * - ako je lista prazna, leva strana je Factor iz roditeljskog Term-a.
 	 */
 	private Integer getLeftMulOperand(MultiplicativeOperations mo) {
@@ -278,7 +304,7 @@ public class Optimizer extends VisitorAdaptor {
 			setConst(pe, getConstValue(inner));
 	}
 
-	// --- Korak 5: simboličke konstante (Obj.Con) ---
+	// --- Korak 5: simbolicke konstante (Obj.Con) ---
 
 	@Override
 	public void visit(FuncCall funcCall) {
@@ -332,7 +358,7 @@ public class Optimizer extends VisitorAdaptor {
 
 	/**
 	 * CondTerm ::= CondFact { && CondFact }
-	 * Short-circuit: false && x -> false čak i ako x nije const.
+	 * Short-circuit: false && x -> false cak i ako x nije const.
 	 */
 	@Override
 	public void visit(ConditionTerm ct) {
@@ -363,7 +389,7 @@ public class Optimizer extends VisitorAdaptor {
 
 	/**
 	 * Condition ::= CondTerm { || CondTerm }
-	 * Short-circuit: true || x -> true čak i ako x nije const.
+	 * Short-circuit: true || x -> true cak i ako x nije const.
 	 */
 	@Override
 	public void visit(Condition cond) {
@@ -397,7 +423,7 @@ public class Optimizer extends VisitorAdaptor {
 	// =====================================================================
 
 	/**
-	 * Poziva se POSLE constant folding prolaza.
+	 * Poziva se posle constant folding prolaza.
 	 * Korak 1+3: posle return / break / continue u bloku.
 	 * Korak 2: then/else kad je Condition konstanta.
 	 * Korak 4: mrtav jmp nazad u do-while.
@@ -437,7 +463,7 @@ public class Optimizer extends VisitorAdaptor {
 		// NoStatements - prazan blok
 	}
 
-	/** return / break / continue prekidaju tok u tekućem bloku. */
+	/** return / break / continue prekidaju tok u tekucem bloku. */
 	private boolean isBlockTerminator(Statement s) {
 		return s instanceof Return || s instanceof Break || s instanceof Continue;
 	}
@@ -450,16 +476,16 @@ public class Optimizer extends VisitorAdaptor {
 		for (Statement s : stmts) {
 			if (dead)
 				markUnreachable(s);
-			// terminator ostaje živ; mrtvo je sve POSLE njega u istom bloku
+			// terminator ostaje ziv; mrtvo je sve POSLE njega u istom bloku
 			if (isBlockTerminator(s))
 				dead = true;
 		}
 	}
 
 	/**
-	 * Const true  -> else grana mrtva (ako postoji).
-	 * Const false -> then grana mrtva.
-	 * Zahteva da je folding već označio Condition kao const.
+	 * Const true  -> else grana mrtva (ako postoji)
+	 * Const false -> then grana mrtva
+	 * Zahteva da je folding vec oznacio Condition kao const
 	 */
 	private void markDeadIfBranches(IfStatement ifs) {
 		Condition cond = ifs.getCondition();
@@ -483,7 +509,7 @@ public class Optimizer extends VisitorAdaptor {
 	}
 
 	/**
-	 * Poslednja "živa" naredba u telu (simulacija terminator prolaza).
+	 * Poslednja "ziva" naredba u telu
 	 */
 	private Statement lastLiveInBody(Statement body) {
 		if (body instanceof NestedStatements) {
@@ -503,9 +529,9 @@ public class Optimizer extends VisitorAdaptor {
 	}
 
 	/**
-	 * Petlja se nikad ne vraća na DoStart:
+	 * Petlja se nikad ne vraca na DoStart:
 	 * - while (false) / const false uslov, ili
-	 * - telo uvek završi break/return (continue i dalje treba back-edge).
+	 * - telo uvek zavrsi break/return (continue i dalje treba back-edge).
 	 */
 	private boolean loopNeverContinues(DoWhile dw) {
 		Condition cond = getDoWhileCondition(dw);
@@ -517,7 +543,7 @@ public class Optimizer extends VisitorAdaptor {
 	}
 
 	/**
-	 * Da li je poslednja dostižna naredba u bloku return
+	 * Da li je poslednja dostizna naredba u bloku return
 	 * Ako jeste, codegen ne treba ponovo da emituje exit/return na kraju metode.
 	 */
 	public boolean endsWithLiveReturn(StatementList list) {
@@ -528,5 +554,82 @@ public class Optimizer extends VisitorAdaptor {
 			if (!isUnreachable(s))
 				lastLive = s;
 		return lastLive instanceof Return;
+	}
+
+	// =====================================================================
+	// Nekoriscene varijable - korak 1: koje se citaju
+	// =====================================================================
+
+	/**
+	 * Posle dead code elimination: obidji AST i zabelezi Obj.Var koji se citaju u zivom kodu.
+	 * Samo dodele / read u jednostavnu promenljivu nisu citanje
+	 */
+	public void markReadVariables(Program prog) {
+		readVars.clear();
+		prog.traverseBottomUp(new VisitorAdaptor() {
+			@Override
+			public void visit(Designator d) {
+				if (isInUnreachableCode(d) || isWriteOnlySimpleVar(d))
+					return;
+
+				// prosta promenljiva / element / polje - ime baze je Var
+				markRead(d.getDesignatorName().obj);
+				// designator.obj moze biti Var (isto) ili Elem/Fld - markRead filtrira
+				markRead(d.obj);
+			}
+		});
+	}
+
+	/** Da li je cvor unutar Statement oznacenog kao unreachable. */
+	private boolean isInUnreachableCode(SyntaxNode node) {
+		for (SyntaxNode n = node; n != null; n = n.getParent())
+			if (n instanceof Statement && isUnreachable((Statement) n))
+				return true;
+		return false;
+	}
+
+	/**
+	 * Leva strana dodele / read u prostu Var - samo upis, ne citanje vrednosti.
+	 * Increment/Decrement citaju staru vrednost -> nisu write-only.
+	 */
+	private boolean isWriteOnlySimpleVar(Designator d) {
+		if (d.obj == null || d.obj.getKind() != Obj.Var)
+			return false;
+
+		SyntaxNode p = d.getParent();
+		if (p instanceof AssignOperation)
+			return ((AssignOperation) p).getDesignator() == d;
+		if (p instanceof Read)
+			return ((Read) p).getDesignator() == d;
+		if (p instanceof SetOperation)
+			return ((SetOperation) p).getDesignator() == d;
+		return false;
+	}
+
+	// =====================================================================
+	// Nekoriscene varijable - korak 2: oznaci unused lokale
+	// =====================================================================
+
+	/**
+	 * Posle markReadVariables: lokalne Var (fpPos==0, ne "this") koje nisu
+	 * u readVars postaju unused
+	 */
+	public void markUnusedVariables(Program prog) {
+		unusedVars.clear();
+		prog.traverseTopDown(new VisitorAdaptor() {
+			@Override
+			public void visit(MethodDeclaration md) {
+				Obj method = md.getMethodSignature().getMethodTypeName().obj;
+				if (method == null)
+					return;
+				for (Obj local : method.getLocalSymbols()) {
+					// formalni parametri imaju fpPos >= 1; lokalne ostaju 0
+					if ((local.getKind() != Obj.Var) || "this".equals(local.getName()) || (local.getFpPos() != 0))
+						continue;
+					if (!isRead(local))
+						unusedVars.add(local);
+				}
+			}
+		});
 	}
 }

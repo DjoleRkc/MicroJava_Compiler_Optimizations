@@ -1,0 +1,15 @@
+program UnusedVars
+
+{
+	void main()
+	int used, dead, dead2;
+	{
+		used = 1;
+		dead = 2 + 3;           // unused: const RHS - nema ni load ni store
+		dead2 = used + 1;       // unused: racuna se (used se cita), pa pop umesto store
+		print(used);            // 1
+
+		// Ocekivani ispis: 1
+		// U disasm: nema store u dead/dead2; za dead nema ni const 5
+	}
+}

@@ -22,6 +22,7 @@ import rs.ac.bg.etf.pp1.ast.Continue;
 import rs.ac.bg.etf.pp1.ast.Decrement;
 import rs.ac.bg.etf.pp1.ast.Designator;
 import rs.ac.bg.etf.pp1.ast.DesignatorName;
+import rs.ac.bg.etf.pp1.ast.DesignatorStmt;
 import rs.ac.bg.etf.pp1.ast.DesignatorWithParams;
 import rs.ac.bg.etf.pp1.ast.Div;
 import rs.ac.bg.etf.pp1.ast.DoStart;
@@ -461,7 +462,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	/**
-	 * Čvorovi koji nose "vrednost" izraza/uslova - tu Optimizer može da stavi const.
+	 * Cvorovi koji nose "vrednost" izraza/uslova - tu Optimizer moze da stavi const.
 	 * Korak 7: ako je neki predak const, deca ne emituju kod.
 	 */
 	private boolean isValueNode(SyntaxNode node) {
@@ -475,7 +476,7 @@ public class CodeGenerator extends VisitorAdaptor {
 				|| node instanceof Condition;
 	}
 
-	// Da li postoji const predak-vrednost (tada ovaj čvor ne sme da emituje ništa)
+	// Da li postoji const predak-vrednost (tada ovaj cvor ne sme da emituje nista)
 	private boolean hasConstValueAncestor(SyntaxNode node) {
 		if (optimizer == null)
 			return false;
@@ -488,7 +489,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		return false;
 	}
 
-	/** Naredba (ili predak-naredba) označena kao unreachable u eliminaciji mrtvog koda. */
+	/** Naredba (ili predak-naredba) oznacena kao unreachable u eliminaciji mrtvog koda. */
 	private boolean shouldSkipDeadCode(SyntaxNode node) {
 		if (optimizer == null)
 			return false;
@@ -502,12 +503,46 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	private boolean shouldSkipCodegen(SyntaxNode node) {
-		return shouldSkipDeadCode(node) || hasConstValueAncestor(node);
+		return shouldSkipDeadCode(node) || hasConstValueAncestor(node) || shouldSkipUnusedAssignExpr(node);
 	}
 
-	// Ako je ovaj čvor const i nema const pretka, emituj jedan loadConst
+	/**
+	 * Korak 3 (nekoriscene var): ako je dodela u unused prostu Var i desna strana izraza je const,
+	 * nemoj uopste da emitujes izraz (inace bi bilo loadConst + pop)
+	 * Za ne-const desnu stranu (npr. f()) deca se i dalje emituju zbog side-effecta, pa Assign uradi pop.
+	 */
+	private boolean shouldSkipUnusedAssignExpr(SyntaxNode node) {
+		if (optimizer == null)
+			return false;
+		AssignOperation assign = findUnusedVarAssign(node);
+		if (assign == null)
+			return false;
+		// designator s leve strane ne mora da emituje nista posebno za prostu Var;
+		// Expr (i njegova deca) skip samo ako je foldovan const
+		return optimizer.isConst(assign.getExpr());
+	}
+
+	/** Najblizi AssignOperation ka unused prostoj Var, ili null. */
+	private AssignOperation findUnusedVarAssign(SyntaxNode node) {
+		for (SyntaxNode n = node; n != null; n = n.getParent()) {
+			if (n instanceof AssignOperation) {
+				AssignOperation a = (AssignOperation) n;
+				Obj dest = a.getDesignator().obj;
+				if (dest != null && dest.getKind() == Obj.Var && optimizer.isUnused(dest))
+					return a;
+				return null;
+			}
+			// ne izlazimo iz naredbe dodele na pogresan nacin
+			if (n instanceof Statement && !(n instanceof DesignatorStmt))
+				return null;
+		}
+		return null;
+	}
+
+	// Ako je ovaj cvor const i nema const pretka, emituj jedan loadConst
 	private boolean tryEmitFoldedConst(SyntaxNode node) {
-		if (shouldSkipDeadCode(node) || optimizer == null || !optimizer.isConst(node) || hasConstValueAncestor(node))
+		if (shouldSkipDeadCode(node) || shouldSkipUnusedAssignExpr(node)
+				|| optimizer == null || !optimizer.isConst(node) || hasConstValueAncestor(node))
 			return false;
 		Code.loadConst(optimizer.getConstValue(node));
 		return true;
@@ -588,7 +623,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(99);
 		}
 		else {
-			// Ako telo već završava returnom, ne emituj drugi exit/return
+			// Ako telo vec zavrsava returnom, ne emituj drugi exit/return
 			if (optimizer != null && optimizer.endsWithLiveReturn(methodDeclaration.getStatementList()))
 				return;
 			Code.put(Code.exit);
@@ -669,7 +704,7 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(AddOperations addOperations) {
-		// ceo +/− korak je foldovan - rezultat emituje spoljašnji Term/Expr
+		// ceo +/− korak je foldovan - rezultat emituje spoljasnji Term/Expr
 		if (shouldSkipCodegen(addOperations) || (optimizer != null && optimizer.isConst(addOperations)))
 			return;
 		if (addOperations.getAddop() instanceof Plus)
@@ -691,15 +726,15 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 
 	/**
-	 * "(1+1)" može biti najspoljašniji const Factor (npr x * (1+1)).
-	 * Unutrašnji Expr se tada skipuje; ovde mora da se emituje loadConst
+	 * "(1+1)" moze biti najspoljasniji const Factor (npr x * (1+1)).
+	 * Unutrasnji Expr se tada skipuje; ovde mora da se emituje loadConst
 	 */
 	@Override
 	public void visit(ParenthesisExpression pe) {
 		if (shouldSkipCodegen(pe))
 			return;
 		tryEmitFoldedConst(pe);
-		// ako nije const, deca su već ostavila vrednost na steku
+		// ako nije const, deca su vec ostavila vrednost na steku
 	}
 
 	@Override
@@ -847,8 +882,16 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(AssignOperation assignOp) {
 		if (shouldSkipDeadCode(assignOp))
 			return;
-		Code.store(assignOp.getDesignator().obj);
 
+		Obj dest = assignOp.getDesignator().obj;
+		// Korak 3: unused lokal - ne store; const desna strana vec skipovana, inace pop sa steka
+		if (optimizer != null && dest != null && dest.getKind() == Obj.Var && optimizer.isUnused(dest)) {
+			if (!optimizer.isConst(assignOp.getExpr()))
+				Code.put(Code.pop);
+			return;
+		}
+
+		Code.store(dest);
 	}
 
 	@Override
@@ -936,12 +979,17 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.bread);
 		else
 			Code.put(Code.read);
-		Code.store(r.getDesignator().obj);
 
+		Obj dest = r.getDesignator().obj;
+		// Korak 3: read i dalje trosi ulaz; u unused Var samo odbaci vrednost
+		if (optimizer != null && dest != null && dest.getKind() == Obj.Var && optimizer.isUnused(dest))
+			Code.put(Code.pop);
+		else
+			Code.store(dest);
 	}
 
 	/**
-	 * Da li je ovaj čvor unutar if sa foldovanim (const) uslovom
+	 * Da li je ovaj cvor unutar if sa foldovanim (const) uslovom
 	 * Tad ne treba jump skelet - mrtva grana se ionako ne emituje
 	 */
 	private boolean inConstConditionIf(SyntaxNode node) {
@@ -961,7 +1009,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		if (shouldSkipCodegen(cf))
 			return;
 
-		// Ceo CondFact je konstanta - deca (Expr) su već preskočena
+		// Ceo CondFact je konstanta - deca (Expr) su vec preskocena
 		if (optimizer != null && optimizer.isConst(cf)) {
 			if (optimizer.getConstValue(cf) == 0) {
 				// false -> skok na kraj ovog && lanca
@@ -994,11 +1042,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		// Ceo && lanac je konstanta
 		if (optimizer != null && optimizer.isConst(ct)) {
 			if (optimizer.getConstValue(ct) != 0) {
-				// true -> kao uspešan CondTerm: skok na then
+				// true -> kao uspesan CondTerm: skok na then
 				Code.putJump(0);
 				jumpConditionStack.push(Code.pc - 2);
 			}
-			// false -> ništa (ne ide na then)
+			// false -> nista (ne ide na then)
 			return;
 		}
 

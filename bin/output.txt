@@ -2,145 +2,101 @@
   pos: instruction operands
      | expressionstack
 -----------------------------
-  220: enter       0 1 
+  226: enter       0 8 
      | 
-  223: const       14 
-     | 14 
-  228: const_0     
-     | 14 0 
-  229: print       14
-     | 
-  230: const       20 
-     | 20 
-  235: const_0     
-     | 20 0 
-  236: print       20
-     | 
-  237: const       10 
-     | 10 
-  242: const_0     
-     | 10 0 
-  243: print       10
-     | 
-  244: const_1     
+  229: const_1     
      | 1 
-  245: const_0     
-     | 1 0 
-  246: print       1
+  230: store_0     
      | 
-  247: const       15 
-     | 15 
-  252: const_0     
-     | 15 0 
-  253: print       15
-     | 
-  254: const       11 
-     | 11 
-  259: const_0     
-     | 11 0 
-  260: print       11
-     | 
-  261: const       7 
-     | 7 
-  266: store_0     
-     | 
-  267: load_0      
-     | 7 
-  268: const       6 
-     | 7 6 
-  273: add         
-     | 13 
-  274: const_0     
-     | 13 0 
-  275: print       13
-     | 
-  276: load_0      
-     | 7 
-  277: const_2     
-     | 7 2 
-  278: mul         
-     | 14 
-  279: const_0     
-     | 14 0 
-  280: print       14
-     | 
-  281: const_1     
+  231: load_0      
      | 1 
-  282: const_0     
+  232: const_0     
      | 1 0 
-  283: print       1
+  233: print       1
      | 
-  284: const_2     
+  234: load_0      
+     | 1 
+  235: const_1     
+     | 1 1 
+  236: add         
      | 2 
-  285: const_0     
-     | 2 0 
-  286: print       2
+  237: pop         
      | 
-  287: const_3     
-     | 3 
-  288: const_0     
-     | 3 0 
-  289: print       3
-     | 
-  290: const_4     
+  238: load_0      
+     | 1 
+  239: const_4     
+     | 1 4 
+  240: mul         
      | 4 
-  291: const_0     
+  241: pop         
+     | 
+  242: load_0      
+     | 1 
+  243: const_2     
+     | 1 2 
+  244: add         
+     | 3 
+  245: pop         
+     | 
+  246: const_2     
+     | 2 
+  247: const_0     
+     | 2 0 
+  248: print       2
+     | 
+  249: const_3     
+     | 3 
+  250: store       7 
+     | 
+  252: load        7 
+     | 3 
+  254: const_1     
+     | 3 1 
+  255: add         
+     | 4 
+  256: store       7 
+     | 
+  258: load        7 
+     | 4 
+  260: const_0     
      | 4 0 
-  292: print       4
+  261: print       4
      | 
-  293: const_5     
+  262: const_5     
      | 5 
-  294: const_0     
-     | 5 0 
-  295: print       5
+  263: call        -55 
+     | 5 
+  208: enter       1 3 
      | 
-  296: const       6 
+  211: load_0      
+     | 5 
+  212: const_1     
+     | 5 1 
+  213: add         
      | 6 
-  301: const_0     
-     | 6 0 
-  302: print       6
+  214: pop         
      | 
-  303: const       7 
+  215: const       7 
      | 7 
-  308: const_0     
+  220: store_2     
+     | 
+  221: load_2      
+     | 7 
+  222: const_0     
      | 7 0 
-  309: print       7
+  223: print       7
      | 
-  310: jmp         3 
+  224: exit        
      | 
-  313: const       8 
-     | 8 
-  318: const_0     
-     | 8 0 
-  319: print       8
+  225: return      
      | 
-  320: jmp         3 
+  266: load_0      
+     | 1 
+  267: const_0     
+     | 1 0 
+  268: print       1
      | 
-  323: const       9 
-     | 9 
-  328: const_0     
-     | 9 0 
-  329: print       9
+  269: exit        
      | 
-  330: jmp         3 
-     | 
-  333: jmp         3 
-     | 
-  336: call        -128 
-     | 
-  208: enter       0 0 
-     | 
-  211: const       10 
-     | 10 
-  216: const_0     
-     | 10 0 
-  217: print       10
-     | 
-  218: exit        
-     | 
-  219: return      
-     | 
-  339: exit        
-     | 
-  340: return      
-Completion took 14 ms
+  270: return      
+Completion took 9 ms

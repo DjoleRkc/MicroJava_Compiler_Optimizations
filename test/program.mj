@@ -1,102 +1,82 @@
-program DceAll
+program UnusedAll
 
-const int C = 5, D = 10;
-const bool T = true, F = false;
+const int C = 10;
 
 {
-	void deadAfterReturn() {
-		print(10);
-		return;
-		print(99);              // DCE korak 1 - ne sme u disasm / ispis
+	// Formal p se ne cita u telu - NIJE unused (fpPos), ali lokal ghost jeste
+	void helper(int p)
+	int ghost, live;
+	{
+		ghost = p + 1;          // ghost unused: RHS cita p -> load p, add, pop (nema store ghost)
+		live = 7;
+		print(live);            // 7
+		// p se ne cita kao "vrednost koju printujemo", ali jeste procitan u ghost = p+1
 	}
 
 	void main()
-	int x;
+	int a, b, c, d, e, f, g, h;
 	{
 		// =====================================================================
-		// A) CONSTANT FOLDING (isto kao folding_all.mj)
+		// 1) Koriscena promenljiva - obican store/load
 		// =====================================================================
+		a = 1;
+		print(a);               // 1
 
-		// --- aritmetika ---
-		print(2 + 3 * 4);           // 14
-		print((2 + 3) * 4);         // 20
-		print(-2 + 3 * 4);          // 10
-		print(100 / 4 % 3);         // 1
+		// =====================================================================
+		// 2) Unused + const RHS - nestaje potpuno (nema const ni store)
+		// =====================================================================
+		b = 2 + 3;              // fold 5, pa skip
+		b = C * 2;              // fold 20, pa skip
+		c = (1 + 1) * 4;        // fold 8, pa skip
 
-		// --- simboličke konstante ---
-		print(C + D);               // 15
-		print(C * 2 + 1);           // 11
+		// =====================================================================
+		// 3) Unused + ne-const RHS - racuna se, pa pop
+		// =====================================================================
+		d = a + 1;              // load a, const 1, add, pop
+		e = a * (2 + 2);        // load a, const 4, mul, pop
 
-		// --- delimični fold ---
-		x = 7;
-		print(x + 2 * 3);           // 13
-		print(x * (1 + 1));         // 14
+		// =====================================================================
+		// 4) Vise dodela u unused - sve bez store
+		// =====================================================================
+		f = 100;
+		f = a + 2;              // druga dodela: pop
+		f = 3;                  // const - nestaje
 
-		// --- const if (folding + DCE korak 2: mrtve grane NESTAJU) ---
-		if (1 + 1 == 2)
-			print(1);
-		else
-			print(0);               // mrtvo — nema u disasm
-
+		// =====================================================================
+		// 5) DCE + unused: citanje samo u mrtvom kodu => unused
+		// =====================================================================
+		g = 9;                  // unused (print(g) je mrtav)
 		if (false)
-			print(0);               // mrtvo
+			print(g);           // mrtva grana - ne cini g "read"
 		else
-			print(2);
-
-		if (C < D && T)
-			print(3);
-		else
-			print(0);               // mrtvo
-
-		if (F || 2 > 10)
-			print(0);               // mrtvo
-		else
-			print(4);
-
-		if (true || x == 0)
-			print(5);
-		else
-			print(0);               // mrtvo
-
-		if (false && x == 0)
-			print(0);               // mrtvo
-		else
-			print(6);
-
-		// --- do-while(false): folding + DCE korak 4 (nema jmp nazad) ---
-		do
-			print(7);
-		while (false);
+			print(2);           // 2
 
 		// =====================================================================
-		// B) DEAD CODE - dodatni terminiatori
+		// 6) Promenljiva koja POSTANE koriscena (nije unused)
 		// =====================================================================
+		h = 3;
+		h = h + 1;              // cita h -> h nije unused; oba store ostaju
+		print(h);               // 4
 
-		// DCE korak 3+4: break; print posle mrtav; nema back-edge
-		do {
-			print(8);
-			break;
-			print(99);              // mrtvo
-		} while (true);
+		// =====================================================================
+		// 7) Poziv metode (lokal ghost unused unutra)
+		// =====================================================================
+		helper(5);              // print 7 iz helper-a
 
-		// DCE korak 3: continue; print posle mrtav
-		// while(false) -> DCE korak 4: nema back-edge
-		do {
-			print(9);
-			continue;
-			print(99);              // mrtvo
-		} while (false);
+		// =====================================================================
+		// 8) Kontrola: a i dalje ziv
+		// =====================================================================
+		print(a);               // 1
 
-		// DCE korak 1: posle return (+ bez duplog exit/return)
-		deadAfterReturn();          // 10
-
-		// Očekivani ispis:
-		// 14 20 10 1 15 11 13 14 1 2 3 4 5 6 7 8 9 10
-		// => 14201011511131412345678910
+		// Ocekivani ispis:
+		// 1  2  4  7  1
+		// => 12471
 		//
-		// Razlika vs samo folding (raniji disasm):
-		// - const if: nema mrtvih print(0) ni jmp oko grana
-		// - do-while(false): nema jmp nazad na DoStart
-		// - break/continue/return: NEMA print(99)
+		// Disasm (main) - ocekuj:
+		// - store samo za a, h (i privremeno sto treba za h=h+1)
+		// - NEMA store za b,c,d,e,f,g
+		// - za b/c/f=const: nema ni loadConst dodela
+		// - za d/e/f=a+...: load a ... pop
+		// - helper: enter; load p ... pop za ghost; store live; print 7
 	}
 }
