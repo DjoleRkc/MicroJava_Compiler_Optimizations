@@ -94,9 +94,9 @@ const bool T = true, F = false;
 		// 14 20 10 1 15 11 13 14 1 2 3 4 5 6 7 8 9 10
 		// => 14201011511131412345678910
 		//
-		// Razlika vs samo folding (raniji disasm):
+		// Razlika vs samo folding:
 		// - const if: nema mrtvih print(0) ni jmp oko grana
 		// - do-while(false): nema jmp nazad na DoStart
-		// - break/continue/return: NEMA print(99)
+		// - break/continue/return: nema print(99)
 	}
 }

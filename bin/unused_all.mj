@@ -3,11 +3,11 @@ program UnusedAll
 const int C = 10;
 
 {
-	// Formal p se ne cita u telu - NIJE unused (fpPos), ali lokal ghost jeste
+	// Formalni parametar p se ne cita u telu - nije unused (fpPos > 0), ali lokal ghost jeste
 	void helper(int p)
 	int ghost, live;
 	{
-		ghost = p + 1;          // ghost unused: RHS cita p -> load p, add, pop (nema store ghost)
+		ghost = p + 1;          // ghost se ne koristi nakon ovoga: desna strana cita p -> load p, add, pop (nema store ghost)
 		live = 7;
 		print(live);            // 7
 		// p se ne cita kao "vrednost koju printujemo", ali jeste procitan u ghost = p+1
@@ -23,14 +23,14 @@ const int C = 10;
 		print(a);               // 1
 
 		// =====================================================================
-		// 2) Unused + const RHS - nestaje potpuno (nema const ni store)
+		// 2) Unused + const desna strana - nestaje potpuno (nema const ni store)
 		// =====================================================================
 		b = 2 + 3;              // fold 5, pa skip
 		b = C * 2;              // fold 20, pa skip
 		c = (1 + 1) * 4;        // fold 8, pa skip
 
 		// =====================================================================
-		// 3) Unused + ne-const RHS - racuna se, pa pop
+		// 3) Unused + ne-const desna strana - racuna se, pa pop
 		// =====================================================================
 		d = a + 1;              // load a, const 1, add, pop
 		e = a * (2 + 2);        // load a, const 4, mul, pop
@@ -43,16 +43,16 @@ const int C = 10;
 		f = 3;                  // const - nestaje
 
 		// =====================================================================
-		// 5) DCE + unused: citanje samo u mrtvom kodu => unused
+		// 5) dead code + unused: citanje samo u mrtvom kodu -> unused
 		// =====================================================================
 		g = 9;                  // unused (print(g) je mrtav)
 		if (false)
-			print(g);           // mrtva grana - ne cini g "read"
+			print(g);           // mrtva grana - ne cini g "iskoriscenim"
 		else
 			print(2);           // 2
 
 		// =====================================================================
-		// 6) Promenljiva koja POSTANE koriscena (nije unused)
+		// 6) Promenljiva koja postane koriscena (nije unused)
 		// =====================================================================
 		h = 3;
 		h = h + 1;              // cita h -> h nije unused; oba store ostaju
@@ -71,12 +71,5 @@ const int C = 10;
 		// Ocekivani ispis:
 		// 1  2  4  7  1
 		// => 12471
-		//
-		// Disasm (main) - ocekuj:
-		// - store samo za a, h (i privremeno sto treba za h=h+1)
-		// - NEMA store za b,c,d,e,f,g
-		// - za b/c/f=const: nema ni loadConst dodela
-		// - za d/e/f=a+...: load a ... pop
-		// - helper: enter; load p ... pop za ghost; store live; print 7
 	}
 }

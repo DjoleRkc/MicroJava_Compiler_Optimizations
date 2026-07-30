@@ -1,170 +1,170 @@
-INFO  20:36:01,247 - #2 program
-INFO  20:36:01,247 - #48 UnusedAll
-INFO  20:36:01,248 - #10 const
-INFO  20:36:01,249 - #48 int
-INFO  20:36:01,249 - #48 C
-INFO  20:36:01,250 - #36 =
-INFO  20:36:01,250 - #47 10
-INFO  20:36:01,250 - #37 ;
-INFO  20:36:01,252 - #44 {
-INFO  20:36:01,252 - #5 void
-INFO  20:36:01,253 - #48 helper
-INFO  20:36:01,253 - #40 (
-INFO  20:36:01,253 - #48 int
-INFO  20:36:01,254 - #48 p
-INFO  20:36:01,254 - #41 )
-INFO  20:36:01,257 - #48 int
-INFO  20:36:01,260 - #48 ghost
-INFO  20:36:01,260 - #38 ,
-INFO  20:36:01,260 - #48 live
-INFO  20:36:01,260 - #37 ;
-INFO  20:36:01,261 - #44 {
-INFO  20:36:01,262 - #48 ghost
-INFO  20:36:01,264 - #36 =
-INFO  20:36:01,266 - #48 p
-INFO  20:36:01,268 - #22 +
-INFO  20:36:01,285 - #47 1
-INFO  20:36:01,287 - #37 ;
-INFO  20:36:01,287 - #48 live
-INFO  20:36:01,288 - #36 =
-INFO  20:36:01,288 - #47 7
-INFO  20:36:01,288 - #37 ;
-INFO  20:36:01,288 - #3 print
-INFO  20:36:01,288 - #40 (
-INFO  20:36:01,288 - #48 live
-INFO  20:36:01,288 - #41 )
-INFO  20:36:01,290 - #37 ;
-INFO  20:36:01,290 - #45 }
-INFO  20:36:01,290 - #5 void
-INFO  20:36:01,290 - #48 main
-INFO  20:36:01,290 - #40 (
-INFO  20:36:01,290 - #41 )
-INFO  20:36:01,291 - #48 int
-INFO  20:36:01,291 - #48 a
-INFO  20:36:01,291 - #38 ,
-INFO  20:36:01,291 - #48 b
-INFO  20:36:01,291 - #38 ,
-INFO  20:36:01,291 - #48 c
-INFO  20:36:01,292 - #38 ,
-INFO  20:36:01,292 - #48 d
-INFO  20:36:01,292 - #38 ,
-INFO  20:36:01,292 - #48 e
-INFO  20:36:01,292 - #38 ,
-INFO  20:36:01,292 - #48 f
-INFO  20:36:01,292 - #38 ,
-INFO  20:36:01,292 - #48 g
-INFO  20:36:01,292 - #38 ,
-INFO  20:36:01,292 - #48 h
-INFO  20:36:01,292 - #37 ;
-INFO  20:36:01,293 - #44 {
-INFO  20:36:01,293 - #48 a
-INFO  20:36:01,293 - #36 =
-INFO  20:36:01,293 - #47 1
-INFO  20:36:01,293 - #37 ;
-INFO  20:36:01,294 - #3 print
-INFO  20:36:01,294 - #40 (
-INFO  20:36:01,294 - #48 a
-INFO  20:36:01,294 - #41 )
-INFO  20:36:01,294 - #37 ;
-INFO  20:36:01,294 - #48 b
-INFO  20:36:01,295 - #36 =
-INFO  20:36:01,298 - #47 2
-INFO  20:36:01,298 - #22 +
-INFO  20:36:01,298 - #47 3
-INFO  20:36:01,299 - #37 ;
-INFO  20:36:01,299 - #48 b
-INFO  20:36:01,299 - #36 =
-INFO  20:36:01,299 - #48 C
-INFO  20:36:01,299 - #25 *
-INFO  20:36:01,299 - #47 2
-INFO  20:36:01,301 - #37 ;
-INFO  20:36:01,301 - #48 c
-INFO  20:36:01,301 - #36 =
-INFO  20:36:01,302 - #40 (
-INFO  20:36:01,302 - #47 1
-INFO  20:36:01,302 - #22 +
-INFO  20:36:01,302 - #47 1
-INFO  20:36:01,302 - #41 )
-INFO  20:36:01,303 - #25 *
-INFO  20:36:01,303 - #47 4
-INFO  20:36:01,303 - #37 ;
-INFO  20:36:01,303 - #48 d
-INFO  20:36:01,303 - #36 =
-INFO  20:36:01,303 - #48 a
-INFO  20:36:01,303 - #22 +
-INFO  20:36:01,304 - #47 1
-INFO  20:36:01,304 - #37 ;
-INFO  20:36:01,304 - #48 e
-INFO  20:36:01,304 - #36 =
-INFO  20:36:01,304 - #48 a
-INFO  20:36:01,304 - #25 *
-INFO  20:36:01,304 - #40 (
-INFO  20:36:01,304 - #47 2
-INFO  20:36:01,305 - #22 +
-INFO  20:36:01,305 - #47 2
-INFO  20:36:01,305 - #41 )
-INFO  20:36:01,305 - #37 ;
-INFO  20:36:01,306 - #48 f
-INFO  20:36:01,306 - #36 =
-INFO  20:36:01,306 - #47 100
-INFO  20:36:01,306 - #37 ;
-INFO  20:36:01,306 - #48 f
-INFO  20:36:01,306 - #36 =
-INFO  20:36:01,306 - #48 a
-INFO  20:36:01,306 - #22 +
-INFO  20:36:01,307 - #47 2
-INFO  20:36:01,307 - #37 ;
-INFO  20:36:01,307 - #48 f
-INFO  20:36:01,307 - #36 =
-INFO  20:36:01,307 - #47 3
-INFO  20:36:01,308 - #37 ;
-INFO  20:36:01,308 - #48 g
-INFO  20:36:01,308 - #36 =
-INFO  20:36:01,308 - #47 9
-INFO  20:36:01,308 - #37 ;
-INFO  20:36:01,308 - #11 if
-INFO  20:36:01,308 - #40 (
-INFO  20:36:01,308 - #46 false
-INFO  20:36:01,309 - #41 )
-INFO  20:36:01,316 - #3 print
-INFO  20:36:01,316 - #40 (
-INFO  20:36:01,316 - #48 g
-INFO  20:36:01,316 - #41 )
-INFO  20:36:01,316 - #37 ;
-INFO  20:36:01,316 - #8 else
-INFO  20:36:01,316 - #3 print
-INFO  20:36:01,318 - #40 (
-INFO  20:36:01,318 - #47 2
-INFO  20:36:01,318 - #41 )
-INFO  20:36:01,318 - #37 ;
-INFO  20:36:01,318 - #48 h
-INFO  20:36:01,318 - #36 =
-INFO  20:36:01,318 - #47 3
-INFO  20:36:01,318 - #37 ;
-INFO  20:36:01,318 - #48 h
-INFO  20:36:01,319 - #36 =
-INFO  20:36:01,319 - #48 h
-INFO  20:36:01,319 - #22 +
-INFO  20:36:01,319 - #47 1
-INFO  20:36:01,319 - #37 ;
-INFO  20:36:01,319 - #3 print
-INFO  20:36:01,319 - #40 (
-INFO  20:36:01,319 - #48 h
-INFO  20:36:01,319 - #41 )
-INFO  20:36:01,319 - #37 ;
-INFO  20:36:01,319 - #48 helper
-INFO  20:36:01,319 - #40 (
-INFO  20:36:01,319 - #47 5
-INFO  20:36:01,319 - #41 )
-INFO  20:36:01,322 - #37 ;
-INFO  20:36:01,322 - #3 print
-INFO  20:36:01,322 - #40 (
-INFO  20:36:01,322 - #48 a
-INFO  20:36:01,322 - #41 )
-INFO  20:36:01,322 - #37 ;
-INFO  20:36:01,322 - #45 }
-INFO  20:36:01,322 - #45 }
-INFO  20:36:01,329 - Program(
+INFO  20:35:17,975 - #2 program
+INFO  20:35:17,975 - #48 UnusedAll
+INFO  20:35:17,975 - #10 const
+INFO  20:35:17,980 - #48 int
+INFO  20:35:17,980 - #48 C
+INFO  20:35:17,980 - #36 =
+INFO  20:35:17,981 - #47 10
+INFO  20:35:17,981 - #37 ;
+INFO  20:35:17,983 - #44 {
+INFO  20:35:17,984 - #5 void
+INFO  20:35:17,986 - #48 helper
+INFO  20:35:17,986 - #40 (
+INFO  20:35:17,986 - #48 int
+INFO  20:35:17,986 - #48 p
+INFO  20:35:17,986 - #41 )
+INFO  20:35:17,995 - #48 int
+INFO  20:35:17,999 - #48 ghost
+INFO  20:35:17,999 - #38 ,
+INFO  20:35:17,999 - #48 live
+INFO  20:35:17,999 - #37 ;
+INFO  20:35:18,001 - #44 {
+INFO  20:35:18,005 - #48 ghost
+INFO  20:35:18,007 - #36 =
+INFO  20:35:18,014 - #48 p
+INFO  20:35:18,018 - #22 +
+INFO  20:35:18,040 - #47 1
+INFO  20:35:18,044 - #37 ;
+INFO  20:35:18,044 - #48 live
+INFO  20:35:18,045 - #36 =
+INFO  20:35:18,045 - #47 7
+INFO  20:35:18,045 - #37 ;
+INFO  20:35:18,045 - #3 print
+INFO  20:35:18,045 - #40 (
+INFO  20:35:18,045 - #48 live
+INFO  20:35:18,045 - #41 )
+INFO  20:35:18,048 - #37 ;
+INFO  20:35:18,048 - #45 }
+INFO  20:35:18,048 - #5 void
+INFO  20:35:18,048 - #48 main
+INFO  20:35:18,048 - #40 (
+INFO  20:35:18,048 - #41 )
+INFO  20:35:18,051 - #48 int
+INFO  20:35:18,051 - #48 a
+INFO  20:35:18,051 - #38 ,
+INFO  20:35:18,051 - #48 b
+INFO  20:35:18,051 - #38 ,
+INFO  20:35:18,051 - #48 c
+INFO  20:35:18,051 - #38 ,
+INFO  20:35:18,051 - #48 d
+INFO  20:35:18,052 - #38 ,
+INFO  20:35:18,052 - #48 e
+INFO  20:35:18,052 - #38 ,
+INFO  20:35:18,052 - #48 f
+INFO  20:35:18,052 - #38 ,
+INFO  20:35:18,052 - #48 g
+INFO  20:35:18,052 - #38 ,
+INFO  20:35:18,052 - #48 h
+INFO  20:35:18,053 - #37 ;
+INFO  20:35:18,053 - #44 {
+INFO  20:35:18,053 - #48 a
+INFO  20:35:18,053 - #36 =
+INFO  20:35:18,053 - #47 1
+INFO  20:35:18,053 - #37 ;
+INFO  20:35:18,055 - #3 print
+INFO  20:35:18,055 - #40 (
+INFO  20:35:18,055 - #48 a
+INFO  20:35:18,055 - #41 )
+INFO  20:35:18,056 - #37 ;
+INFO  20:35:18,056 - #48 b
+INFO  20:35:18,056 - #36 =
+INFO  20:35:18,058 - #47 2
+INFO  20:35:18,059 - #22 +
+INFO  20:35:18,059 - #47 3
+INFO  20:35:18,059 - #37 ;
+INFO  20:35:18,059 - #48 b
+INFO  20:35:18,059 - #36 =
+INFO  20:35:18,059 - #48 C
+INFO  20:35:18,059 - #25 *
+INFO  20:35:18,059 - #47 2
+INFO  20:35:18,063 - #37 ;
+INFO  20:35:18,063 - #48 c
+INFO  20:35:18,064 - #36 =
+INFO  20:35:18,064 - #40 (
+INFO  20:35:18,064 - #47 1
+INFO  20:35:18,064 - #22 +
+INFO  20:35:18,064 - #47 1
+INFO  20:35:18,064 - #41 )
+INFO  20:35:18,064 - #25 *
+INFO  20:35:18,066 - #47 4
+INFO  20:35:18,066 - #37 ;
+INFO  20:35:18,066 - #48 d
+INFO  20:35:18,066 - #36 =
+INFO  20:35:18,067 - #48 a
+INFO  20:35:18,067 - #22 +
+INFO  20:35:18,067 - #47 1
+INFO  20:35:18,067 - #37 ;
+INFO  20:35:18,067 - #48 e
+INFO  20:35:18,067 - #36 =
+INFO  20:35:18,067 - #48 a
+INFO  20:35:18,067 - #25 *
+INFO  20:35:18,067 - #40 (
+INFO  20:35:18,067 - #47 2
+INFO  20:35:18,067 - #22 +
+INFO  20:35:18,067 - #47 2
+INFO  20:35:18,067 - #41 )
+INFO  20:35:18,068 - #37 ;
+INFO  20:35:18,068 - #48 f
+INFO  20:35:18,068 - #36 =
+INFO  20:35:18,068 - #47 100
+INFO  20:35:18,068 - #37 ;
+INFO  20:35:18,069 - #48 f
+INFO  20:35:18,069 - #36 =
+INFO  20:35:18,069 - #48 a
+INFO  20:35:18,070 - #22 +
+INFO  20:35:18,070 - #47 2
+INFO  20:35:18,070 - #37 ;
+INFO  20:35:18,070 - #48 f
+INFO  20:35:18,070 - #36 =
+INFO  20:35:18,070 - #47 3
+INFO  20:35:18,074 - #37 ;
+INFO  20:35:18,075 - #48 g
+INFO  20:35:18,075 - #36 =
+INFO  20:35:18,075 - #47 9
+INFO  20:35:18,075 - #37 ;
+INFO  20:35:18,075 - #11 if
+INFO  20:35:18,075 - #40 (
+INFO  20:35:18,076 - #46 false
+INFO  20:35:18,076 - #41 )
+INFO  20:35:18,085 - #3 print
+INFO  20:35:18,085 - #40 (
+INFO  20:35:18,087 - #48 g
+INFO  20:35:18,087 - #41 )
+INFO  20:35:18,088 - #37 ;
+INFO  20:35:18,088 - #8 else
+INFO  20:35:18,088 - #3 print
+INFO  20:35:18,091 - #40 (
+INFO  20:35:18,091 - #47 2
+INFO  20:35:18,091 - #41 )
+INFO  20:35:18,091 - #37 ;
+INFO  20:35:18,092 - #48 h
+INFO  20:35:18,092 - #36 =
+INFO  20:35:18,093 - #47 3
+INFO  20:35:18,093 - #37 ;
+INFO  20:35:18,093 - #48 h
+INFO  20:35:18,093 - #36 =
+INFO  20:35:18,093 - #48 h
+INFO  20:35:18,093 - #22 +
+INFO  20:35:18,093 - #47 1
+INFO  20:35:18,093 - #37 ;
+INFO  20:35:18,093 - #3 print
+INFO  20:35:18,093 - #40 (
+INFO  20:35:18,093 - #48 h
+INFO  20:35:18,093 - #41 )
+INFO  20:35:18,093 - #37 ;
+INFO  20:35:18,093 - #48 helper
+INFO  20:35:18,093 - #40 (
+INFO  20:35:18,093 - #47 5
+INFO  20:35:18,093 - #41 )
+INFO  20:35:18,097 - #37 ;
+INFO  20:35:18,097 - #3 print
+INFO  20:35:18,097 - #40 (
+INFO  20:35:18,097 - #48 a
+INFO  20:35:18,097 - #41 )
+INFO  20:35:18,097 - #37 ;
+INFO  20:35:18,097 - #45 }
+INFO  20:35:18,097 - #45 }
+INFO  20:35:18,106 - Program(
   ProgName(
    UnusedAll
   ) [ProgName]
@@ -1022,35 +1022,35 @@ INFO  20:36:01,329 - Program(
   ) [MethodDeclarationList]
 ) [Program]
 ===================================
-INFO  20:36:01,350 - Deklarisana konstanta C na liniji 3
-INFO  20:36:01,351 - Definicija funkcije helper, povratnog tipa void na liniji 7
-INFO  20:36:01,351 - Deklarisan formalni parametar p na liniji 7
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva ghost na liniji 8
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva live na liniji 8
-INFO  20:36:01,352 - Dodela vrednosti promenljivoj ghost na liniji 10
-INFO  20:36:01,352 - Dodela vrednosti promenljivoj live na liniji 11
-INFO  20:36:01,352 - Definicija funkcije main, povratnog tipa void na liniji 16
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva a na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva b na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva c na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva d na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva e na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva f na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva g na liniji 17
-INFO  20:36:01,352 - Deklarisana lokalna promenljiva h na liniji 17
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj a na liniji 22
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj b na liniji 28
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj b na liniji 29
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj c na liniji 30
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj d na liniji 35
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj e na liniji 36
-INFO  20:36:01,353 - Dodela vrednosti promenljivoj f na liniji 41
-INFO  20:36:01,354 - Dodela vrednosti promenljivoj f na liniji 42
-INFO  20:36:01,354 - Dodela vrednosti promenljivoj f na liniji 43
-INFO  20:36:01,354 - Dodela vrednosti promenljivoj g na liniji 48
-INFO  20:36:01,355 - Dodela vrednosti promenljivoj h na liniji 57
-INFO  20:36:01,355 - Dodela vrednosti promenljivoj h na liniji 58
-INFO  20:36:01,357 - Pronadjen poziv funkcije helper na liniji 64
+INFO  20:35:18,136 - Deklarisana konstanta C na liniji 3
+INFO  20:35:18,136 - Definicija funkcije helper, povratnog tipa void na liniji 7
+INFO  20:35:18,138 - Deklarisan formalni parametar p na liniji 7
+INFO  20:35:18,139 - Deklarisana lokalna promenljiva ghost na liniji 8
+INFO  20:35:18,139 - Deklarisana lokalna promenljiva live na liniji 8
+INFO  20:35:18,139 - Dodela vrednosti promenljivoj ghost na liniji 10
+INFO  20:35:18,139 - Dodela vrednosti promenljivoj live na liniji 11
+INFO  20:35:18,139 - Definicija funkcije main, povratnog tipa void na liniji 16
+INFO  20:35:18,139 - Deklarisana lokalna promenljiva a na liniji 17
+INFO  20:35:18,139 - Deklarisana lokalna promenljiva b na liniji 17
+INFO  20:35:18,139 - Deklarisana lokalna promenljiva c na liniji 17
+INFO  20:35:18,140 - Deklarisana lokalna promenljiva d na liniji 17
+INFO  20:35:18,140 - Deklarisana lokalna promenljiva e na liniji 17
+INFO  20:35:18,140 - Deklarisana lokalna promenljiva f na liniji 17
+INFO  20:35:18,140 - Deklarisana lokalna promenljiva g na liniji 17
+INFO  20:35:18,140 - Deklarisana lokalna promenljiva h na liniji 17
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj a na liniji 22
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj b na liniji 28
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj b na liniji 29
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj c na liniji 30
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj d na liniji 35
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj e na liniji 36
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj f na liniji 41
+INFO  20:35:18,140 - Dodela vrednosti promenljivoj f na liniji 42
+INFO  20:35:18,141 - Dodela vrednosti promenljivoj f na liniji 43
+INFO  20:35:18,142 - Dodela vrednosti promenljivoj g na liniji 48
+INFO  20:35:18,143 - Dodela vrednosti promenljivoj h na liniji 57
+INFO  20:35:18,143 - Dodela vrednosti promenljivoj h na liniji 58
+INFO  20:35:18,143 - Pronadjen poziv funkcije helper na liniji 64
 =====================SYMBOL TABLE DUMP=========================
 Type int: int, -1, -1 
 Type char: char, -1, -1 
@@ -1094,4 +1094,4 @@ Prog UnusedAll: notype, 0, 0
 
 
 
-INFO  20:36:01,384 - Generisanje koda uspesno zavrseno!
+INFO  20:35:18,182 - Generisanje koda uspesno zavrseno!

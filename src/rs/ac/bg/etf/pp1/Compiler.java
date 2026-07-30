@@ -44,7 +44,7 @@ class Compiler {
 		v.print();
 
 		if (!p.greska && v.passed() && v.mainFound) {
-			// Constant folding (i kasnije ostale optimizacije) - posle semantike, pre codegen-a
+			// optimizacije - posle semantike, pre codegen-a
 			Optimizer optimizer = new Optimizer();
 			prog.traverseBottomUp(optimizer);
 			optimizer.markDeadCode(prog);

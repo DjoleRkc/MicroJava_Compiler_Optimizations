@@ -82,7 +82,7 @@ import rs.etf.pp1.symboltable.concepts.Obj;
  * - Nekoriscene varijable:
  *   korak 1 = koje se Obj.Var citaju
  *   korak 2 = lokalne Var koje se nikad ne citaju = unused
- *   korak 3 = codegen: nema store u unused (const RHS nestaje; inace pop)
+ *   korak 3 = codegen: nema store u unused (const desna strana nestaje; inace pop)
  */
 public class Optimizer extends VisitorAdaptor {
 
@@ -366,6 +366,7 @@ public class Optimizer extends VisitorAdaptor {
 		if (!isConst(first))
 			return;
 
+		// drzi vrednost leve strane do sada (true ili false)
 		int value = getConstValue(first) != 0 ? 1 : 0;
 		CondFactList list = ct.getCondFactList();
 
@@ -607,7 +608,7 @@ public class Optimizer extends VisitorAdaptor {
 	}
 
 	// =====================================================================
-	// Nekoriscene varijable - korak 2: oznaci unused lokale
+	// Nekoriscene varijable - korak 2: oznaci unused lokalne
 	// =====================================================================
 
 	/**

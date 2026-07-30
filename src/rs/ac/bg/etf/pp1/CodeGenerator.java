@@ -476,7 +476,7 @@ public class CodeGenerator extends VisitorAdaptor {
 				|| node instanceof Condition;
 	}
 
-	// Da li postoji const predak-vrednost (tada ovaj cvor ne sme da emituje nista)
+	// Da li postoji const predak (tada ovaj cvor ne sme da emituje nista)
 	private boolean hasConstValueAncestor(SyntaxNode node) {
 		if (optimizer == null)
 			return false;
@@ -532,7 +532,6 @@ public class CodeGenerator extends VisitorAdaptor {
 					return a;
 				return null;
 			}
-			// ne izlazimo iz naredbe dodele na pogresan nacin
 			if (n instanceof Statement && !(n instanceof DesignatorStmt))
 				return null;
 		}
@@ -884,7 +883,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			return;
 
 		Obj dest = assignOp.getDesignator().obj;
-		// Korak 3: unused lokal - ne store; const desna strana vec skipovana, inace pop sa steka
+		// Korak 3: unused lokalna - ne store; const desna strana vec skipovana, inace pop sa steka
 		if (optimizer != null && dest != null && dest.getKind() == Obj.Var && optimizer.isUnused(dest)) {
 			if (!optimizer.isConst(assignOp.getExpr()))
 				Code.put(Code.pop);
@@ -896,7 +895,7 @@ public class CodeGenerator extends VisitorAdaptor {
 
 	@Override
 	public void visit(Term t) {
-		// npr 2*3 unutar x+(2*3) - Term je const, ali ceo Expr nije
+		// npr 2*3 unutar expressiona x+(2*3) - Term (2*3) je const, ali ceo Expr nije
 		if (shouldSkipCodegen(t) || tryEmitFoldedConst(t))
 			return;
 
